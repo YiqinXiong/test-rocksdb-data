@@ -1,0 +1,14 @@
+# SST files
+*.sst
+
+# LOG files
+*.log
+LOG.old.*
+
+# something else in rocksdb
+CURRENT
+IDENTITY
+LOCK
+LOG
+MANIFEST-*
+OPTIONS-*
