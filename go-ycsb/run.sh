@@ -3,7 +3,7 @@
 TYPE=$1
 
 # Directory to save data
-DATA=./data
+DATA=../data
 CMD=go-ycsb
 # Direcotry to save logs
 LOG=./logs
