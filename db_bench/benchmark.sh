@@ -23,17 +23,24 @@ M=$((1024 * K))
 G=$((1024 * M))
 T=$((1024 * T))
 
-if [ -z $DB_DIR ]; then
+db_dir=${DB_DIR:-../data}
+if [ ! -d $db_dir ]; then
+  mkdir -p $db_dir
+fi
+
+wal_dir=${WAL_DIR:-../data}
+
+if [ -z $db_dir ]; then
   echo "DB_DIR is not defined"
   exit 0
 fi
 
-if [ -z $WAL_DIR ]; then
+if [ -z $wal_dir ]; then
   echo "WAL_DIR is not defined"
   exit 0
 fi
 
-output_dir=${OUTPUT_DIR:-/tmp/}
+output_dir=${OUTPUT_DIR:-../logs}
 if [ ! -d $output_dir ]; then
   mkdir -p $output_dir
 fi
@@ -46,8 +53,6 @@ if [ ! -z $DB_BENCH_NO_SYNC ]; then
   syncval="0";
 fi
 
-db_bench_dir = ${DB_BENCH_DIR:-../../rocksdb_953f8b/}
-
 num_threads=${NUM_THREADS:-64}
 mb_written_per_sec=${MB_WRITE_PER_SEC:-0}
 # Only for tests that do range scans
@@ -57,14 +62,14 @@ compression_max_dict_bytes=${COMPRESSION_MAX_DICT_BYTES:-0}
 compression_type=${COMPRESSION_TYPE:-zstd}
 duration=${DURATION:-0}
 
-num_keys=${NUM_KEYS:-8000000000}
+num_keys=${NUM_KEYS:-80000000}
 key_size=${KEY_SIZE:-20}
 value_size=${VALUE_SIZE:-400}
 block_size=${BLOCK_SIZE:-8192}
 
 const_params="
-  --db=$DB_DIR \
-  --wal_dir=$WAL_DIR \
+  --db=$db_dir \
+  --wal_dir=$wal_dir \
   \
   --num=$num_keys \
   --num_levels=6 \
@@ -88,7 +93,7 @@ const_params="
   --target_file_size_base=$((128 * M)) \
   --max_bytes_for_level_base=$((1 * G)) \
   \
-  --verify_checksum=1 \
+  --verify_checksum=0 \
   --delete_obsolete_files_period_micros=$((60 * M)) \
   --max_bytes_for_level_multiplier=8 \
   \
@@ -99,7 +104,13 @@ const_params="
   \
   --memtablerep=skip_list \
   --bloom_bits=10 \
-  --open_files=-1"
+  --open_files=-1 \
+  \
+  --max_background_jobs=16 \
+  --subcompactions=5 \
+  --rate_limiter_bytes_per_sec=$((400 * M)) \
+  --rate_limiter_auto_tuned=1 \
+  --max_compaction_bytes=$((10 * G))"
 
 l0_config="
   --level0_file_num_compaction_trigger=4 \
@@ -111,15 +122,11 @@ fi
 
 params_w="$const_params \
           $l0_config \
-          --max_background_compactions=16 \
-          --max_write_buffer_number=8 \
-          --max_background_flushes=7"
+          --max_write_buffer_number=8"
 
 params_bulkload="$const_params \
-                 --max_background_compactions=16 \
                  --max_write_buffer_number=8 \
                  --allow_concurrent_memtable_write=false \
-                 --max_background_flushes=7 \
                  --level0_file_num_compaction_trigger=$((10 * M)) \
                  --level0_slowdown_writes_trigger=$((10 * M)) \
                  --level0_stop_writes_trigger=$((10 * M))"
@@ -178,7 +185,7 @@ function run_bulkload {
   # This runs with a vector memtable and the WAL disabled to load faster. It is still crash safe and the
   # client can discover where to restart a load after a crash. I think this is a good way to load.
   echo "Bulk loading $num_keys random keys"
-  cmd="$db_bench_dir/db_bench --benchmarks=fillrandom \
+  cmd="./db_bench --benchmarks=fillrandom \
        --use_existing_db=0 \
        --disable_auto_compactions=1 \
        --sync=0 \
@@ -193,7 +200,7 @@ function run_bulkload {
   eval $cmd
   summarize_result $output_dir/benchmark_bulkload_fillrandom.log bulkload fillrandom
   echo "Compacting..."
-  cmd="$db_bench_dir/db_bench --benchmarks=compact \
+  cmd="./db_bench --benchmarks=compact \
        --use_existing_db=1 \
        --disable_auto_compactions=1 \
        --sync=0 \
@@ -228,7 +235,7 @@ function run_manual_compaction_worker {
   fi
 
   # Make sure that fillrandom uses the same compaction options as compact.
-  cmd="$db_bench_dir/db_bench --benchmarks=fillrandom \
+  cmd="./db_bench --benchmarks=fillrandom \
        --use_existing_db=0 \
        --disable_auto_compactions=0 \
        --sync=0 \
@@ -255,7 +262,7 @@ function run_manual_compaction_worker {
   # doesn't output regular statistics then we'll just use the time command to
   # measure how long this step takes.
   cmd="{ \
-       time $db_bench_dir/db_bench --benchmarks=compact \
+       time ./db_bench --benchmarks=compact \
        --use_existing_db=1 \
        --disable_auto_compactions=0 \
        --sync=0 \
@@ -316,7 +323,7 @@ function run_fillseq {
   fi
 
   echo "Loading $num_keys keys sequentially"
-  cmd="$db_bench_dir/db_bench --benchmarks=fillseq \
+  cmd="./db_bench --benchmarks=fillseq \
        --use_existing_db=0 \
        --sync=0 \
        $params_fillseq \
@@ -338,7 +345,7 @@ function run_change {
   operation=$1
   echo "Do $num_keys random $operation"
   out_name="benchmark_${operation}.t${num_threads}.s${syncval}.log"
-  cmd="$db_bench_dir/db_bench --benchmarks=$operation \
+  cmd="./db_bench --benchmarks=$operation \
        --use_existing_db=1 \
        --sync=$syncval \
        $params_w \
@@ -353,7 +360,7 @@ function run_change {
 
 function run_filluniquerandom {
   echo "Loading $num_keys unique keys randomly"
-  cmd="$db_bench_dir/db_bench --benchmarks=filluniquerandom \
+  cmd="./db_bench --benchmarks=filluniquerandom \
        --use_existing_db=0 \
        --sync=0 \
        $params_w \
@@ -368,7 +375,7 @@ function run_filluniquerandom {
 function run_readrandom {
   echo "Reading $num_keys random keys"
   out_name="benchmark_readrandom.t${num_threads}.log"
-  cmd="$db_bench_dir/db_bench --benchmarks=readrandom \
+  cmd="./db_bench --benchmarks=readrandom \
        --use_existing_db=1 \
        $params_w \
        --threads=$num_threads \
@@ -383,7 +390,7 @@ function run_readwhile {
   operation=$1
   echo "Reading $num_keys random keys while $operation"
   out_name="benchmark_readwhile${operation}.t${num_threads}.log"
-  cmd="$db_bench_dir/db_bench --benchmarks=readwhile${operation} \
+  cmd="./db_bench --benchmarks=readwhile${operation} \
        --use_existing_db=1 \
        --sync=$syncval \
        $params_w \
@@ -402,7 +409,7 @@ function run_rangewhile {
   reverse_arg=$3
   out_name="benchmark_${full_name}.t${num_threads}.log"
   echo "Range scan $num_keys random keys while ${operation} for reverse_iter=${reverse_arg}"
-  cmd="$db_bench_dir/db_bench --benchmarks=seekrandomwhile${operation} \
+  cmd="./db_bench --benchmarks=seekrandomwhile${operation} \
        --use_existing_db=1 \
        --sync=$syncval \
        $params_w \
@@ -422,7 +429,7 @@ function run_range {
   reverse_arg=$2
   out_name="benchmark_${full_name}.t${num_threads}.log"
   echo "Range scan $num_keys random keys for reverse_iter=${reverse_arg}"
-  cmd="$db_bench_dir/db_bench --benchmarks=seekrandom \
+  cmd="./db_bench --benchmarks=seekrandom \
        --use_existing_db=1 \
        $params_w \
        --threads=$num_threads \
@@ -437,7 +444,7 @@ function run_range {
 
 function run_randomtransaction {
   echo "..."
-  cmd="$db_bench_dir/db_bench $params_r --benchmarks=randomtransaction \
+  cmd="./db_bench $params_r --benchmarks=randomtransaction \
        --num=$num_keys \
        --transaction_db \
        --threads=5 \
@@ -476,7 +483,6 @@ for job in ${jobs[@]}; do
     syncval="0"
     params_w="$params_w \
 	--writes=125000000 \
-	--subcompactions=4 \
 	--soft_pending_compaction_bytes_limit=$((1 * T)) \
 	--hard_pending_compaction_bytes_limit=$((4 * T)) "
     run_change overwrite
