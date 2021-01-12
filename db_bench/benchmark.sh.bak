@@ -2,10 +2,10 @@
 # Copyright (c) Facebook, Inc. and its affiliates. All Rights Reserved.
 # REQUIRE: db_bench binary exists in the current directory
 
-if [ $# -ne 2 ]; then
+if [ $# -ne 1 ]; then
   echo -n "./benchmark.sh [bulkload/fillseq/overwrite/filluniquerandom/"
   echo    "readrandom/readwhilewriting/readwhilemerging/updaterandom/"
-  echo    "mergerandom/randomtransaction/compact] [new/old]"
+  echo    "mergerandom/randomtransaction/compact]"
   exit 0
 fi
 
@@ -23,12 +23,12 @@ M=$((1024 * K))
 G=$((1024 * M))
 T=$((1024 * T))
 
-db_dir=${DB_DIR:-../data_$2}
+db_dir=${DB_DIR:-../data}
 if [ ! -d $db_dir ]; then
   mkdir -p $db_dir
 fi
 
-wal_dir=${WAL_DIR:-../data_$2}
+wal_dir=${WAL_DIR:-../data}
 
 if [ -z $db_dir ]; then
   echo "DB_DIR is not defined"
@@ -40,7 +40,7 @@ if [ -z $wal_dir ]; then
   exit 0
 fi
 
-output_dir=${OUTPUT_DIR:-../logs_$2}
+output_dir=${OUTPUT_DIR:-../logs}
 if [ ! -d $output_dir ]; then
   mkdir -p $output_dir
 fi
@@ -81,7 +81,7 @@ const_params="
   --compression_max_dict_bytes=$compression_max_dict_bytes \
   --compression_ratio=0.5 \
   --compression_type=$compression_type \
-  --level_compaction_dynamic_level_bytes=false \
+  --level_compaction_dynamic_level_bytes=true \
   --bytes_per_sync=$((8 * M)) \
   --cache_index_and_filter_blocks=0 \
   --pin_l0_filter_and_index_blocks_in_cache=1 \
@@ -328,7 +328,7 @@ function run_fillseq {
        --sync=0 \
        $params_fillseq \
        --min_level_to_compress=0 \
-       --threads=10 \
+       --threads=1 \
        --memtablerep=vector \
        --allow_concurrent_memtable_write=false \
        --disable_wal=$1 \

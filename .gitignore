@@ -1,8 +1,8 @@
 # rocksdb datas
-data/
+data_*/
 
 # logs
-logs/
+logs_*/
 
 #db_bench
 db_bench/db_bench
