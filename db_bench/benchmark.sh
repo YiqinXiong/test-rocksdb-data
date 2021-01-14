@@ -328,7 +328,7 @@ function run_fillseq {
        --sync=0 \
        $params_fillseq \
        --min_level_to_compress=0 \
-       --threads=10 \
+       --threads=64 \
        --memtablerep=vector \
        --allow_concurrent_memtable_write=false \
        --disable_wal=$1 \
