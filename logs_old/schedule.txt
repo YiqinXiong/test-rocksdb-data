@@ -1,0 +1,4 @@
+Start fillseq_enable_wal at Thu Jan 14 10:41:02 UTC 2021
+Complete fillseq_enable_wal in 13353 seconds
+Start updaterandom at Thu Jan 14 14:23:35 UTC 2021
+Complete updaterandom in 8944 seconds
