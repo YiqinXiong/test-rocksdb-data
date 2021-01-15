@@ -23,13 +23,13 @@ M=$((1024 * K))
 G=$((1024 * M))
 T=$((1024 * T))
 
-db_dir=${DB_DIR:-../data_$2}
+db_dir=${DB_DIR:-../data_$2_$(date +%m%d_%H_%M)}
 if [ ! -d "$db_dir" ]; then
   mkdir -p "$db_dir"
 fi
 echo ----------------------------------------------------"$db_dir"
 
-wal_dir=${WAL_DIR:-../data_$2}
+wal_dir=${WAL_DIR:-../data_$2_$(date +%m%d_%H_%M)}
 
 if [ -z "$db_dir" ]; then
   echo "DB_DIR is not defined"
@@ -41,7 +41,7 @@ if [ -z "$wal_dir" ]; then
   exit 0
 fi
 
-output_dir=${OUTPUT_DIR:-../logs_$2}
+output_dir=${OUTPUT_DIR:-../logs_$2_$(date +%m%d_%H_%M)}
 if [ ! -d "$output_dir" ]; then
   mkdir -p "$output_dir"
 fi
@@ -54,7 +54,7 @@ if [ -n "$DB_BENCH_NO_SYNC" ]; then
   syncval="0";
 fi
 
-num_threads=${NUM_THREADS:-100}
+num_threads=${NUM_THREADS:-200}
 mb_written_per_sec=${MB_WRITE_PER_SEC:-0}
 # Only for tests that do range scans
 num_nexts_per_seek=${NUM_NEXTS_PER_SEEK:-10}
@@ -94,7 +94,7 @@ const_params="\
   --target_file_size_base=$((128 * M)) \
   --max_bytes_for_level_base=$((1 * G)) \
   \
-  --verify_checksum=0 \
+  --verify_checksum=1 \
   --delete_obsolete_files_period_micros=$((60 * M)) \
   --max_bytes_for_level_multiplier=8 \
   \
