@@ -333,7 +333,7 @@ function run_fillseq {
        --allow_concurrent_memtable_write=false \
        --disable_wal=$1 \
        --seed=$( date +%s ) \
-       2>&1 | tee -a $log_file_name"
+       2>&1 | grep -v \"... thread\" | tee -a $log_file_name"
   echo "$cmd" | tee "$log_file_name"
   eval "$cmd" > /dev/null 2>&1
 
@@ -352,7 +352,7 @@ function run_change {
        --threads=$num_threads \
        --merge_operator=\"put\" \
        --seed=$( date +%s ) \
-       2>&1 | tee -a $output_dir/${out_name}"
+       2>&1 | grep -v \"... thread\" | tee -a $output_dir/${out_name}"
   echo "$cmd" | tee "$output_dir/${out_name}"
   eval "$cmd" > /dev/null 2>&1
   summarize_result "$output_dir"/"${out_name}" "${operation}".t"${num_threads}".s"${syncval}" "$operation"
