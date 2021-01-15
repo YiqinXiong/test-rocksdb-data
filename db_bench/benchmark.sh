@@ -54,7 +54,7 @@ if [ -n "$DB_BENCH_NO_SYNC" ]; then
   syncval="0";
 fi
 
-num_threads=${NUM_THREADS:-64}
+num_threads=${NUM_THREADS:-100}
 mb_written_per_sec=${MB_WRITE_PER_SEC:-0}
 # Only for tests that do range scans
 num_nexts_per_seek=${NUM_NEXTS_PER_SEEK:-10}
@@ -328,12 +328,12 @@ function run_fillseq {
        --sync=0 \
        $params_fillseq \
        --min_level_to_compress=0 \
-       --threads=64 \
+       --threads=$num_threads \
        --memtablerep=vector \
        --allow_concurrent_memtable_write=false \
        --disable_wal=$1 \
        --seed=$( date +%s ) \
-       2>&1 | grep -A 8 \"DB Stats\|Flush(GB)\" | tee -a $log_file_name"
+       2>&1 | tee -a $log_file_name"
   echo "$cmd" | tee "$log_file_name"
   eval "$cmd" > /dev/null 2>&1
 
@@ -352,7 +352,7 @@ function run_change {
        --threads=$num_threads \
        --merge_operator=\"put\" \
        --seed=$( date +%s ) \
-       2>&1 | grep -A 8 \"DB Stats\|Flush(GB)\" | tee -a $output_dir/${out_name}"
+       2>&1 | tee -a $output_dir/${out_name}"
   echo "$cmd" | tee "$output_dir/${out_name}"
   eval "$cmd" > /dev/null 2>&1
   summarize_result "$output_dir"/"${out_name}" "${operation}".t"${num_threads}".s"${syncval}" "$operation"
