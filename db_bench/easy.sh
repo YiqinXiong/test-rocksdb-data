@@ -72,13 +72,13 @@ const_params="\
   \
   --statistics=0 \
   --stats_per_interval=1 \
-  --stats_interval_seconds=60 \
+  --stats_interval_seconds=10 \
   --histogram=1 \
   \
   --open_files=-1 \
   \
-  --max_background_jobs=16 \
-  --subcompactions=5 \
+  --max_background_jobs=8 \
+  --subcompactions=3 \
   --rate_limiter_bytes_per_sec=$((400 * M)) \
   --rate_limiter_auto_tuned=1 \
   --max_compaction_bytes=$((10 * G))"
