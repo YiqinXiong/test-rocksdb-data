@@ -1,0 +1,132 @@
+./db_bench --benchmarks=updaterandom        --use_existing_db=1        --sync=1          --db=../data_old_0115_13_28   --wal_dir=../data_old_0115_13_28     --num=80000000   --num_levels=6   --key_size=20   --value_size=400   --block_size=8192   --cache_size=17179869184   --cache_numshardbits=6   --compression_max_dict_bytes=0   --compression_ratio=0.5   --compression_type=zstd   --level_compaction_dynamic_level_bytes=false   --bytes_per_sync=8388608   --cache_index_and_filter_blocks=0   --pin_l0_filter_and_index_blocks_in_cache=1   --benchmark_write_rate_limit=0     --hard_rate_limit=3   --rate_limit_delay_max_milliseconds=1000000   --write_buffer_size=134217728   --target_file_size_base=134217728   --max_bytes_for_level_base=1073741824     --verify_checksum=1   --delete_obsolete_files_period_micros=62914560   --max_bytes_for_level_multiplier=8     --statistics=0   --stats_per_interval=1   --stats_interval_seconds=1   --histogram=1     --memtablerep=skip_list   --bloom_bits=10   --open_files=-1     --max_background_jobs=16   --subcompactions=5   --rate_limiter_bytes_per_sec=419430400   --rate_limiter_auto_tuned=1   --max_compaction_bytes=10737418240           --level0_file_num_compaction_trigger=4            --level0_stop_writes_trigger=20           --max_write_buffer_number=8        --threads=200        --merge_operator="put"        --seed=1610688634        2>&1 | grep -v "... thread" | tee -a ../logs_old_0115_13_28/benchmark_updaterandom.t200.s1.log
+RocksDB:    version 6.4
+Date:       Fri Jan 15 13:30:35 2021
+CPU:        12 * Intel(R) Core(TM) i7-8700 CPU @ 3.20GHz
+CPUCache:   12288 KB
+put error: Corruption: block checksum mismatch: expected 1782473852, got 540311920  in ../data_old_0115_13_28/000593.sst offset 14319446 size 3408
+put error: Corruption: block checksum mismatch: expected 1782473852, got 540311920  in ../data_old_0115_13_28/000593.sst offset 14319446 size 3408
+put error: Corruption: block checksum mismatch: expected 1782473852, got 540311920  in ../data_old_0115_13_28/000593.sst offset 14319446 size 3408
+put error: Corruption: block checksum mismatch: expected 1782473852, got 540311920  in ../data_old_0115_13_28/000593.sst offset 14319446 size 3408
+put error: Corruption: block checksum mismatch: expected 1782473852, got 540311920  in ../data_old_0115_13_28/000593.sst offset 14319446 size 3408
+put error: Corruption: block checksum mismatch: expected 1782473852, got 540311920  in ../data_old_0115_13_28/000593.sst offset 14319446 size 3408
+corrupted double-linked list
+put error: Corruption: block checksum mismatch: expected 1782473852, got 540311920  in ../data_old_0115_13_28/000593.sst offset 14319446 size 3408
+put error: Corruption: block checksum mismatch: expected 1782473852, got 540311920  in ../data_old_0115_13_28/000593.sst offset 14319446 size 3408
+put error: Corruption: block checksum mismatch: expected 1782473852, got 540311920  in ../data_old_0115_13_28/000593.sst offset 14319446 size 3408
+put error: Corruption: block checksum mismatch: expected 1782473852, got 540311920  in ../data_old_0115_13_28/000593.sst offset 14319446 size 3408
+put error: Corruption: block checksum mismatch: expected 1782473852, got 540311920  in ../data_old_0115_13_28/000593.sst offset 14319446 size 3408
+put error: Corruption: block checksum mismatch: expected 1782473852, got 540311920  in ../data_old_0115_13_28/000593.sst offset 14319446 size 3408
+put error: Corruption: block checksum mismatch: expected 1782473852, got 540311920  in ../data_old_0115_13_28/000593.sst offset 14319446 size 3408
+Received signal 6 (Aborted)
+put error: Corruption: block checksum mismatch: expected 1782473852, got 540311920  in ../data_old_0115_13_28/000593.sst offset 14319446 size 3408
+put error: Corruption: block checksum mismatch: expected 1782473852, got 540311920  in ../data_old_0115_13_28/000593.sst offset 14319446 size 3408
+put error: Corruption: block checksum mismatch: expected 1782473852, got 540311920  in ../data_old_0115_13_28/000593.sst offset 14319446 size 3408
+put error: Corruption: block checksum mismatch: expected 1782473852, got 540311920  in ../data_old_0115_13_28/000593.sst offset 14319446 size 3408
+put error: Corruption: block checksum mismatch: expected 1782473852, got 540311920  in ../data_old_0115_13_28/000593.sst offset 14319446 size 3408
+put error: Corruption: block checksum mismatch: expected 1782473852, got 540311920  in ../data_old_0115_13_28/000593.sst offset 14319446 size 3408
+put error: Corruption: block checksum mismatch: expected 1782473852, got 540311920  in ../data_old_0115_13_28/000593.sst offset 14319446 size 3408
+Received signal 11 (Segmentation fault)
+put error: Corruption: block checksum mismatch: expected 1782473852, got 540311920  in ../data_old_0115_13_28/000593.sst offset 14319446 size 3408
+put error: Corruption: block checksum mismatch: expected 1782473852, got 540311920  in ../data_old_0115_13_28/000593.sst offset 14319446 size 3408
+put error: Corruption: block checksum mismatch: expected 1782473852, got 540311920  in ../data_old_0115_13_28/000593.sst offset 14319446 size 3408
+put error: Corruption: block checksum mismatch: expected 1782473852, got 540311920  in ../data_old_0115_13_28/000593.sst offset 14319446 size 3408
+put error: Corruption: block checksum mismatch: expected 1782473852, got 540311920  in ../data_old_0115_13_28/000593.sst offset 14319446 size 3408
+put error: Corruption: block checksum mismatch: expected 1782473852, got 540311920  in ../data_old_0115_13_28/000593.sst offset 14319446 size 3408
+put error: Corruption: block checksum mismatch: expected 1782473852, got 540311920  in ../data_old_0115_13_28/000593.sst offset 14319446 size 3408
+put error: Corruption: block checksum mismatch: expected 1782473852, got 540311920  in ../data_old_0115_13_28/000593.sst offset 14319446 size 3408
+put error: Corruption: block checksum mismatch: expected 1782473852, got 540311920  in ../data_old_0115_13_28/000593.sst offset 14319446 size 3408
+put error: Corruption: block checksum mismatch: expected 1782473852, got 540311920  in ../data_old_0115_13_28/000593.sst offset 14319446 size 3408
+put error: Corruption: block checksum mismatch: expected 1782473852, got 540311920  in ../data_old_0115_13_28/000593.sst offset 14319446 size 3408
+Received signal 11 (Segmentation fault)
+put error: Corruption: block checksum mismatch: expected 1782473852, got 540311920  in ../data_old_0115_13_28/000593.sst offset 14319446 size 3408
+put error: Corruption: block checksum mismatch: expected 1782473852, got 540311920  in ../data_old_0115_13_28/000593.sst offset 14319446 size 3408
+put error: Corruption: block checksum mismatch: expected 1782473852, got 540311920  in ../data_old_0115_13_28/000593.sst offset 14319446 size 3408
+put error: Corruption: block checksum mismatch: expected 1782473852, got 540311920  in ../data_old_0115_13_28/000593.sst offset 14319446 size 3408
+put error: Corruption: block checksum mismatch: expected 1782473852, got 540311920  in ../data_old_0115_13_28/000593.sst offset 14319446 size 3408
+put error: Corruption: block checksum mismatch: expected 1782473852, got 540311920  in ../data_old_0115_13_28/000593.sst offset 14319446 size 3408
+put error: Corruption: block checksum mismatch: expected 1782473852, got 540311920  in ../data_old_0115_13_28/000593.sst offset 14319446 size 3408
+put error: Corruption: block checksum mismatch: expected 1782473852, got 540311920  in ../data_old_0115_13_28/000593.sst offset 14319446 size 3408
+put error: Corruption: block checksum mismatch: expected 1782473852, got 540311920  in ../data_old_0115_13_28/000593.sst offset 14319446 size 3408
+put error: Corruption: block checksum mismatch: expected 1782473852, got 540311920  in ../data_old_0115_13_28/000593.sst offset 14319446 size 3408
+put error: Corruption: block checksum mismatch: expected 1782473852, got 540311920  in ../data_old_0115_13_28/000593.sst offset 14319446 size 3408
+put error: Corruption: block checksum mismatch: expected 1782473852, got 540311920  in ../data_old_0115_13_28/000593.sst offset 14319446 size 3408
+put error: Corruption: block checksum mismatch: expected 1782473852, got 540311920  in ../data_old_0115_13_28/000593.sst offset 14319446 size 3408
+put error: Corruption: block checksum mismatch: expected 1782473852, got 540311920  in ../data_old_0115_13_28/000593.sst offset 14319446 size 3408
+put error: Corruption: block checksum mismatch: expected 1782473852, got 540311920  in ../data_old_0115_13_28/000593.sst offset 14319446 size 3408
+put error: Corruption: block checksum mismatch: expected 1782473852, got 540311920  in ../data_old_0115_13_28/000593.sst offset 14319446 size 3408
+put error: Corruption: block checksum mismatch: expected 1782473852, got 540311920  in ../data_old_0115_13_28/000593.sst offset 14319446 size 3408
+put error: Corruption: block checksum mismatch: expected 1782473852, got 540311920  in ../data_old_0115_13_28/000593.sst offset 14319446 size 3408
+put error: Corruption: block checksum mismatch: expected 1782473852, got 540311920  in ../data_old_0115_13_28/000593.sst offset 14319446 size 3408
+put error: Corruption: block checksum mismatch: expected 1782473852, got 540311920  in ../data_old_0115_13_28/000593.sst offset 14319446 size 3408
+put error: Corruption: block checksum mismatch: expected 1782473852, got 540311920  in ../data_old_0115_13_28/000593.sst offset 14319446 size 3408
+put error: Corruption: block checksum mismatch: expected 1782473852, got 540311920  in ../data_old_0115_13_28/000593.sst offset 14319446 size 3408
+put error: Corruption: block checksum mismatch: expected 1782473852, got 540311920  in ../data_old_0115_13_28/000593.sst offset 14319446 size 3408
+put error: Corruption: block checksum mismatch: expected 1782473852, got 540311920  in ../data_old_0115_13_28/000593.sst offset 14319446 size 3408
+put error: Corruption: block checksum mismatch: expected 1782473852, got 540311920  in ../data_old_0115_13_28/000593.sst offset 14319446 size 3408
+put error: Corruption: block checksum mismatch: expected 1782473852, got 540311920  in ../data_old_0115_13_28/000593.sst offset 14319446 size 3408
+put error: Corruption: block checksum mismatch: expected 1782473852, got 540311920  in ../data_old_0115_13_28/000593.sst offset 14319446 size 3408
+put error: Corruption: block checksum mismatch: expected 1782473852, got 540311920  in ../data_old_0115_13_28/000593.sst offset 14319446 size 3408
+put error: Corruption: block checksum mismatch: expected 1782473852, got 540311920  in ../data_old_0115_13_28/000593.sst offset 14319446 size 3408
+put error: Corruption: block checksum mismatch: expected 1782473852, got 540311920  in ../data_old_0115_13_28/000593.sst offset 14319446 size 3408
+put error: Corruption: block checksum mismatch: expected 1782473852, got 540311920  in ../data_old_0115_13_28/000593.sst offset 14319446 size 3408
+put error: Corruption: block checksum mismatch: expected 1782473852, got 540311920  in ../data_old_0115_13_28/000593.sst offset 14319446 size 3408
+put error: Corruption: block checksum mismatch: expected 1782473852, got 540311920  in ../data_old_0115_13_28/000593.sst offset 14319446 size 3408
+put error: Corruption: block checksum mismatch: expected 1782473852, got 540311920  in ../data_old_0115_13_28/000593.sst offset 14319446 size 3408
+put error: Corruption: block checksum mismatch: expected 1782473852, got 540311920  in ../data_old_0115_13_28/000593.sst offset 14319446 size 3408
+put error: Corruption: block checksum mismatch: expected 1782473852, got 540311920  in ../data_old_0115_13_28/000593.sst offset 14319446 size 3408
+put error: Corruption: block checksum mismatch: expected 1782473852, got 540311920  in ../data_old_0115_13_28/000593.sst offset 14319446 size 3408
+put error: Corruption: block checksum mismatch: expected 1782473852, got 540311920  in ../data_old_0115_13_28/000593.sst offset 14319446 size 3408
+put error: Corruption: block checksum mismatch: expected 1782473852, got 540311920  in ../data_old_0115_13_28/000593.sst offset 14319446 size 3408
+put error: Corruption: block checksum mismatch: expected 1782473852, got 540311920  in ../data_old_0115_13_28/000593.sst offset 14319446 size 3408
+put error: Corruption: block checksum mismatch: expected 1782473852, got 540311920  in ../data_old_0115_13_28/000593.sst offset 14319446 size 3408
+put error: Corruption: block checksum mismatch: expected 1782473852, got 540311920  in ../data_old_0115_13_28/000593.sst offset 14319446 size 3408
+put error: Corruption: block checksum mismatch: expected 1782473852, got 540311920  in ../data_old_0115_13_28/000593.sst offset 14319446 size 3408
+put error: Corruption: block checksum mismatch: expected 1782473852, got 540311920  in ../data_old_0115_13_28/000593.sst offset 14319446 size 3408
+put error: Corruption: block checksum mismatch: expected 1782473852, got 540311920  in ../data_old_0115_13_28/000593.sst offset 14319446 size 3408
+put error: Corruption: block checksum mismatch: expected 1782473852, got 540311920  in ../data_old_0115_13_28/000593.sst offset 14319446 size 3408
+put error: Corruption: block checksum mismatch: expected 1782473852, got 540311920  in ../data_old_0115_13_28/000593.sst offset 14319446 size 3408
+put error: Corruption: block checksum mismatch: expected 1782473852, got 540311920  in ../data_old_0115_13_28/000593.sst offset 14319446 size 3408
+put error: Corruption: block checksum mismatch: expected 1782473852, got 540311920  in ../data_old_0115_13_28/000593.sst offset 14319446 size 3408
+put error: Corruption: block checksum mismatch: expected 1782473852, got 540311920  in ../data_old_0115_13_28/000593.sst offset 14319446 size 3408
+put error: Corruption: block checksum mismatch: expected 1782473852, got 540311920  in ../data_old_0115_13_28/000593.sst offset 14319446 size 3408
+put error: Corruption: block checksum mismatch: expected 1782473852, got 540311920  in ../data_old_0115_13_28/000593.sst offset 14319446 size 3408
+put error: Corruption: block checksum mismatch: expected 1782473852, got 540311920  in ../data_old_0115_13_28/000593.sst offset 14319446 size 3408
+put error: Corruption: block checksum mismatch: expected 1782473852, got 540311920  in ../data_old_0115_13_28/000593.sst offset 14319446 size 3408
+put error: Corruption: block checksum mismatch: expected 1782473852, got 540311920  in ../data_old_0115_13_28/000593.sst offset 14319446 size 3408
+put error: Corruption: block checksum mismatch: expected 1782473852, got 540311920  in ../data_old_0115_13_28/000593.sst offset 14319446 size 3408
+put error: Corruption: block checksum mismatch: expected 1782473852, got 540311920  in ../data_old_0115_13_28/000593.sst offset 14319446 size 3408
+put error: Corruption: block checksum mismatch: expected 1782473852, got 540311920  in ../data_old_0115_13_28/000593.sst offset 14319446 size 3408
+put error: Corruption: block checksum mismatch: expected 1782473852, got 540311920  in ../data_old_0115_13_28/000593.sst offset 14319446 size 3408
+put error: Corruption: block checksum mismatch: expected 1782473852, got 540311920  in ../data_old_0115_13_28/000593.sst offset 14319446 size 3408
+put error: Corruption: block checksum mismatch: expected 1782473852, got 540311920  in ../data_old_0115_13_28/000593.sst offset 14319446 size 3408
+put error: Corruption: block checksum mismatch: expected 1782473852, got 540311920  in ../data_old_0115_13_28/000593.sst offset 14319446 size 3408
+#0   put error: Corruption: block checksum mismatch: expected 1782473852, got 540311920  in ../data_old_0115_13_28/000593.sst offset 14319446 size 3408
+put error: Corruption: block checksum mismatch: expected 1782473852, got 540311920  in ../data_old_0115_13_28/000593.sst offset 14319446 size 3408
+/lib/x86_64-linux-gnu/libc.so.6(+0x499f6) [0x7fc5bf2a69f6] put error: Corruption: block checksum mismatch: expected 1782473852, got 540311920  in ../data_old_0115_13_28/000593.sst offset 14319446 size 3408
+put error: Corruption: block checksum mismatch: expected 1782473852, got 540311920  in ../data_old_0115_13_28/000593.sst offset 14319446 size 3408
+put error: Corruption: block checksum mismatch: expected 1782473852, got 540311920  in ../data_old_0115_13_28/000593.sst offset 14319446 size 3408
+put error: Corruption: block checksum mismatch: expected 1782473852, got 540311920  in ../data_old_0115_13_28/000593.sst offset 14319446 size 3408
+put error: Corruption: block checksum mismatch: expected 1782473852, got 540311920  in ../data_old_0115_13_28/000593.sst offset 14319446 size 3408
+put error: Corruption: block checksum mismatch: expected 1782473852, got 540311920  in ../data_old_0115_13_28/000593.sst offset 14319446 size 3408
+#0   /lib/x86_64-linux-gnu/libc.so.6(+0x499f6) [0x7fc5bf2a69f6] put error: Corruption: block checksum mismatch: expected 1782473852, got 540311920  in ../data_old_0115_13_28/000593.sst offset 14319446 size 3408
+#0   /lib/x86_64-linux-gnu/libc.so.6(gsignal+0xcb) [0x7fc5bf2a318b] put error: Corruption: block checksum mismatch: expected 1782473852, got 540311920  in ../data_old_0115_13_28/000593.sst offset 14319446 size 3408
+??	??:0	??	??:0	??	??:0	
+#1   /lib/x86_64-linux-gnu/libc.so.6(on_exit+0) [0x7fc5bf2a6be0] 
+#1   /lib/x86_64-linux-gnu/libc.so.6(abort+0x12b) [0x7fc5bf282859] 
+#1   /lib/x86_64-linux-gnu/libc.so.6(on_exit+0) [0x7fc5bf2a6be0] ??	??:0	??	??:0	??	??:0	
+#2   ./db_bench(+0xcc50a) [0x558a8c3f150a] 
+#2   /lib/x86_64-linux-gnu/libc.so.6(+0x903ee) [0x7fc5bf2ed3ee] 
+#2   ./db_bench(+0xcc50a) [0x558a8c3f150a] ??	??:0	??	??:0	
+#3   /lib/x86_64-linux-gnu/libc.so.6(+0x9847c) [0x7fc5bf2f547c] 
+#3   ./db_bench(+0xb96a3) [0x558a8c3de6a3] ??	??:0	
+#3   ./db_bench(+0xb96a3) [0x558a8c3de6a3] ??	??	??:0	??:0	??	??:0	
+#4   /lib/x86_64-linux-gnu/libc.so.6(+0x98acc) [0x7fc5bf2f5acc] 
+#4   ./db_bench(+0x2a0969) [0x558a8c5c5969] 
+#4   ./db_bench(+0x2a0969) [0x558a8c5c5969] ??	??:0	??	??:0	??	??:0	
+#5   /lib/x86_64-linux-gnu/libc.so.6(+0x9a00b) [0x7fc5bf2f700b] 
+#5   /lib/x86_64-linux-gnu/libpthread.so.0(+0x9609) [0x7fc5bf8d4609] 
+#5   /lib/x86_64-linux-gnu/libpthread.so.0(+0x9609) [0x7fc5bf8d4609] ??	??:0	??	??:0	
+#6   /lib/x86_64-linux-gnu/libc.so.6(+0x49ad3) [0x7fc5bf2a6ad3] ??	??:0	
+#6   /lib/x86_64-linux-gnu/libc.so.6(clone+0x43) [0x7fc5bf37f293] 
+#6   /lib/x86_64-linux-gnu/libc.so.6(clone+0x43) [0x7fc5bf37f293] ??	??:0	??	??:0	
+#7   /lib/x86_64-linux-gnu/libc.so.6(on_exit+0) [0x7fc5bf2a6be0] ??	??:0	

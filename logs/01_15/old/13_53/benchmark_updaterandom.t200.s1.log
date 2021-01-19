@@ -1,0 +1,27 @@
+./db_bench --benchmarks=updaterandom        --use_existing_db=1        --sync=1          --db=../data_old_0115_13_53   --wal_dir=../data_old_0115_13_53     --num=80000000   --num_levels=6   --key_size=20   --value_size=400   --block_size=8192   --cache_size=17179869184   --cache_numshardbits=6   --compression_max_dict_bytes=0   --compression_ratio=0.5   --compression_type=zstd   --level_compaction_dynamic_level_bytes=false   --bytes_per_sync=8388608   --cache_index_and_filter_blocks=0   --pin_l0_filter_and_index_blocks_in_cache=1   --benchmark_write_rate_limit=0     --hard_rate_limit=3   --rate_limit_delay_max_milliseconds=1000000   --write_buffer_size=134217728   --target_file_size_base=134217728   --max_bytes_for_level_base=1073741824     --verify_checksum=1   --delete_obsolete_files_period_micros=62914560   --max_bytes_for_level_multiplier=8     --statistics=0   --stats_per_interval=1   --stats_interval_seconds=1   --histogram=1     --memtablerep=skip_list   --bloom_bits=10   --open_files=-1     --max_background_jobs=16   --subcompactions=5   --rate_limiter_bytes_per_sec=419430400   --rate_limiter_auto_tuned=1   --max_compaction_bytes=10737418240           --level0_file_num_compaction_trigger=4            --level0_stop_writes_trigger=20           --max_write_buffer_number=8        --threads=200        --merge_operator="put"        --seed=1610690391        2>&1 | grep -v "... thread" | tee -a ../logs_old_0115_13_53/benchmark_updaterandom.t200.s1.log
+RocksDB:    version 6.4
+Date:       Fri Jan 15 13:59:52 2021
+CPU:        12 * Intel(R) Core(TM) i7-8700 CPU @ 3.20GHz
+CPUCache:   12288 KB
+db_bench: ./table/block_based/block.h:575: virtual rocksdb::IndexValue rocksdb::IndexBlockIter::value() const: Assertion `decode_s.ok()' failed.
+Received signal 6 (Aborted)
+#0   /lib/x86_64-linux-gnu/libc.so.6(gsignal+0xcb) [0x7f496656818b] ??	??:0	
+#1   /lib/x86_64-linux-gnu/libc.so.6(abort+0x12b) [0x7f4966547859] ??	??:0	
+#2   /lib/x86_64-linux-gnu/libc.so.6(+0x25729) [0x7f4966547729] ??	??:0	
+#3   /lib/x86_64-linux-gnu/libc.so.6(+0x36f36) [0x7f4966558f36] ??	??:0	
+#4   ./db_bench(+0x315070) [0x55fd33fcd070] ??	??:0	
+#5   ./db_bench(+0x3505cb) [0x55fd340085cb] ??	??:0	
+#6   ./db_bench(+0x35082a) [0x55fd3400882a] ??	??:0	
+#7   ./db_bench(+0x3508a2) [0x55fd340088a2] ??	??:0	
+#8   ./db_bench(+0x37b032) [0x55fd34033032] ??	??:0	
+#9   ./db_bench(+0x11af42) [0x55fd33dd2f42] ??	??:0	
+#10  ./db_bench(+0x1230db) [0x55fd33ddb0db] ??	??:0	
+#11  ./db_bench(+0x1245fc) [0x55fd33ddc5fc] ??	??:0	
+#12  ./db_bench(+0x182d1d) [0x55fd33e3ad1d] ??	??:0	
+#13  ./db_bench(+0x188dea) [0x55fd33e40dea] ??	??:0	
+#14  ./db_bench(+0x189a1a) [0x55fd33e41a1a] ??	??:0	
+#15  ./db_bench(+0x3c4423) [0x55fd3407c423] ??	??:0	
+#16  ./db_bench(+0x3c45be) [0x55fd3407c5be] ??	??:0	
+#17  /lib/x86_64-linux-gnu/libstdc++.so.6(+0xd6d84) [0x7f4966954d84] ??	??:0	
+#18  /lib/x86_64-linux-gnu/libpthread.so.0(+0x9609) [0x7f4966b99609] ??	??:0	
+#19  /lib/x86_64-linux-gnu/libc.so.6(clone+0x43) [0x7f4966644293] ??	??:0	

@@ -1,0 +1,4 @@
+Start bulkload at 2021年 01月 15日 星期五 13:53:57 CST
+Complete bulkload in 354 seconds
+Start updaterandom at 2021年 01月 15日 星期五 13:59:51 CST
+Complete updaterandom in 250 seconds
