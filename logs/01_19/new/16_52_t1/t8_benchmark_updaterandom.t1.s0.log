@@ -1,0 +1,1509 @@
+RocksDB:    version 6.4
+Date:       Tue Jan 19 21:16:19 2021
+CPU:        12 * Intel(R) Core(TM) i7-8700 CPU @ 3.20GHz
+CPUCache:   12288 KB
+
+** Compaction Stats [default] **
+Level    Files   Size     Score Read(GB)  Rn(GB) Rnp1(GB) Write(GB) Wnew(GB) Moved(GB) W-Amp Rd(MB/s) Wr(MB/s) Comp(sec) CompMergeCPU(sec) Comp(cnt) Avg(sec) KeyIn KeyDrop
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  L0      5/0   168.37 MB   1.2      0.0     0.0      0.0       0.1      0.1       0.0   1.0      0.0     59.1      1.60              0.66         3    0.534       0      0
+  L1     10/1    1.07 GB   2.0      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0      0.0      0.00              0.00         0    0.000       0      0
+  L2     39/1    4.13 GB   1.0      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0      0.0      0.00              0.00         0    0.000       0      0
+  L3     62/0    6.75 GB   0.2      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0      0.0      0.00              0.00         0    0.000       0      0
+ Sum    116/2   12.11 GB   0.0      0.0     0.0      0.0       0.1      0.1       0.0   1.0      0.0     59.1      1.60              0.66         3    0.534       0      0
+ Int      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.0      0.0       0.0   1.0      0.0     49.2      0.75              0.66         1    0.750       0      0
+
+** Compaction Stats [default] **
+Priority    Files   Size     Score Read(GB)  Rn(GB) Rnp1(GB) Write(GB) Wnew(GB) Moved(GB) W-Amp Rd(MB/s) Wr(MB/s) Comp(sec) CompMergeCPU(sec) Comp(cnt) Avg(sec) KeyIn KeyDrop
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+High      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0     49.2      0.75              0.66         1    0.750       0      0
+User      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.1      0.1       0.0   0.0      0.0     67.8      0.85              0.00         2    0.426       0      0
+Uptime(secs): 3.8 total, 2.0 interval
+Flush(GB): cumulative 0.092, interval 0.036
+AddFile(GB): cumulative 0.000, interval 0.000
+AddFile(Total Files): cumulative 0, interval 0
+AddFile(L0 Files): cumulative 0, interval 0
+AddFile(Keys): cumulative 0, interval 0
+Cumulative compaction: 0.09 GB write, 24.83 MB/s write, 0.00 GB read, 0.00 MB/s read, 1.6 seconds
+Interval compaction: 0.04 GB write, 18.06 MB/s write, 0.00 GB read, 0.00 MB/s read, 0.8 seconds
+Stalls(count): 0 level0_slowdown, 0 level0_slowdown_with_compaction, 0 level0_numfiles, 0 level0_numfiles_with_compaction, 0 stop for pending_compaction_bytes, 0 slowdown for pending_compaction_bytes, 0 memtable_compaction, 0 memtable_slowdown, interval 0 total count
+
+** File Read Latency Histogram By Level [default] **
+
+** DB Stats **
+Uptime(secs): 3.8 total, 2.0 interval
+Cumulative writes: 671K writes, 671K keys, 325K commit groups, 2.1 writes per commit group, ingest: 0.27 GB, 72.12 MB/s
+Cumulative WAL: 671K writes, 0 syncs, 671213.00 writes per sync, written: 0.27 GB, 72.12 MB/s
+Cumulative stall: 00:00:0.000 H:M:S, 0.0 percent
+Interval writes: 671K writes, 671K keys, 325K commit groups, 2.1 writes per commit group, ingest: 275.14 MB, 134.70 MB/s
+Interval WAL: 671K writes, 0 syncs, 671213.00 writes per sync, written: 0.27 MB, 134.70 MB/s
+Interval stall: 00:00:0.000 H:M:S, 0.0 percent
+
+
+** Compaction Stats [default] **
+Level    Files   Size     Score Read(GB)  Rn(GB) Rnp1(GB) Write(GB) Wnew(GB) Moved(GB) W-Amp Rd(MB/s) Wr(MB/s) Comp(sec) CompMergeCPU(sec) Comp(cnt) Avg(sec) KeyIn KeyDrop
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  L0      7/0   242.24 MB   1.8      0.0     0.0      0.0       0.2      0.2       0.0   1.0      0.0     56.7      2.98              1.82         5    0.595       0      0
+  L1      9/1    1.00 GB   1.8      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0      0.0      0.00              0.00         0    0.000       0      0
+  L2     39/3    4.13 GB   1.0      0.2     0.1      0.1       0.1     -0.0       0.0   1.8     57.1     36.9      3.47              3.24         1    3.469   1108K   392K
+  L3     62/0    6.75 GB   0.2      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0      0.0      0.00              0.00         0    0.000       0      0
+ Sum    117/4   12.12 GB   0.0      0.2     0.1      0.1       0.3      0.2       0.0   1.8     30.7     46.0      6.44              5.06         6    1.074   1108K   392K
+ Int      0/0    0.00 KB   0.0      0.2     0.1      0.1       0.2      0.1       0.0   2.7     40.9     41.7      4.84              4.39         3    1.614   1108K   392K
+
+** Compaction Stats [default] **
+Priority    Files   Size     Score Read(GB)  Rn(GB) Rnp1(GB) Write(GB) Wnew(GB) Moved(GB) W-Amp Rd(MB/s) Wr(MB/s) Comp(sec) CompMergeCPU(sec) Comp(cnt) Avg(sec) KeyIn KeyDrop
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Low      0/0    0.00 KB   0.0      0.2     0.1      0.1       0.1     -0.0       0.0   0.0     57.1     36.9      3.47              3.24         1    3.469   1108K   392K
+High      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.1      0.1       0.0   0.0      0.0     52.2      2.12              1.82         3    0.708       0      0
+User      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.1      0.1       0.0   0.0      0.0     67.8      0.85              0.00         2    0.426       0      0
+Uptime(secs): 5.8 total, 2.0 interval
+Flush(GB): cumulative 0.165, interval 0.072
+AddFile(GB): cumulative 0.000, interval 0.000
+AddFile(Total Files): cumulative 0, interval 0
+AddFile(L0 Files): cumulative 0, interval 0
+AddFile(Keys): cumulative 0, interval 0
+Cumulative compaction: 0.29 GB write, 50.97 MB/s write, 0.19 GB read, 34.05 MB/s read, 6.4 seconds
+Interval compaction: 0.20 GB write, 100.78 MB/s write, 0.19 GB read, 98.94 MB/s read, 4.8 seconds
+Stalls(count): 0 level0_slowdown, 0 level0_slowdown_with_compaction, 0 level0_numfiles, 0 level0_numfiles_with_compaction, 0 stop for pending_compaction_bytes, 0 slowdown for pending_compaction_bytes, 0 memtable_compaction, 0 memtable_slowdown, interval 0 total count
+
+** File Read Latency Histogram By Level [default] **
+
+** DB Stats **
+Uptime(secs): 5.8 total, 2.0 interval
+Cumulative writes: 1371K writes, 1371K keys, 643K commit groups, 2.1 writes per commit group, ingest: 0.55 GB, 96.60 MB/s
+Cumulative WAL: 1371K writes, 0 syncs, 1371437.00 writes per sync, written: 0.55 GB, 96.60 MB/s
+Cumulative stall: 00:00:0.000 H:M:S, 0.0 percent
+Interval writes: 700K writes, 700K keys, 317K commit groups, 2.2 writes per commit group, ingest: 286.78 MB, 143.24 MB/s
+Interval WAL: 700K writes, 0 syncs, 700224.00 writes per sync, written: 0.28 MB, 143.24 MB/s
+Interval stall: 00:00:0.000 H:M:S, 0.0 percent
+
+
+** Compaction Stats [default] **
+Level    Files   Size     Score Read(GB)  Rn(GB) Rnp1(GB) Write(GB) Wnew(GB) Moved(GB) W-Amp Rd(MB/s) Wr(MB/s) Comp(sec) CompMergeCPU(sec) Comp(cnt) Avg(sec) KeyIn KeyDrop
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  L0      9/8   315.99 MB   0.2      0.0     0.0      0.0       0.2      0.2       0.0   1.0      0.0     49.8      4.87              3.13         7    0.695       0      0
+  L1      9/5    1.00 GB   0.9      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0      0.0      0.00              0.00         0    0.000       0      0
+  L2     39/16   4.13 GB   0.6      0.2     0.1      0.1       0.1     -0.0       0.0   1.8     57.1     36.9      3.47              3.24         1    3.469   1108K   392K
+  L3     62/0    6.75 GB   0.2      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0      0.0      0.00              0.00         0    0.000       0      0
+ Sum    119/29  12.19 GB   0.0      0.2     0.1      0.1       0.4      0.2       0.0   1.5     23.8     44.4      8.34              6.37         8    1.042   1108K   392K
+ Int      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.1      0.1       0.0   1.0      0.0     39.0      1.89              1.32         2    0.946       0      0
+
+** Compaction Stats [default] **
+Priority    Files   Size     Score Read(GB)  Rn(GB) Rnp1(GB) Write(GB) Wnew(GB) Moved(GB) W-Amp Rd(MB/s) Wr(MB/s) Comp(sec) CompMergeCPU(sec) Comp(cnt) Avg(sec) KeyIn KeyDrop
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Low      0/0    0.00 KB   0.0      0.2     0.1      0.1       0.1     -0.0       0.0   0.0     57.1     36.9      3.47              3.24         1    3.469   1108K   392K
+High      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.2      0.2       0.0   0.0      0.0     46.0      4.02              3.13         5    0.803       0      0
+User      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.1      0.1       0.0   0.0      0.0     67.8      0.85              0.00         2    0.426       0      0
+Uptime(secs): 7.8 total, 2.0 interval
+Flush(GB): cumulative 0.237, interval 0.072
+AddFile(GB): cumulative 0.000, interval 0.000
+AddFile(Total Files): cumulative 0, interval 0
+AddFile(L0 Files): cumulative 0, interval 0
+AddFile(Keys): cumulative 0, interval 0
+Cumulative compaction: 0.36 GB write, 47.27 MB/s write, 0.19 GB read, 25.29 MB/s read, 8.3 seconds
+Interval compaction: 0.07 GB write, 36.60 MB/s write, 0.00 GB read, 0.00 MB/s read, 1.9 seconds
+Stalls(count): 0 level0_slowdown, 0 level0_slowdown_with_compaction, 0 level0_numfiles, 0 level0_numfiles_with_compaction, 0 stop for pending_compaction_bytes, 0 slowdown for pending_compaction_bytes, 0 memtable_compaction, 0 memtable_slowdown, interval 0 total count
+
+** File Read Latency Histogram By Level [default] **
+
+** DB Stats **
+Uptime(secs): 7.8 total, 2.0 interval
+Cumulative writes: 1709K writes, 1709K keys, 807K commit groups, 2.1 writes per commit group, ingest: 0.68 GB, 89.42 MB/s
+Cumulative WAL: 1709K writes, 0 syncs, 1709119.00 writes per sync, written: 0.68 GB, 89.42 MB/s
+Cumulative stall: 00:00:0.000 H:M:S, 0.0 percent
+Interval writes: 337K writes, 337K keys, 163K commit groups, 2.1 writes per commit group, ingest: 138.42 MB, 68.70 MB/s
+Interval WAL: 337K writes, 0 syncs, 337682.00 writes per sync, written: 0.14 MB, 68.70 MB/s
+Interval stall: 00:00:0.000 H:M:S, 0.0 percent
+
+
+** Compaction Stats [default] **
+Level    Files   Size     Score Read(GB)  Rn(GB) Rnp1(GB) Write(GB) Wnew(GB) Moved(GB) W-Amp Rd(MB/s) Wr(MB/s) Comp(sec) CompMergeCPU(sec) Comp(cnt) Avg(sec) KeyIn KeyDrop
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  L0      2/0   73.80 MB   0.5      0.0     0.0      0.0       0.3      0.3       0.0   1.0      0.0     48.9      5.71              3.82         8    0.713       0      0
+  L1     10/4    1.07 GB   1.1      0.3     0.3      0.0       0.1      0.1       0.0   0.4    135.2     49.2      2.42              2.80         1    2.422   1840K  1171K
+  L2     39/16   4.13 GB   0.6      0.2     0.1      0.1       0.1     -0.0       0.0   1.8     57.1     36.9      3.47              3.24         1    3.469   1108K   392K
+  L3     62/0    6.75 GB   0.2      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0      0.0      0.00              0.00         0    0.000       0      0
+ Sum    113/20  12.02 GB   0.0      0.5     0.3      0.2       0.5      0.3       0.0   1.9     45.3     45.4     11.60              9.86        10    1.160   2949K  1564K
+ Int      0/0    0.00 KB   0.0      0.3     0.3      0.0       0.2      0.1       0.0   4.2    100.4     47.8      3.26              3.48         2    1.631   1840K  1171K
+
+** Compaction Stats [default] **
+Priority    Files   Size     Score Read(GB)  Rn(GB) Rnp1(GB) Write(GB) Wnew(GB) Moved(GB) W-Amp Rd(MB/s) Wr(MB/s) Comp(sec) CompMergeCPU(sec) Comp(cnt) Avg(sec) KeyIn KeyDrop
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Low      0/0    0.00 KB   0.0      0.5     0.3      0.2       0.2      0.1       0.0   0.0     89.2     41.9      5.89              6.04         2    2.945   2949K  1564K
+High      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.2      0.2       0.0   0.0      0.0     45.6      4.86              3.82         6    0.809       0      0
+User      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.1      0.1       0.0   0.0      0.0     67.8      0.85              0.00         2    0.426       0      0
+Uptime(secs): 9.9 total, 2.0 interval
+Flush(GB): cumulative 0.273, interval 0.036
+AddFile(GB): cumulative 0.000, interval 0.000
+AddFile(Total Files): cumulative 0, interval 0
+AddFile(L0 Files): cumulative 0, interval 0
+AddFile(Keys): cumulative 0, interval 0
+Cumulative compaction: 0.51 GB write, 53.40 MB/s write, 0.51 GB read, 53.33 MB/s read, 11.6 seconds
+Interval compaction: 0.15 GB write, 77.14 MB/s write, 0.32 GB read, 161.91 MB/s read, 3.3 seconds
+Stalls(count): 0 level0_slowdown, 0 level0_slowdown_with_compaction, 0 level0_numfiles, 0 level0_numfiles_with_compaction, 0 stop for pending_compaction_bytes, 0 slowdown for pending_compaction_bytes, 0 memtable_compaction, 0 memtable_slowdown, interval 0 total count
+
+** File Read Latency Histogram By Level [default] **
+
+** DB Stats **
+Uptime(secs): 9.9 total, 2.0 interval
+Cumulative writes: 1949K writes, 1949K keys, 937K commit groups, 2.1 writes per commit group, ingest: 0.78 GB, 81.08 MB/s
+Cumulative WAL: 1949K writes, 0 syncs, 1949286.00 writes per sync, written: 0.78 GB, 81.08 MB/s
+Cumulative stall: 00:00:0.000 H:M:S, 0.0 percent
+Interval writes: 240K writes, 240K keys, 129K commit groups, 1.8 writes per commit group, ingest: 98.60 MB, 48.76 MB/s
+Interval WAL: 240K writes, 0 syncs, 240167.00 writes per sync, written: 0.10 MB, 48.76 MB/s
+Interval stall: 00:00:0.000 H:M:S, 0.0 percent
+
+
+** Compaction Stats [default] **
+Level    Files   Size     Score Read(GB)  Rn(GB) Rnp1(GB) Write(GB) Wnew(GB) Moved(GB) W-Amp Rd(MB/s) Wr(MB/s) Comp(sec) CompMergeCPU(sec) Comp(cnt) Avg(sec) KeyIn KeyDrop
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  L0      3/0   110.70 MB   0.8      0.0     0.0      0.0       0.3      0.3       0.0   1.0      0.0     47.3      6.69              4.45         9    0.743       0      0
+  L1     10/4    1.07 GB   1.1      0.3     0.3      0.0       0.1      0.1       0.0   0.4    135.2     49.2      2.42              2.80         1    2.422   1840K  1171K
+  L2     39/16   4.13 GB   0.6      0.2     0.1      0.1       0.1     -0.0       0.0   1.8     57.1     36.9      3.47              3.24         1    3.469   1108K   392K
+  L3     62/0    6.75 GB   0.2      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0      0.0      0.00              0.00         0    0.000       0      0
+ Sum    114/20  12.06 GB   0.0      0.5     0.3      0.2       0.5      0.4       0.0   1.8     41.8     44.8     12.58             10.48        11    1.144   2949K  1564K
+ Int      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.0      0.0       0.0   1.0      0.0     37.6      0.98              0.63         1    0.982       0      0
+
+** Compaction Stats [default] **
+Priority    Files   Size     Score Read(GB)  Rn(GB) Rnp1(GB) Write(GB) Wnew(GB) Moved(GB) W-Amp Rd(MB/s) Wr(MB/s) Comp(sec) CompMergeCPU(sec) Comp(cnt) Avg(sec) KeyIn KeyDrop
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Low      0/0    0.00 KB   0.0      0.5     0.3      0.2       0.2      0.1       0.0   0.0     89.2     41.9      5.89              6.04         2    2.945   2949K  1564K
+High      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.3      0.3       0.0   0.0      0.0     44.3      5.84              4.45         7    0.834       0      0
+User      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.1      0.1       0.0   0.0      0.0     67.8      0.85              0.00         2    0.426       0      0
+Uptime(secs): 11.9 total, 2.0 interval
+Flush(GB): cumulative 0.309, interval 0.036
+AddFile(GB): cumulative 0.000, interval 0.000
+AddFile(Total Files): cumulative 0, interval 0
+AddFile(L0 Files): cumulative 0, interval 0
+AddFile(Keys): cumulative 0, interval 0
+Cumulative compaction: 0.55 GB write, 47.36 MB/s write, 0.51 GB read, 44.19 MB/s read, 12.6 seconds
+Interval compaction: 0.04 GB write, 18.11 MB/s write, 0.00 GB read, 0.00 MB/s read, 1.0 seconds
+Stalls(count): 0 level0_slowdown, 0 level0_slowdown_with_compaction, 0 level0_numfiles, 0 level0_numfiles_with_compaction, 0 stop for pending_compaction_bytes, 0 slowdown for pending_compaction_bytes, 0 memtable_compaction, 0 memtable_slowdown, interval 0 total count
+
+** File Read Latency Histogram By Level [default] **
+
+** DB Stats **
+Uptime(secs): 11.9 total, 2.0 interval
+Cumulative writes: 2287K writes, 2287K keys, 1100K commit groups, 2.1 writes per commit group, ingest: 0.92 GB, 78.83 MB/s
+Cumulative WAL: 2287K writes, 0 syncs, 2287015.00 writes per sync, written: 0.92 GB, 78.83 MB/s
+Cumulative stall: 00:00:0.000 H:M:S, 0.0 percent
+Interval writes: 337K writes, 337K keys, 163K commit groups, 2.1 writes per commit group, ingest: 138.44 MB, 67.95 MB/s
+Interval WAL: 337K writes, 0 syncs, 337729.00 writes per sync, written: 0.14 MB, 67.95 MB/s
+Interval stall: 00:00:0.000 H:M:S, 0.0 percent
+
+
+** Compaction Stats [default] **
+Level    Files   Size     Score Read(GB)  Rn(GB) Rnp1(GB) Write(GB) Wnew(GB) Moved(GB) W-Amp Rd(MB/s) Wr(MB/s) Comp(sec) CompMergeCPU(sec) Comp(cnt) Avg(sec) KeyIn KeyDrop
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  L0      4/0   147.61 MB   1.0      0.0     0.0      0.0       0.3      0.3       0.0   1.0      0.0     46.5      7.59              5.06        10    0.759       0      0
+  L1     10/4    1.07 GB   1.1      0.3     0.3      0.0       0.1      0.1       0.0   0.4    135.2     49.2      2.42              2.80         1    2.422   1840K  1171K
+  L2     39/16   4.13 GB   0.6      0.2     0.1      0.1       0.1     -0.0       0.0   1.8     57.1     36.9      3.47              3.24         1    3.469   1108K   392K
+  L3     62/0    6.75 GB   0.2      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0      0.0      0.00              0.00         0    0.000       0      0
+ Sum    115/20  12.09 GB   0.0      0.5     0.3      0.2       0.6      0.4       0.0   1.7     39.0     44.5     13.48             11.10        12    1.123   2949K  1564K
+ Int      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.0      0.0       0.0   1.0      0.0     41.1      0.90              0.62         1    0.897       0      0
+
+** Compaction Stats [default] **
+Priority    Files   Size     Score Read(GB)  Rn(GB) Rnp1(GB) Write(GB) Wnew(GB) Moved(GB) W-Amp Rd(MB/s) Wr(MB/s) Comp(sec) CompMergeCPU(sec) Comp(cnt) Avg(sec) KeyIn KeyDrop
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Low      0/0    0.00 KB   0.0      0.5     0.3      0.2       0.2      0.1       0.0   0.0     89.2     41.9      5.89              6.04         2    2.945   2949K  1564K
+High      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.3      0.3       0.0   0.0      0.0     43.8      6.73              5.06         8    0.842       0      0
+User      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.1      0.1       0.0   0.0      0.0     67.8      0.85              0.00         2    0.426       0      0
+Uptime(secs): 13.9 total, 2.0 interval
+Flush(GB): cumulative 0.345, interval 0.036
+AddFile(GB): cumulative 0.000, interval 0.000
+AddFile(Total Files): cumulative 0, interval 0
+AddFile(L0 Files): cumulative 0, interval 0
+AddFile(Keys): cumulative 0, interval 0
+Cumulative compaction: 0.59 GB write, 43.14 MB/s write, 0.51 GB read, 37.78 MB/s read, 13.5 seconds
+Interval compaction: 0.04 GB write, 18.28 MB/s write, 0.00 GB read, 0.00 MB/s read, 0.9 seconds
+Stalls(count): 0 level0_slowdown, 0 level0_slowdown_with_compaction, 0 level0_numfiles, 0 level0_numfiles_with_compaction, 0 stop for pending_compaction_bytes, 0 slowdown for pending_compaction_bytes, 0 memtable_compaction, 0 memtable_slowdown, interval 0 total count
+
+** File Read Latency Histogram By Level [default] **
+
+** DB Stats **
+Uptime(secs): 13.9 total, 2.0 interval
+Cumulative writes: 2562K writes, 2562K keys, 1241K commit groups, 2.1 writes per commit group, ingest: 1.03 GB, 75.52 MB/s
+Cumulative WAL: 2562K writes, 0 syncs, 2562892.00 writes per sync, written: 1.03 GB, 75.52 MB/s
+Cumulative stall: 00:00:0.000 H:M:S, 0.0 percent
+Interval writes: 275K writes, 275K keys, 140K commit groups, 2.0 writes per commit group, ingest: 113.16 MB, 56.06 MB/s
+Interval WAL: 275K writes, 0 syncs, 275877.00 writes per sync, written: 0.11 MB, 56.06 MB/s
+Interval stall: 00:00:0.000 H:M:S, 0.0 percent
+
+
+** Compaction Stats [default] **
+Level    Files   Size     Score Read(GB)  Rn(GB) Rnp1(GB) Write(GB) Wnew(GB) Moved(GB) W-Amp Rd(MB/s) Wr(MB/s) Comp(sec) CompMergeCPU(sec) Comp(cnt) Avg(sec) KeyIn KeyDrop
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  L0      5/0   184.50 MB   1.2      0.0     0.0      0.0       0.4      0.4       0.0   1.0      0.0     46.6      8.36              5.66        11    0.760       0      0
+  L1     10/4    1.07 GB   1.1      0.3     0.3      0.0       0.1      0.1       0.0   0.4    135.2     49.2      2.42              2.80         1    2.422   1840K  1171K
+  L2     39/16   4.13 GB   0.6      0.2     0.1      0.1       0.1     -0.0       0.0   1.8     57.1     36.9      3.47              3.24         1    3.469   1108K   392K
+  L3     62/0    6.75 GB   0.2      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0      0.0      0.00              0.00         0    0.000       0      0
+ Sum    116/20  12.13 GB   0.0      0.5     0.3      0.2       0.6      0.4       0.0   1.6     36.9     44.7     14.25             11.70        13    1.096   2949K  1564K
+ Int      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.0      0.0       0.0   1.0      0.0     47.5      0.78              0.60         1    0.777       0      0
+
+** Compaction Stats [default] **
+Priority    Files   Size     Score Read(GB)  Rn(GB) Rnp1(GB) Write(GB) Wnew(GB) Moved(GB) W-Amp Rd(MB/s) Wr(MB/s) Comp(sec) CompMergeCPU(sec) Comp(cnt) Avg(sec) KeyIn KeyDrop
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Low      0/0    0.00 KB   0.0      0.5     0.3      0.2       0.2      0.1       0.0   0.0     89.2     41.9      5.89              6.04         2    2.945   2949K  1564K
+High      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.3      0.3       0.0   0.0      0.0     44.2      7.51              5.66         9    0.835       0      0
+User      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.1      0.1       0.0   0.0      0.0     67.8      0.85              0.00         2    0.426       0      0
+Uptime(secs): 15.9 total, 2.0 interval
+Flush(GB): cumulative 0.381, interval 0.036
+AddFile(GB): cumulative 0.000, interval 0.000
+AddFile(Total Files): cumulative 0, interval 0
+AddFile(L0 Files): cumulative 0, interval 0
+AddFile(Keys): cumulative 0, interval 0
+Cumulative compaction: 0.62 GB write, 39.96 MB/s write, 0.51 GB read, 32.97 MB/s read, 14.3 seconds
+Interval compaction: 0.04 GB write, 18.20 MB/s write, 0.00 GB read, 0.00 MB/s read, 0.8 seconds
+Stalls(count): 0 level0_slowdown, 0 level0_slowdown_with_compaction, 0 level0_numfiles, 0 level0_numfiles_with_compaction, 0 stop for pending_compaction_bytes, 0 slowdown for pending_compaction_bytes, 0 memtable_compaction, 0 memtable_slowdown, interval 0 total count
+
+** File Read Latency Histogram By Level [default] **
+
+** DB Stats **
+Uptime(secs): 15.9 total, 2.0 interval
+Cumulative writes: 2961K writes, 2961K keys, 1428K commit groups, 2.1 writes per commit group, ingest: 1.19 GB, 76.15 MB/s
+Cumulative WAL: 2961K writes, 0 syncs, 2961002.00 writes per sync, written: 1.19 GB, 76.15 MB/s
+Cumulative stall: 00:00:0.000 H:M:S, 0.0 percent
+Interval writes: 398K writes, 398K keys, 186K commit groups, 2.1 writes per commit group, ingest: 163.12 MB, 80.45 MB/s
+Interval WAL: 398K writes, 0 syncs, 398110.00 writes per sync, written: 0.16 MB, 80.45 MB/s
+Interval stall: 00:00:0.000 H:M:S, 0.0 percent
+
+Initializing RocksDB Options from the specified file
+Initializing RocksDB Options from command-line flags
+Keys:       20 bytes each
+Values:     400 bytes each (200 bytes after compression)
+Entries:    400000
+Prefix:    0 bytes
+Keys per prefix:    0
+RawSize:    160.2 MB (estimated)
+FileSize:   83.9 MB (estimated)
+Write rate: 0 bytes/second
+Read rate: 0 ops/second
+Compression: ZSTD
+Compression sampling rate: 0
+Memtablerep: skip_list
+Perf Level: 1
+WARNING: Assertions are enabled; benchmarks unnecessarily slow
+------------------------------------------------
+DB path: [../data/01_19/new/16_52_t1]
+updaterandom :      37.481 micros/op 212688 ops/sec;  170.4 MB/s ( updates:400000 found:400000)
+Microseconds per update:
+Count: 3200000 Average: 37.4814  StdDev: 329.54
+Min: 4  Median: 21.8194  Max: 46787
+Percentiles: P50: 21.82 P75: 30.45 P99: 130.10 P99.9: 2700.00 P99.99: 17792.83
+------------------------------------------------------
+(       3,       4 ]        1   0.000%   0.000% 
+(       4,       6 ]      783   0.024%   0.025% 
+(       6,      10 ]    23930   0.748%   0.772% 
+(      10,      15 ]   306478   9.577%  10.350% ##
+(      15,      22 ]  1302409  40.700%  51.050% ########
+(      22,      34 ]  1087952  33.998%  85.049% #######
+(      34,      51 ]   214125   6.691%  91.740% #
+(      51,      76 ]   144606   4.519%  96.259% #
+(      76,     110 ]    77929   2.435%  98.694% 
+(     110,     170 ]    29219   0.913%  99.607% 
+(     170,     250 ]     4888   0.153%  99.760% 
+(     250,     380 ]     1804   0.056%  99.816% 
+(     380,     580 ]      821   0.026%  99.842% 
+(     580,     870 ]      466   0.015%  99.857% 
+(     870,    1300 ]      537   0.017%  99.873% 
+(    1300,    1900 ]      448   0.014%  99.887% 
+(    1900,    2900 ]      505   0.016%  99.903% 
+(    2900,    4400 ]      823   0.026%  99.929% 
+(    4400,    6600 ]      412   0.013%  99.942% 
+(    6600,    9900 ]      570   0.018%  99.960% 
+(    9900,   14000 ]      736   0.023%  99.983% 
+(   14000,   22000 ]      502   0.016%  99.998% 
+(   22000,   33000 ]       39   0.001%  99.999% 
+(   33000,   50000 ]       17   0.001% 100.000% 
+
+RocksDB:    version 6.4
+Date:       Tue Jan 19 21:16:43 2021
+CPU:        12 * Intel(R) Core(TM) i7-8700 CPU @ 3.20GHz
+CPUCache:   12288 KB
+
+** Compaction Stats [default] **
+Level    Files   Size     Score Read(GB)  Rn(GB) Rnp1(GB) Write(GB) Wnew(GB) Moved(GB) W-Amp Rd(MB/s) Wr(MB/s) Comp(sec) CompMergeCPU(sec) Comp(cnt) Avg(sec) KeyIn KeyDrop
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  L0      8/8   293.55 MB   0.0      0.0     0.0      0.0       0.1      0.1       0.0   1.0      0.0     57.0      1.26              0.63         2    0.632       0      0
+  L1      9/4   967.47 MB   1.0      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0      0.0      0.00              0.00         0    0.000       0      0
+  L2     40/14   4.19 GB   0.7      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0      0.0      0.00              0.00         0    0.000       0      0
+  L3     62/0    6.75 GB   0.2      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0      0.0      0.00              0.00         0    0.000       0      0
+ Sum    119/26  12.17 GB   0.0      0.0     0.0      0.0       0.1      0.1       0.0   1.0      0.0     57.0      1.26              0.63         2    0.632       0      0
+ Int      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.0      0.0       0.0   1.0      0.0     50.3      0.73              0.63         1    0.733       0      0
+
+** Compaction Stats [default] **
+Priority    Files   Size     Score Read(GB)  Rn(GB) Rnp1(GB) Write(GB) Wnew(GB) Moved(GB) W-Amp Rd(MB/s) Wr(MB/s) Comp(sec) CompMergeCPU(sec) Comp(cnt) Avg(sec) KeyIn KeyDrop
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+High      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0     50.3      0.73              0.63         1    0.733       0      0
+User      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0     66.2      0.53              0.00         1    0.532       0      0
+Uptime(secs): 3.3 total, 2.2 interval
+Flush(GB): cumulative 0.070, interval 0.036
+AddFile(GB): cumulative 0.000, interval 0.000
+AddFile(Total Files): cumulative 0, interval 0
+AddFile(L0 Files): cumulative 0, interval 0
+AddFile(Keys): cumulative 0, interval 0
+Cumulative compaction: 0.07 GB write, 21.88 MB/s write, 0.00 GB read, 0.00 MB/s read, 1.3 seconds
+Interval compaction: 0.04 GB write, 17.11 MB/s write, 0.00 GB read, 0.00 MB/s read, 0.7 seconds
+Stalls(count): 0 level0_slowdown, 0 level0_slowdown_with_compaction, 0 level0_numfiles, 0 level0_numfiles_with_compaction, 0 stop for pending_compaction_bytes, 0 slowdown for pending_compaction_bytes, 0 memtable_compaction, 0 memtable_slowdown, interval 0 total count
+
+** File Read Latency Histogram By Level [default] **
+
+** DB Stats **
+Uptime(secs): 3.3 total, 2.2 interval
+Cumulative writes: 596K writes, 596K keys, 287K commit groups, 2.1 writes per commit group, ingest: 0.24 GB, 74.13 MB/s
+Cumulative WAL: 596K writes, 0 syncs, 596408.00 writes per sync, written: 0.24 GB, 74.13 MB/s
+Cumulative stall: 00:00:0.000 H:M:S, 0.0 percent
+Interval writes: 596K writes, 596K keys, 287K commit groups, 2.1 writes per commit group, ingest: 244.45 MB, 113.40 MB/s
+Interval WAL: 596K writes, 0 syncs, 596408.00 writes per sync, written: 0.24 MB, 113.40 MB/s
+Interval stall: 00:00:0.000 H:M:S, 0.0 percent
+
+
+** Compaction Stats [default] **
+Level    Files   Size     Score Read(GB)  Rn(GB) Rnp1(GB) Write(GB) Wnew(GB) Moved(GB) W-Amp Rd(MB/s) Wr(MB/s) Comp(sec) CompMergeCPU(sec) Comp(cnt) Avg(sec) KeyIn KeyDrop
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  L0      2/0   107.85 MB   0.5      0.3     0.0      0.3       0.2     -0.1       0.0   1.6     63.3     38.8      4.64              3.11         4    1.160   1651K  1252K
+  L1      8/3   896.71 MB   1.0      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0      0.0      0.00              0.00         0    0.000       0      0
+  L2     40/13   4.19 GB   0.7      0.2     0.1      0.1       0.1     -0.0       0.0   1.8     53.6     34.5      3.70              3.18         1    3.704   1114K   398K
+  L3     62/0    6.75 GB   0.2      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0      0.0      0.00              0.00         0    0.000       0      0
+ Sum    112/16  11.92 GB   0.0      0.5     0.1      0.4       0.3     -0.1       0.0   2.8     59.0     36.9      8.34              6.29         5    1.668   2765K  1650K
+ Int      0/0    0.00 KB   0.0      0.5     0.1      0.4       0.2     -0.2       0.0   6.4     69.5     33.3      7.08              5.65         3    2.359   2765K  1650K
+
+** Compaction Stats [default] **
+Priority    Files   Size     Score Read(GB)  Rn(GB) Rnp1(GB) Write(GB) Wnew(GB) Moved(GB) W-Amp Rd(MB/s) Wr(MB/s) Comp(sec) CompMergeCPU(sec) Comp(cnt) Avg(sec) KeyIn KeyDrop
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Low      0/0    0.00 KB   0.0      0.5     0.1      0.4       0.2     -0.2       0.0   0.0     82.3     33.2      5.98              4.99         2    2.992   2765K  1650K
+High      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.1      0.1       0.0   0.0      0.0     40.4      1.83              1.30         2    0.913       0      0
+User      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0     66.2      0.53              0.00         1    0.532       0      0
+Uptime(secs): 5.3 total, 2.0 interval
+Flush(GB): cumulative 0.107, interval 0.036
+AddFile(GB): cumulative 0.000, interval 0.000
+AddFile(Total Files): cumulative 0, interval 0
+AddFile(L0 Files): cumulative 0, interval 0
+AddFile(Keys): cumulative 0, interval 0
+Cumulative compaction: 0.30 GB write, 58.07 MB/s write, 0.48 GB read, 92.86 MB/s read, 8.3 seconds
+Interval compaction: 0.23 GB write, 117.69 MB/s write, 0.48 GB read, 245.80 MB/s read, 7.1 seconds
+Stalls(count): 0 level0_slowdown, 0 level0_slowdown_with_compaction, 0 level0_numfiles, 0 level0_numfiles_with_compaction, 0 stop for pending_compaction_bytes, 0 slowdown for pending_compaction_bytes, 0 memtable_compaction, 0 memtable_slowdown, interval 0 total count
+
+** File Read Latency Histogram By Level [default] **
+
+** DB Stats **
+Uptime(secs): 5.3 total, 2.0 interval
+Cumulative writes: 833K writes, 833K keys, 413K commit groups, 2.0 writes per commit group, ingest: 0.33 GB, 64.45 MB/s
+Cumulative WAL: 833K writes, 0 syncs, 833028.00 writes per sync, written: 0.33 GB, 64.45 MB/s
+Cumulative stall: 00:00:0.000 H:M:S, 0.0 percent
+Interval writes: 236K writes, 236K keys, 126K commit groups, 1.9 writes per commit group, ingest: 97.13 MB, 48.50 MB/s
+Interval WAL: 236K writes, 0 syncs, 236620.00 writes per sync, written: 0.09 MB, 48.50 MB/s
+Interval stall: 00:00:0.000 H:M:S, 0.0 percent
+
+
+** Compaction Stats [default] **
+Level    Files   Size     Score Read(GB)  Rn(GB) Rnp1(GB) Write(GB) Wnew(GB) Moved(GB) W-Amp Rd(MB/s) Wr(MB/s) Comp(sec) CompMergeCPU(sec) Comp(cnt) Avg(sec) KeyIn KeyDrop
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  L0      3/0   144.73 MB   0.8      0.3     0.0      0.3       0.2     -0.1       0.0   1.5     53.8     39.8      5.45              3.78         5    1.091   1651K  1252K
+  L1      8/3   896.71 MB   1.0      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0      0.0      0.00              0.00         0    0.000       0      0
+  L2     40/13   4.19 GB   0.7      0.2     0.1      0.1       0.1     -0.0       0.0   1.8     53.6     34.5      3.70              3.18         1    3.704   1114K   398K
+  L3     62/0    6.75 GB   0.2      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0      0.0      0.00              0.00         0    0.000       0      0
+ Sum    113/16  11.95 GB   0.0      0.5     0.1      0.4       0.3     -0.1       0.0   2.4     53.7     37.6      9.16              6.96         6    1.526   2765K  1650K
+ Int      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.0      0.0       0.0   1.0      0.0     45.2      0.82              0.67         1    0.815       0      0
+
+** Compaction Stats [default] **
+Priority    Files   Size     Score Read(GB)  Rn(GB) Rnp1(GB) Write(GB) Wnew(GB) Moved(GB) W-Amp Rd(MB/s) Wr(MB/s) Comp(sec) CompMergeCPU(sec) Comp(cnt) Avg(sec) KeyIn KeyDrop
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Low      0/0    0.00 KB   0.0      0.5     0.1      0.4       0.2     -0.2       0.0   0.0     82.3     33.2      5.98              4.99         2    2.992   2765K  1650K
+High      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.1      0.1       0.0   0.0      0.0     41.9      2.64              1.98         3    0.881       0      0
+User      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0     66.2      0.53              0.00         1    0.532       0      0
+Uptime(secs): 7.3 total, 2.0 interval
+Flush(GB): cumulative 0.143, interval 0.036
+AddFile(GB): cumulative 0.000, interval 0.000
+AddFile(Total Files): cumulative 0, interval 0
+AddFile(L0 Files): cumulative 0, interval 0
+AddFile(Keys): cumulative 0, interval 0
+Cumulative compaction: 0.34 GB write, 46.90 MB/s write, 0.48 GB read, 66.98 MB/s read, 9.2 seconds
+Interval compaction: 0.04 GB write, 18.00 MB/s write, 0.00 GB read, 0.00 MB/s read, 0.8 seconds
+Stalls(count): 0 level0_slowdown, 0 level0_slowdown_with_compaction, 0 level0_numfiles, 0 level0_numfiles_with_compaction, 0 stop for pending_compaction_bytes, 0 slowdown for pending_compaction_bytes, 0 memtable_compaction, 0 memtable_slowdown, interval 0 total count
+
+** File Read Latency Histogram By Level [default] **
+
+** DB Stats **
+Uptime(secs): 7.3 total, 2.0 interval
+Cumulative writes: 1271K writes, 1271K keys, 625K commit groups, 2.0 writes per commit group, ingest: 0.51 GB, 70.96 MB/s
+Cumulative WAL: 1271K writes, 0 syncs, 1271881.00 writes per sync, written: 0.51 GB, 70.96 MB/s
+Cumulative stall: 00:00:0.000 H:M:S, 0.0 percent
+Interval writes: 438K writes, 438K keys, 211K commit groups, 2.1 writes per commit group, ingest: 179.88 MB, 87.81 MB/s
+Interval WAL: 438K writes, 0 syncs, 438853.00 writes per sync, written: 0.18 MB, 87.81 MB/s
+Interval stall: 00:00:0.000 H:M:S, 0.0 percent
+
+
+** Compaction Stats [default] **
+Level    Files   Size     Score Read(GB)  Rn(GB) Rnp1(GB) Write(GB) Wnew(GB) Moved(GB) W-Amp Rd(MB/s) Wr(MB/s) Comp(sec) CompMergeCPU(sec) Comp(cnt) Avg(sec) KeyIn KeyDrop
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  L0      5/0   218.77 MB   1.2      0.3     0.0      0.3       0.3     -0.0       0.0   1.3     41.0     40.6      7.16              5.06         7    1.023   1651K  1252K
+  L1      8/3   896.71 MB   1.0      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0      0.0      0.00              0.00         0    0.000       0      0
+  L2     40/13   4.19 GB   0.7      0.2     0.1      0.1       0.1     -0.0       0.0   1.8     53.6     34.5      3.70              3.18         1    3.704   1114K   398K
+  L3     62/0    6.75 GB   0.2      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0      0.0      0.00              0.00         0    0.000       0      0
+ Sum    115/16  12.03 GB   0.0      0.5     0.1      0.4       0.4     -0.0       0.0   1.9     45.3     38.5     10.87              8.24         8    1.358   2765K  1650K
+ Int      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.1      0.1       0.0   1.0      0.0     43.4      1.71              1.28         2    0.854       0      0
+
+** Compaction Stats [default] **
+Priority    Files   Size     Score Read(GB)  Rn(GB) Rnp1(GB) Write(GB) Wnew(GB) Moved(GB) W-Amp Rd(MB/s) Wr(MB/s) Comp(sec) CompMergeCPU(sec) Comp(cnt) Avg(sec) KeyIn KeyDrop
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Low      0/0    0.00 KB   0.0      0.5     0.1      0.4       0.2     -0.2       0.0   0.0     82.3     33.2      5.98              4.99         2    2.992   2765K  1650K
+High      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.2      0.2       0.0   0.0      0.0     42.5      4.35              3.25         5    0.870       0      0
+User      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0     66.2      0.53              0.00         1    0.532       0      0
+Uptime(secs): 9.4 total, 2.0 interval
+Flush(GB): cumulative 0.215, interval 0.072
+AddFile(GB): cumulative 0.000, interval 0.000
+AddFile(Total Files): cumulative 0, interval 0
+AddFile(L0 Files): cumulative 0, interval 0
+AddFile(Keys): cumulative 0, interval 0
+Cumulative compaction: 0.41 GB write, 44.73 MB/s write, 0.48 GB read, 52.58 MB/s read, 10.9 seconds
+Interval compaction: 0.07 GB write, 36.79 MB/s write, 0.00 GB read, 0.00 MB/s read, 1.7 seconds
+Stalls(count): 0 level0_slowdown, 0 level0_slowdown_with_compaction, 0 level0_numfiles, 0 level0_numfiles_with_compaction, 0 stop for pending_compaction_bytes, 0 slowdown for pending_compaction_bytes, 0 memtable_compaction, 0 memtable_slowdown, interval 0 total count
+
+** File Read Latency Histogram By Level [default] **
+
+** DB Stats **
+Uptime(secs): 9.4 total, 2.0 interval
+Cumulative writes: 1739K writes, 1739K keys, 850K commit groups, 2.0 writes per commit group, ingest: 0.70 GB, 76.18 MB/s
+Cumulative WAL: 1739K writes, 0 syncs, 1739641.00 writes per sync, written: 0.70 GB, 76.18 MB/s
+Cumulative stall: 00:00:0.000 H:M:S, 0.0 percent
+Interval writes: 467K writes, 467K keys, 224K commit groups, 2.1 writes per commit group, ingest: 191.71 MB, 95.25 MB/s
+Interval WAL: 467K writes, 0 syncs, 467760.00 writes per sync, written: 0.19 MB, 95.25 MB/s
+Interval stall: 00:00:0.000 H:M:S, 0.0 percent
+
+
+** Compaction Stats [default] **
+Level    Files   Size     Score Read(GB)  Rn(GB) Rnp1(GB) Write(GB) Wnew(GB) Moved(GB) W-Amp Rd(MB/s) Wr(MB/s) Comp(sec) CompMergeCPU(sec) Comp(cnt) Avg(sec) KeyIn KeyDrop
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  L0      6/0   255.75 MB   1.5      0.3     0.0      0.3       0.3      0.0       0.0   1.3     36.9     41.2      7.96              5.70         8    0.995   1651K  1252K
+  L1      8/3   896.71 MB   1.0      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0      0.0      0.00              0.00         0    0.000       0      0
+  L2     40/13   4.19 GB   0.7      0.2     0.1      0.1       0.1     -0.0       0.0   1.8     53.6     34.5      3.70              3.18         1    3.704   1114K   398K
+  L3     62/0    6.75 GB   0.2      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0      0.0      0.00              0.00         0    0.000       0      0
+ Sum    116/16  12.06 GB   0.0      0.5     0.1      0.4       0.4      0.0       0.0   1.8     42.2     39.1     11.66              8.88         9    1.296   2765K  1650K
+ Int      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.0      0.0       0.0   1.0      0.0     46.3      0.80              0.64         1    0.799       0      0
+
+** Compaction Stats [default] **
+Priority    Files   Size     Score Read(GB)  Rn(GB) Rnp1(GB) Write(GB) Wnew(GB) Moved(GB) W-Amp Rd(MB/s) Wr(MB/s) Comp(sec) CompMergeCPU(sec) Comp(cnt) Avg(sec) KeyIn KeyDrop
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Low      0/0    0.00 KB   0.0      0.5     0.1      0.4       0.2     -0.2       0.0   0.0     82.3     33.2      5.98              4.99         2    2.992   2765K  1650K
+High      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.2      0.2       0.0   0.0      0.0     43.1      5.15              3.90         6    0.858       0      0
+User      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0     66.2      0.53              0.00         1    0.532       0      0
+Uptime(secs): 11.4 total, 2.0 interval
+Flush(GB): cumulative 0.251, interval 0.036
+AddFile(GB): cumulative 0.000, interval 0.000
+AddFile(Total Files): cumulative 0, interval 0
+AddFile(L0 Files): cumulative 0, interval 0
+AddFile(Keys): cumulative 0, interval 0
+Cumulative compaction: 0.45 GB write, 40.06 MB/s write, 0.48 GB read, 43.27 MB/s read, 11.7 seconds
+Interval compaction: 0.04 GB write, 18.36 MB/s write, 0.00 GB read, 0.00 MB/s read, 0.8 seconds
+Stalls(count): 0 level0_slowdown, 0 level0_slowdown_with_compaction, 0 level0_numfiles, 0 level0_numfiles_with_compaction, 0 stop for pending_compaction_bytes, 0 slowdown for pending_compaction_bytes, 0 memtable_compaction, 0 memtable_slowdown, interval 0 total count
+
+** File Read Latency Histogram By Level [default] **
+
+** DB Stats **
+Uptime(secs): 11.4 total, 2.0 interval
+Cumulative writes: 2128K writes, 2128K keys, 1044K commit groups, 2.0 writes per commit group, ingest: 0.85 GB, 76.73 MB/s
+Cumulative WAL: 2128K writes, 0 syncs, 2128908.00 writes per sync, written: 0.85 GB, 76.73 MB/s
+Cumulative stall: 00:00:0.000 H:M:S, 0.0 percent
+Interval writes: 389K writes, 389K keys, 194K commit groups, 2.0 writes per commit group, ingest: 159.63 MB, 79.26 MB/s
+Interval WAL: 389K writes, 0 syncs, 389267.00 writes per sync, written: 0.16 MB, 79.26 MB/s
+Interval stall: 00:00:0.000 H:M:S, 0.0 percent
+
+
+** Compaction Stats [default] **
+Level    Files   Size     Score Read(GB)  Rn(GB) Rnp1(GB) Write(GB) Wnew(GB) Moved(GB) W-Amp Rd(MB/s) Wr(MB/s) Comp(sec) CompMergeCPU(sec) Comp(cnt) Avg(sec) KeyIn KeyDrop
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  L0      8/8   329.77 MB   0.0      0.3     0.0      0.3       0.4      0.1       0.0   1.2     30.4     41.7      9.65              7.00        10    0.965   1651K  1252K
+  L1      8/4   896.71 MB   0.9      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0      0.0      0.00              0.00         0    0.000       0      0
+  L2     40/13   4.19 GB   0.7      0.2     0.1      0.1       0.1     -0.0       0.0   1.8     53.6     34.5      3.70              3.18         1    3.704   1114K   398K
+  L3     62/0    6.75 GB   0.2      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0      0.0      0.00              0.00         0    0.000       0      0
+ Sum    118/25  12.13 GB   0.0      0.5     0.1      0.4       0.5      0.1       0.0   1.6     36.9     39.7     13.35             10.18        11    1.214   2765K  1650K
+ Int      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.1      0.1       0.0   1.0      0.0     43.9      1.69              1.30         2    0.844       0      0
+
+** Compaction Stats [default] **
+Priority    Files   Size     Score Read(GB)  Rn(GB) Rnp1(GB) Write(GB) Wnew(GB) Moved(GB) W-Amp Rd(MB/s) Wr(MB/s) Comp(sec) CompMergeCPU(sec) Comp(cnt) Avg(sec) KeyIn KeyDrop
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Low      0/0    0.00 KB   0.0      0.5     0.1      0.4       0.2     -0.2       0.0   0.0     82.3     33.2      5.98              4.99         2    2.992   2765K  1650K
+High      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.3      0.3       0.0   0.0      0.0     43.3      6.84              5.20         8    0.854       0      0
+User      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0     66.2      0.53              0.00         1    0.532       0      0
+Uptime(secs): 13.4 total, 2.0 interval
+Flush(GB): cumulative 0.323, interval 0.072
+AddFile(GB): cumulative 0.000, interval 0.000
+AddFile(Total Files): cumulative 0, interval 0
+AddFile(L0 Files): cumulative 0, interval 0
+AddFile(Keys): cumulative 0, interval 0
+Cumulative compaction: 0.52 GB write, 39.54 MB/s write, 0.48 GB read, 36.74 MB/s read, 13.4 seconds
+Interval compaction: 0.07 GB write, 36.62 MB/s write, 0.00 GB read, 0.00 MB/s read, 1.7 seconds
+Stalls(count): 0 level0_slowdown, 0 level0_slowdown_with_compaction, 0 level0_numfiles, 0 level0_numfiles_with_compaction, 0 stop for pending_compaction_bytes, 0 slowdown for pending_compaction_bytes, 0 memtable_compaction, 0 memtable_slowdown, interval 0 total count
+
+** File Read Latency Histogram By Level [default] **
+
+** DB Stats **
+Uptime(secs): 13.4 total, 2.0 interval
+Cumulative writes: 2693K writes, 2693K keys, 1304K commit groups, 2.1 writes per commit group, ingest: 1.08 GB, 82.40 MB/s
+Cumulative WAL: 2693K writes, 0 syncs, 2693191.00 writes per sync, written: 1.08 GB, 82.40 MB/s
+Cumulative stall: 00:00:0.000 H:M:S, 0.0 percent
+Interval writes: 564K writes, 564K keys, 260K commit groups, 2.2 writes per commit group, ingest: 231.15 MB, 114.36 MB/s
+Interval WAL: 564K writes, 0 syncs, 564283.00 writes per sync, written: 0.23 MB, 114.36 MB/s
+Interval stall: 00:00:0.000 H:M:S, 0.0 percent
+
+
+** Compaction Stats [default] **
+Level    Files   Size     Score Read(GB)  Rn(GB) Rnp1(GB) Write(GB) Wnew(GB) Moved(GB) W-Amp Rd(MB/s) Wr(MB/s) Comp(sec) CompMergeCPU(sec) Comp(cnt) Avg(sec) KeyIn KeyDrop
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  L0      9/8   366.86 MB   0.2      0.3     0.0      0.3       0.4      0.1       0.0   1.2     27.3     40.9     10.74              7.67        11    0.977   1651K  1252K
+  L1      8/4   896.71 MB   0.9      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0      0.0      0.00              0.00         0    0.000       0      0
+  L2     40/13   4.19 GB   0.7      0.2     0.1      0.1       0.1     -0.0       0.0   1.8     53.6     34.5      3.70              3.18         1    3.704   1114K   398K
+  L3     62/0    6.75 GB   0.2      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0      0.0      0.00              0.00         0    0.000       0      0
+ Sum    119/25  12.17 GB   0.0      0.5     0.1      0.4       0.6      0.1       0.0   1.5     34.1     39.2     14.45             10.85        12    1.204   2765K  1650K
+ Int      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.0      0.0       0.0   1.0      0.0     33.9      1.10              0.67         1    1.095       0      0
+
+** Compaction Stats [default] **
+Priority    Files   Size     Score Read(GB)  Rn(GB) Rnp1(GB) Write(GB) Wnew(GB) Moved(GB) W-Amp Rd(MB/s) Wr(MB/s) Comp(sec) CompMergeCPU(sec) Comp(cnt) Avg(sec) KeyIn KeyDrop
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Low      0/0    0.00 KB   0.0      0.5     0.1      0.4       0.2     -0.2       0.0   0.0     82.3     33.2      5.98              4.99         2    2.992   2765K  1650K
+High      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.3      0.3       0.0   0.0      0.0     42.0      7.93              5.86         9    0.881       0      0
+User      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0     66.2      0.53              0.00         1    0.532       0      0
+Uptime(secs): 15.4 total, 2.0 interval
+Flush(GB): cumulative 0.359, interval 0.036
+AddFile(GB): cumulative 0.000, interval 0.000
+AddFile(Total Files): cumulative 0, interval 0
+AddFile(L0 Files): cumulative 0, interval 0
+AddFile(Keys): cumulative 0, interval 0
+Cumulative compaction: 0.55 GB write, 36.78 MB/s write, 0.48 GB read, 31.94 MB/s read, 14.4 seconds
+Interval compaction: 0.04 GB write, 18.43 MB/s write, 0.00 GB read, 0.00 MB/s read, 1.1 seconds
+Stalls(count): 0 level0_slowdown, 0 level0_slowdown_with_compaction, 0 level0_numfiles, 0 level0_numfiles_with_compaction, 0 stop for pending_compaction_bytes, 0 slowdown for pending_compaction_bytes, 0 memtable_compaction, 0 memtable_slowdown, interval 0 total count
+
+** File Read Latency Histogram By Level [default] **
+
+** DB Stats **
+Uptime(secs): 15.4 total, 2.0 interval
+Cumulative writes: 3182K writes, 3182K keys, 1532K commit groups, 2.1 writes per commit group, ingest: 1.27 GB, 84.65 MB/s
+Cumulative WAL: 3182K writes, 0 syncs, 3182494.00 writes per sync, written: 1.27 GB, 84.65 MB/s
+Cumulative stall: 00:00:0.000 H:M:S, 0.0 percent
+Interval writes: 489K writes, 489K keys, 227K commit groups, 2.1 writes per commit group, ingest: 200.46 MB, 99.60 MB/s
+Interval WAL: 489K writes, 0 syncs, 489303.00 writes per sync, written: 0.20 MB, 99.60 MB/s
+Interval stall: 00:00:0.000 H:M:S, 0.0 percent
+
+Initializing RocksDB Options from the specified file
+Initializing RocksDB Options from command-line flags
+Keys:       20 bytes each
+Values:     400 bytes each (200 bytes after compression)
+Entries:    400000
+Prefix:    0 bytes
+Keys per prefix:    0
+RawSize:    160.2 MB (estimated)
+FileSize:   83.9 MB (estimated)
+Write rate: 0 bytes/second
+Read rate: 0 ops/second
+Compression: ZSTD
+Compression sampling rate: 0
+Memtablerep: skip_list
+Perf Level: 1
+WARNING: Assertions are enabled; benchmarks unnecessarily slow
+------------------------------------------------
+DB path: [../data/01_19/new/16_52_t1]
+updaterandom :      35.677 micros/op 223389 ops/sec;  179.0 MB/s ( updates:400000 found:400000)
+Microseconds per update:
+Count: 3200000 Average: 35.6780  StdDev: 274.20
+Min: 5  Median: 22.2493  Max: 37762
+Percentiles: P50: 22.25 P75: 31.00 P99: 129.26 P99.9: 1179.60 P99.99: 13847.20
+------------------------------------------------------
+(       4,       6 ]      744   0.023%   0.023% 
+(       6,      10 ]    20071   0.627%   0.650% 
+(      10,      15 ]   283336   8.854%   9.505% ##
+(      15,      22 ]  1273057  39.783%  49.288% ########
+(      22,      34 ]  1097219  34.288%  83.576% #######
+(      34,      51 ]   222343   6.948%  90.524% #
+(      51,      76 ]   175114   5.472%  95.996% #
+(      76,     110 ]    86585   2.706%  98.702% #
+(     110,     170 ]    29691   0.928%  99.630% 
+(     170,     250 ]     5071   0.158%  99.788% 
+(     250,     380 ]     1666   0.052%  99.841% 
+(     380,     580 ]     1009   0.032%  99.872% 
+(     580,     870 ]      498   0.016%  99.888% 
+(     870,    1300 ]      550   0.017%  99.905% 
+(    1300,    1900 ]      292   0.009%  99.914% 
+(    1900,    2900 ]      533   0.017%  99.931% 
+(    2900,    4400 ]      610   0.019%  99.950% 
+(    4400,    6600 ]      296   0.009%  99.959% 
+(    6600,    9900 ]      375   0.012%  99.971% 
+(    9900,   14000 ]      644   0.020%  99.991% 
+(   14000,   22000 ]      260   0.008%  99.999% 
+(   22000,   33000 ]       28   0.001% 100.000% 
+(   33000,   50000 ]        8   0.000% 100.000% 
+
+RocksDB:    version 6.4
+Date:       Tue Jan 19 21:17:09 2021
+CPU:        12 * Intel(R) Core(TM) i7-8700 CPU @ 3.20GHz
+CPUCache:   12288 KB
+
+** Compaction Stats [default] **
+Level    Files   Size     Score Read(GB)  Rn(GB) Rnp1(GB) Write(GB) Wnew(GB) Moved(GB) W-Amp Rd(MB/s) Wr(MB/s) Comp(sec) CompMergeCPU(sec) Comp(cnt) Avg(sec) KeyIn KeyDrop
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  L0     11/11  439.03 MB   0.0      0.0     0.0      0.0       0.0      0.0       0.0   1.0      0.0     65.5      0.54              0.00         1    0.536       0      0
+  L1      8/4   896.71 MB   0.9      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0      0.0      0.00              0.00         0    0.000       0      0
+  L2     40/13   4.19 GB   0.7      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0      0.0      0.00              0.00         0    0.000       0      0
+  L3     62/0    6.75 GB   0.2      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0      0.0      0.00              0.00         0    0.000       0      0
+ Sum    121/28  12.24 GB   0.0      0.0     0.0      0.0       0.0      0.0       0.0   1.0      0.0     65.5      0.54              0.00         1    0.536       0      0
+ Int      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0      0.0      0.00              0.00         0    0.000       0      0
+
+** Compaction Stats [default] **
+Priority    Files   Size     Score Read(GB)  Rn(GB) Rnp1(GB) Write(GB) Wnew(GB) Moved(GB) W-Amp Rd(MB/s) Wr(MB/s) Comp(sec) CompMergeCPU(sec) Comp(cnt) Avg(sec) KeyIn KeyDrop
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+User      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0     65.5      0.54              0.00         1    0.536       0      0
+Uptime(secs): 3.2 total, 2.0 interval
+Flush(GB): cumulative 0.034, interval 0.000
+AddFile(GB): cumulative 0.000, interval 0.000
+AddFile(Total Files): cumulative 0, interval 0
+AddFile(L0 Files): cumulative 0, interval 0
+AddFile(Keys): cumulative 0, interval 0
+Cumulative compaction: 0.03 GB write, 11.05 MB/s write, 0.00 GB read, 0.00 MB/s read, 0.5 seconds
+Interval compaction: 0.00 GB write, 0.00 MB/s write, 0.00 GB read, 0.00 MB/s read, 0.0 seconds
+Stalls(count): 0 level0_slowdown, 0 level0_slowdown_with_compaction, 0 level0_numfiles, 0 level0_numfiles_with_compaction, 0 stop for pending_compaction_bytes, 0 slowdown for pending_compaction_bytes, 0 memtable_compaction, 0 memtable_slowdown, interval 0 total count
+
+** File Read Latency Histogram By Level [default] **
+
+** DB Stats **
+Uptime(secs): 3.2 total, 2.0 interval
+Cumulative writes: 269K writes, 269K keys, 146K commit groups, 1.8 writes per commit group, ingest: 0.11 GB, 34.90 MB/s
+Cumulative WAL: 269K writes, 0 syncs, 269995.00 writes per sync, written: 0.11 GB, 34.90 MB/s
+Cumulative stall: 00:00:0.000 H:M:S, 0.0 percent
+Interval writes: 269K writes, 269K keys, 146K commit groups, 1.8 writes per commit group, ingest: 110.86 MB, 54.61 MB/s
+Interval WAL: 269K writes, 0 syncs, 269995.00 writes per sync, written: 0.11 MB, 54.61 MB/s
+Interval stall: 00:00:0.000 H:M:S, 0.0 percent
+
+
+** Compaction Stats [default] **
+Level    Files   Size     Score Read(GB)  Rn(GB) Rnp1(GB) Write(GB) Wnew(GB) Moved(GB) W-Amp Rd(MB/s) Wr(MB/s) Comp(sec) CompMergeCPU(sec) Comp(cnt) Avg(sec) KeyIn KeyDrop
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  L0      1/0   36.85 MB   0.2      0.0     0.0      0.0       0.1      0.1       0.0   1.0      0.0     52.9      1.36              0.65         2    0.679       0      0
+  L1      9/3   968.04 MB   1.1      0.5     0.4      0.0       0.1      0.1       0.0   0.3    122.8     30.1      3.97              4.34         1    3.968   2736K  2065K
+  L2     40/13   4.19 GB   0.7      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0      0.0      0.00              0.00         0    0.000       0      0
+  L3     62/0    6.75 GB   0.2      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0      0.0      0.00              0.00         0    0.000       0      0
+ Sum    112/16  11.92 GB   0.0      0.5     0.4      0.0       0.2      0.1       0.0   2.7     91.5     36.0      5.33              4.99         3    1.776   2736K  2065K
+ Int      0/0    0.00 KB   0.0      0.5     0.4      0.0       0.2      0.1       0.0   4.2    101.7     32.7      4.79              4.99         2    2.396   2736K  2065K
+
+** Compaction Stats [default] **
+Priority    Files   Size     Score Read(GB)  Rn(GB) Rnp1(GB) Write(GB) Wnew(GB) Moved(GB) W-Amp Rd(MB/s) Wr(MB/s) Comp(sec) CompMergeCPU(sec) Comp(cnt) Avg(sec) KeyIn KeyDrop
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Low      0/0    0.00 KB   0.0      0.5     0.4      0.0       0.1      0.1       0.0   0.0    122.8     30.1      3.97              4.34         1    3.968   2736K  2065K
+High      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0     44.8      0.82              0.65         1    0.823       0      0
+User      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0     65.5      0.54              0.00         1    0.536       0      0
+Uptime(secs): 5.2 total, 2.0 interval
+Flush(GB): cumulative 0.070, interval 0.036
+AddFile(GB): cumulative 0.000, interval 0.000
+AddFile(Total Files): cumulative 0, interval 0
+AddFile(L0 Files): cumulative 0, interval 0
+AddFile(Keys): cumulative 0, interval 0
+Cumulative compaction: 0.19 GB write, 36.83 MB/s write, 0.48 GB read, 93.70 MB/s read, 5.3 seconds
+Interval compaction: 0.15 GB write, 77.30 MB/s write, 0.48 GB read, 240.77 MB/s read, 4.8 seconds
+Stalls(count): 0 level0_slowdown, 0 level0_slowdown_with_compaction, 0 level0_numfiles, 0 level0_numfiles_with_compaction, 0 stop for pending_compaction_bytes, 0 slowdown for pending_compaction_bytes, 0 memtable_compaction, 0 memtable_slowdown, interval 0 total count
+
+** File Read Latency Histogram By Level [default] **
+
+** DB Stats **
+Uptime(secs): 5.2 total, 2.0 interval
+Cumulative writes: 573K writes, 573K keys, 298K commit groups, 1.9 writes per commit group, ingest: 0.23 GB, 45.25 MB/s
+Cumulative WAL: 573K writes, 0 syncs, 573519.00 writes per sync, written: 0.23 GB, 45.25 MB/s
+Cumulative stall: 00:00:0.000 H:M:S, 0.0 percent
+Interval writes: 303K writes, 303K keys, 151K commit groups, 2.0 writes per commit group, ingest: 124.47 MB, 61.50 MB/s
+Interval WAL: 303K writes, 0 syncs, 303524.00 writes per sync, written: 0.12 MB, 61.50 MB/s
+Interval stall: 00:00:0.000 H:M:S, 0.0 percent
+
+
+** Compaction Stats [default] **
+Level    Files   Size     Score Read(GB)  Rn(GB) Rnp1(GB) Write(GB) Wnew(GB) Moved(GB) W-Amp Rd(MB/s) Wr(MB/s) Comp(sec) CompMergeCPU(sec) Comp(cnt) Avg(sec) KeyIn KeyDrop
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  L0      2/0   73.90 MB   0.5      0.0     0.0      0.0       0.1      0.1       0.0   1.0      0.0     46.2      2.36              1.37         3    0.787       0      0
+  L1      9/3   968.04 MB   1.1      0.5     0.4      0.0       0.1      0.1       0.0   0.3    122.8     30.1      3.97              4.34         1    3.968   2736K  2065K
+  L2     40/13   4.19 GB   0.7      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0      0.0      0.00              0.00         0    0.000       0      0
+  L3     62/0    6.75 GB   0.2      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0      0.0      0.00              0.00         0    0.000       0      0
+ Sum    113/16  11.95 GB   0.0      0.5     0.4      0.0       0.2      0.2       0.0   2.1     77.0     36.1      6.33              5.71         4    1.583   2736K  2065K
+ Int      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.0      0.0       0.0   1.0      0.0     36.9      1.00              0.72         1    1.003       0      0
+
+** Compaction Stats [default] **
+Priority    Files   Size     Score Read(GB)  Rn(GB) Rnp1(GB) Write(GB) Wnew(GB) Moved(GB) W-Amp Rd(MB/s) Wr(MB/s) Comp(sec) CompMergeCPU(sec) Comp(cnt) Avg(sec) KeyIn KeyDrop
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Low      0/0    0.00 KB   0.0      0.5     0.4      0.0       0.1      0.1       0.0   0.0    122.8     30.1      3.97              4.34         1    3.968   2736K  2065K
+High      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.1      0.1       0.0   0.0      0.0     40.5      1.83              1.37         2    0.913       0      0
+User      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0     65.5      0.54              0.00         1    0.536       0      0
+Uptime(secs): 7.2 total, 2.0 interval
+Flush(GB): cumulative 0.106, interval 0.036
+AddFile(GB): cumulative 0.000, interval 0.000
+AddFile(Total Files): cumulative 0, interval 0
+AddFile(L0 Files): cumulative 0, interval 0
+AddFile(Keys): cumulative 0, interval 0
+Cumulative compaction: 0.22 GB write, 31.73 MB/s write, 0.48 GB read, 67.64 MB/s read, 6.3 seconds
+Interval compaction: 0.04 GB write, 18.49 MB/s write, 0.00 GB read, 0.00 MB/s read, 1.0 seconds
+Stalls(count): 0 level0_slowdown, 0 level0_slowdown_with_compaction, 0 level0_numfiles, 0 level0_numfiles_with_compaction, 0 stop for pending_compaction_bytes, 0 slowdown for pending_compaction_bytes, 0 memtable_compaction, 0 memtable_slowdown, interval 0 total count
+
+** File Read Latency Histogram By Level [default] **
+
+** DB Stats **
+Uptime(secs): 7.2 total, 2.0 interval
+Cumulative writes: 987K writes, 987K keys, 496K commit groups, 2.0 writes per commit group, ingest: 0.40 GB, 56.22 MB/s
+Cumulative WAL: 987K writes, 0 syncs, 987559.00 writes per sync, written: 0.40 GB, 56.22 MB/s
+Cumulative stall: 00:00:0.000 H:M:S, 0.0 percent
+Interval writes: 414K writes, 414K keys, 197K commit groups, 2.1 writes per commit group, ingest: 169.68 MB, 84.69 MB/s
+Interval WAL: 414K writes, 0 syncs, 414040.00 writes per sync, written: 0.17 MB, 84.69 MB/s
+Interval stall: 00:00:0.000 H:M:S, 0.0 percent
+
+
+** Compaction Stats [default] **
+Level    Files   Size     Score Read(GB)  Rn(GB) Rnp1(GB) Write(GB) Wnew(GB) Moved(GB) W-Amp Rd(MB/s) Wr(MB/s) Comp(sec) CompMergeCPU(sec) Comp(cnt) Avg(sec) KeyIn KeyDrop
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  L0      4/0   147.92 MB   1.0      0.0     0.0      0.0       0.2      0.2       0.0   1.0      0.0     46.6      3.92              2.63         5    0.785       0      0
+  L1      9/3   968.04 MB   1.1      0.5     0.4      0.0       0.1      0.1       0.0   0.3    122.8     30.1      3.97              4.34         1    3.968   2736K  2065K
+  L2     40/13   4.19 GB   0.7      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0      0.0      0.00              0.00         0    0.000       0      0
+  L3     62/0    6.75 GB   0.2      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0      0.0      0.00              0.00         0    0.000       0      0
+ Sum    115/16  12.03 GB   0.0      0.5     0.4      0.0       0.3      0.2       0.0   1.7     61.7     38.3      7.89              6.97         6    1.316   2736K  2065K
+ Int      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.1      0.1       0.0   1.0      0.0     47.4      1.56              1.26         2    0.781       0      0
+
+** Compaction Stats [default] **
+Priority    Files   Size     Score Read(GB)  Rn(GB) Rnp1(GB) Write(GB) Wnew(GB) Moved(GB) W-Amp Rd(MB/s) Wr(MB/s) Comp(sec) CompMergeCPU(sec) Comp(cnt) Avg(sec) KeyIn KeyDrop
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Low      0/0    0.00 KB   0.0      0.5     0.4      0.0       0.1      0.1       0.0   0.0    122.8     30.1      3.97              4.34         1    3.968   2736K  2065K
+High      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.1      0.1       0.0   0.0      0.0     43.7      3.39              2.63         4    0.847       0      0
+User      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0     65.5      0.54              0.00         1    0.536       0      0
+Uptime(secs): 9.2 total, 2.0 interval
+Flush(GB): cumulative 0.179, interval 0.072
+AddFile(GB): cumulative 0.000, interval 0.000
+AddFile(Total Files): cumulative 0, interval 0
+AddFile(L0 Files): cumulative 0, interval 0
+AddFile(Keys): cumulative 0, interval 0
+Cumulative compaction: 0.30 GB write, 32.81 MB/s write, 0.48 GB read, 52.82 MB/s read, 7.9 seconds
+Interval compaction: 0.07 GB write, 36.63 MB/s write, 0.00 GB read, 0.00 MB/s read, 1.6 seconds
+Stalls(count): 0 level0_slowdown, 0 level0_slowdown_with_compaction, 0 level0_numfiles, 0 level0_numfiles_with_compaction, 0 stop for pending_compaction_bytes, 0 slowdown for pending_compaction_bytes, 0 memtable_compaction, 0 memtable_slowdown, interval 0 total count
+
+** File Read Latency Histogram By Level [default] **
+
+** DB Stats **
+Uptime(secs): 9.2 total, 2.0 interval
+Cumulative writes: 1495K writes, 1495K keys, 728K commit groups, 2.1 writes per commit group, ingest: 0.60 GB, 66.44 MB/s
+Cumulative WAL: 1495K writes, 0 syncs, 1495086.00 writes per sync, written: 0.60 GB, 66.44 MB/s
+Cumulative stall: 00:00:0.000 H:M:S, 0.0 percent
+Interval writes: 507K writes, 507K keys, 232K commit groups, 2.2 writes per commit group, ingest: 207.89 MB, 102.87 MB/s
+Interval WAL: 507K writes, 0 syncs, 507527.00 writes per sync, written: 0.20 MB, 102.87 MB/s
+Interval stall: 00:00:0.000 H:M:S, 0.0 percent
+
+
+** Compaction Stats [default] **
+Level    Files   Size     Score Read(GB)  Rn(GB) Rnp1(GB) Write(GB) Wnew(GB) Moved(GB) W-Amp Rd(MB/s) Wr(MB/s) Comp(sec) CompMergeCPU(sec) Comp(cnt) Avg(sec) KeyIn KeyDrop
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  L0      5/0   185.05 MB   1.2      0.0     0.0      0.0       0.2      0.2       0.0   1.0      0.0     47.0      4.68              3.29         6    0.780       0      0
+  L1      9/3   968.04 MB   1.1      0.5     0.4      0.0       0.1      0.1       0.0   0.3    122.8     30.1      3.97              4.34         1    3.968   2736K  2065K
+  L2     40/13   4.19 GB   0.7      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0      0.0      0.00              0.00         0    0.000       0      0
+  L3     62/0    6.75 GB   0.2      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0      0.0      0.00              0.00         0    0.000       0      0
+ Sum    116/16  12.06 GB   0.0      0.5     0.4      0.0       0.3      0.3       0.0   1.5     56.3     39.3      8.65              7.62         7    1.236   2736K  2065K
+ Int      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.0      0.0       0.0   1.0      0.0     49.0      0.76              0.66         1    0.757       0      0
+
+** Compaction Stats [default] **
+Priority    Files   Size     Score Read(GB)  Rn(GB) Rnp1(GB) Write(GB) Wnew(GB) Moved(GB) W-Amp Rd(MB/s) Wr(MB/s) Comp(sec) CompMergeCPU(sec) Comp(cnt) Avg(sec) KeyIn KeyDrop
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Low      0/0    0.00 KB   0.0      0.5     0.4      0.0       0.1      0.1       0.0   0.0    122.8     30.1      3.97              4.34         1    3.968   2736K  2065K
+High      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.2      0.2       0.0   0.0      0.0     44.6      4.15              3.29         5    0.829       0      0
+User      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0     65.5      0.54              0.00         1    0.536       0      0
+Uptime(secs): 11.2 total, 2.0 interval
+Flush(GB): cumulative 0.215, interval 0.036
+AddFile(GB): cumulative 0.000, interval 0.000
+AddFile(Total Files): cumulative 0, interval 0
+AddFile(L0 Files): cumulative 0, interval 0
+AddFile(Keys): cumulative 0, interval 0
+Cumulative compaction: 0.33 GB write, 30.24 MB/s write, 0.48 GB read, 43.36 MB/s read, 8.7 seconds
+Interval compaction: 0.04 GB write, 18.45 MB/s write, 0.00 GB read, 0.00 MB/s read, 0.8 seconds
+Stalls(count): 0 level0_slowdown, 0 level0_slowdown_with_compaction, 0 level0_numfiles, 0 level0_numfiles_with_compaction, 0 stop for pending_compaction_bytes, 0 slowdown for pending_compaction_bytes, 0 memtable_compaction, 0 memtable_slowdown, interval 0 total count
+
+** File Read Latency Histogram By Level [default] **
+
+** DB Stats **
+Uptime(secs): 11.2 total, 2.0 interval
+Cumulative writes: 1905K writes, 1905K keys, 927K commit groups, 2.1 writes per commit group, ingest: 0.76 GB, 69.51 MB/s
+Cumulative WAL: 1905K writes, 0 syncs, 1905529.00 writes per sync, written: 0.76 GB, 69.51 MB/s
+Cumulative stall: 00:00:0.000 H:M:S, 0.0 percent
+Interval writes: 410K writes, 410K keys, 198K commit groups, 2.1 writes per commit group, ingest: 168.24 MB, 83.61 MB/s
+Interval WAL: 410K writes, 0 syncs, 410443.00 writes per sync, written: 0.16 MB, 83.61 MB/s
+Interval stall: 00:00:0.000 H:M:S, 0.0 percent
+
+
+** Compaction Stats [default] **
+Level    Files   Size     Score Read(GB)  Rn(GB) Rnp1(GB) Write(GB) Wnew(GB) Moved(GB) W-Amp Rd(MB/s) Wr(MB/s) Comp(sec) CompMergeCPU(sec) Comp(cnt) Avg(sec) KeyIn KeyDrop
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  L0      7/0   259.13 MB   1.8      0.0     0.0      0.0       0.3      0.3       0.0   1.0      0.0     45.5      6.46              4.67         8    0.808       0      0
+  L1      9/3   968.04 MB   1.1      0.5     0.4      0.0       0.1      0.1       0.0   0.3    122.8     30.1      3.97              4.34         1    3.968   2736K  2065K
+  L2     40/13   4.19 GB   0.7      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0      0.0      0.00              0.00         0    0.000       0      0
+  L3     62/0    6.75 GB   0.2      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0      0.0      0.00              0.00         0    0.000       0      0
+ Sum    118/16  12.13 GB   0.0      0.5     0.4      0.0       0.4      0.4       0.0   1.4     46.7     39.7     10.43              9.01         9    1.159   2736K  2065K
+ Int      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.1      0.1       0.0   1.0      0.0     41.7      1.78              1.39         2    0.889       0      0
+
+** Compaction Stats [default] **
+Priority    Files   Size     Score Read(GB)  Rn(GB) Rnp1(GB) Write(GB) Wnew(GB) Moved(GB) W-Amp Rd(MB/s) Wr(MB/s) Comp(sec) CompMergeCPU(sec) Comp(cnt) Avg(sec) KeyIn KeyDrop
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Low      0/0    0.00 KB   0.0      0.5     0.4      0.0       0.1      0.1       0.0   0.0    122.8     30.1      3.97              4.34         1    3.968   2736K  2065K
+High      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.3      0.3       0.0   0.0      0.0     43.7      5.92              4.67         7    0.846       0      0
+User      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0     65.5      0.54              0.00         1    0.536       0      0
+Uptime(secs): 13.2 total, 2.0 interval
+Flush(GB): cumulative 0.287, interval 0.072
+AddFile(GB): cumulative 0.000, interval 0.000
+AddFile(Total Files): cumulative 0, interval 0
+AddFile(L0 Files): cumulative 0, interval 0
+AddFile(Keys): cumulative 0, interval 0
+Cumulative compaction: 0.40 GB write, 31.24 MB/s write, 0.48 GB read, 36.78 MB/s read, 10.4 seconds
+Interval compaction: 0.07 GB write, 36.83 MB/s write, 0.00 GB read, 0.00 MB/s read, 1.8 seconds
+Stalls(count): 0 level0_slowdown, 0 level0_slowdown_with_compaction, 0 level0_numfiles, 0 level0_numfiles_with_compaction, 0 stop for pending_compaction_bytes, 0 slowdown for pending_compaction_bytes, 0 memtable_compaction, 0 memtable_slowdown, interval 0 total count
+
+** File Read Latency Histogram By Level [default] **
+
+** DB Stats **
+Uptime(secs): 13.2 total, 2.0 interval
+Cumulative writes: 2411K writes, 2411K keys, 1158K commit groups, 2.1 writes per commit group, ingest: 0.97 GB, 74.59 MB/s
+Cumulative WAL: 2411K writes, 0 syncs, 2411112.00 writes per sync, written: 0.97 GB, 74.59 MB/s
+Cumulative stall: 00:00:0.000 H:M:S, 0.0 percent
+Interval writes: 505K writes, 505K keys, 230K commit groups, 2.2 writes per commit group, ingest: 207.08 MB, 102.95 MB/s
+Interval WAL: 505K writes, 0 syncs, 505583.00 writes per sync, written: 0.20 MB, 102.95 MB/s
+Interval stall: 00:00:0.000 H:M:S, 0.0 percent
+
+
+** Compaction Stats [default] **
+Level    Files   Size     Score Read(GB)  Rn(GB) Rnp1(GB) Write(GB) Wnew(GB) Moved(GB) W-Amp Rd(MB/s) Wr(MB/s) Comp(sec) CompMergeCPU(sec) Comp(cnt) Avg(sec) KeyIn KeyDrop
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  L0      9/8   333.26 MB   0.2      0.0     0.0      0.0       0.4      0.4       0.0   1.0      0.0     44.4      8.29              5.94        10    0.829       0      0
+  L1      9/5   968.04 MB   0.9      0.5     0.4      0.0       0.1      0.1       0.0   0.3    122.8     30.1      3.97              4.34         1    3.968   2736K  2065K
+  L2     40/13   4.19 GB   0.7      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0      0.0      0.00              0.00         0    0.000       0      0
+  L3     62/0    6.75 GB   0.2      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0      0.0      0.00              0.00         0    0.000       0      0
+ Sum    120/26  12.21 GB   0.0      0.5     0.4      0.0       0.5      0.4       0.0   1.3     39.7     39.8     12.26             10.27        11    1.115   2736K  2065K
+ Int      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.1      0.1       0.0   1.0      0.0     40.4      1.83              1.26         2    0.917       0      0
+
+** Compaction Stats [default] **
+Priority    Files   Size     Score Read(GB)  Rn(GB) Rnp1(GB) Write(GB) Wnew(GB) Moved(GB) W-Amp Rd(MB/s) Wr(MB/s) Comp(sec) CompMergeCPU(sec) Comp(cnt) Avg(sec) KeyIn KeyDrop
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Low      0/0    0.00 KB   0.0      0.5     0.4      0.0       0.1      0.1       0.0   0.0    122.8     30.1      3.97              4.34         1    3.968   2736K  2065K
+High      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.3      0.3       0.0   0.0      0.0     43.0      7.76              5.94         9    0.862       0      0
+User      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0     65.5      0.54              0.00         1    0.536       0      0
+Uptime(secs): 15.3 total, 2.0 interval
+Flush(GB): cumulative 0.360, interval 0.072
+AddFile(GB): cumulative 0.000, interval 0.000
+AddFile(Total Files): cumulative 0, interval 0
+AddFile(L0 Files): cumulative 0, interval 0
+AddFile(Keys): cumulative 0, interval 0
+Cumulative compaction: 0.48 GB write, 32.00 MB/s write, 0.48 GB read, 31.95 MB/s read, 12.3 seconds
+Interval compaction: 0.07 GB write, 37.03 MB/s write, 0.00 GB read, 0.00 MB/s read, 1.8 seconds
+Stalls(count): 0 level0_slowdown, 0 level0_slowdown_with_compaction, 0 level0_numfiles, 0 level0_numfiles_with_compaction, 0 stop for pending_compaction_bytes, 0 slowdown for pending_compaction_bytes, 0 memtable_compaction, 0 memtable_slowdown, interval 0 total count
+
+** File Read Latency Histogram By Level [default] **
+
+** DB Stats **
+Uptime(secs): 15.3 total, 2.0 interval
+Cumulative writes: 2915K writes, 2915K keys, 1387K commit groups, 2.1 writes per commit group, ingest: 1.17 GB, 78.34 MB/s
+Cumulative WAL: 2915K writes, 0 syncs, 2915481.00 writes per sync, written: 1.17 GB, 78.34 MB/s
+Cumulative stall: 00:00:0.000 H:M:S, 0.0 percent
+Interval writes: 504K writes, 504K keys, 229K commit groups, 2.2 writes per commit group, ingest: 206.57 MB, 103.20 MB/s
+Interval WAL: 504K writes, 0 syncs, 504369.00 writes per sync, written: 0.20 MB, 103.20 MB/s
+Interval stall: 00:00:0.000 H:M:S, 0.0 percent
+
+Initializing RocksDB Options from the specified file
+Initializing RocksDB Options from command-line flags
+Keys:       20 bytes each
+Values:     400 bytes each (200 bytes after compression)
+Entries:    400000
+Prefix:    0 bytes
+Keys per prefix:    0
+RawSize:    160.2 MB (estimated)
+FileSize:   83.9 MB (estimated)
+Write rate: 0 bytes/second
+Read rate: 0 ops/second
+Compression: ZSTD
+Compression sampling rate: 0
+Memtablerep: skip_list
+Perf Level: 1
+WARNING: Assertions are enabled; benchmarks unnecessarily slow
+------------------------------------------------
+DB path: [../data/01_19/new/16_52_t1]
+updaterandom :      37.574 micros/op 212380 ops/sec;  170.1 MB/s ( updates:400000 found:400000)
+Microseconds per update:
+Count: 3200000 Average: 37.5756  StdDev: 301.33
+Min: 4  Median: 22.9929  Max: 42260
+Percentiles: P50: 22.99 P75: 31.42 P99: 139.84 P99.9: 1594.67 P99.99: 16372.70
+------------------------------------------------------
+(       3,       4 ]        3   0.000%   0.000% 
+(       4,       6 ]      752   0.024%   0.024% 
+(       6,      10 ]    16108   0.503%   0.527% 
+(      10,      15 ]   263486   8.234%   8.761% ##
+(      15,      22 ]  1225444  38.295%  47.056% ########
+(      22,      34 ]  1138513  35.579%  82.635% #######
+(      34,      51 ]   231125   7.223%  89.857% #
+(      51,      76 ]   184307   5.760%  95.617% #
+(      76,     110 ]    91234   2.851%  98.468% #
+(     110,     170 ]    34238   1.070%  99.538% 
+(     170,     250 ]     6965   0.218%  99.755% 
+(     250,     380 ]     2127   0.066%  99.822% 
+(     380,     580 ]     1142   0.036%  99.858% 
+(     580,     870 ]      580   0.018%  99.876% 
+(     870,    1300 ]      610   0.019%  99.895% 
+(    1300,    1900 ]      338   0.011%  99.905% 
+(    1900,    2900 ]      480   0.015%  99.920% 
+(    2900,    4400 ]      561   0.018%  99.938% 
+(    4400,    6600 ]      435   0.014%  99.951% 
+(    6600,    9900 ]      501   0.016%  99.967% 
+(    9900,   14000 ]      618   0.019%  99.986% 
+(   14000,   22000 ]      381   0.012%  99.998% 
+(   22000,   33000 ]       36   0.001%  99.999% 
+(   33000,   50000 ]       16   0.001% 100.000% 
+
+RocksDB:    version 6.4
+Date:       Tue Jan 19 21:17:32 2021
+CPU:        12 * Intel(R) Core(TM) i7-8700 CPU @ 3.20GHz
+CPUCache:   12288 KB
+
+** Compaction Stats [default] **
+Level    Files   Size     Score Read(GB)  Rn(GB) Rnp1(GB) Write(GB) Wnew(GB) Moved(GB) W-Amp Rd(MB/s) Wr(MB/s) Comp(sec) CompMergeCPU(sec) Comp(cnt) Avg(sec) KeyIn KeyDrop
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  L0     11/11  405.39 MB   0.0      0.0     0.0      0.0       0.1      0.1       0.0   1.0      0.0     65.7      1.10              0.00         2    0.549       0      0
+  L1      9/5   968.04 MB   0.9      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0      0.0      0.00              0.00         0    0.000       0      0
+  L2     40/13   4.19 GB   0.7      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0      0.0      0.00              0.00         0    0.000       0      0
+  L3     62/0    6.75 GB   0.2      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0      0.0      0.00              0.00         0    0.000       0      0
+ Sum    122/29  12.28 GB   0.0      0.0     0.0      0.0       0.1      0.1       0.0   1.0      0.0     65.7      1.10              0.00         2    0.549       0      0
+ Int      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0      0.0      0.00              0.00         0    0.000       0      0
+
+** Compaction Stats [default] **
+Priority    Files   Size     Score Read(GB)  Rn(GB) Rnp1(GB) Write(GB) Wnew(GB) Moved(GB) W-Amp Rd(MB/s) Wr(MB/s) Comp(sec) CompMergeCPU(sec) Comp(cnt) Avg(sec) KeyIn KeyDrop
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+User      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.1      0.1       0.0   0.0      0.0     65.7      1.10              0.00         2    0.549       0      0
+Uptime(secs): 4.3 total, 2.0 interval
+Flush(GB): cumulative 0.070, interval 0.000
+AddFile(GB): cumulative 0.000, interval 0.000
+AddFile(Total Files): cumulative 0, interval 0
+AddFile(L0 Files): cumulative 0, interval 0
+AddFile(Keys): cumulative 0, interval 0
+Cumulative compaction: 0.07 GB write, 16.65 MB/s write, 0.00 GB read, 0.00 MB/s read, 1.1 seconds
+Interval compaction: 0.00 GB write, 0.00 MB/s write, 0.00 GB read, 0.00 MB/s read, 0.0 seconds
+Stalls(count): 0 level0_slowdown, 0 level0_slowdown_with_compaction, 0 level0_numfiles, 0 level0_numfiles_with_compaction, 0 stop for pending_compaction_bytes, 0 slowdown for pending_compaction_bytes, 0 memtable_compaction, 0 memtable_slowdown, interval 0 total count
+
+** File Read Latency Histogram By Level [default] **
+
+** DB Stats **
+Uptime(secs): 4.3 total, 2.0 interval
+Cumulative writes: 312K writes, 312K keys, 164K commit groups, 1.9 writes per commit group, ingest: 0.13 GB, 29.59 MB/s
+Cumulative WAL: 312K writes, 0 syncs, 312373.00 writes per sync, written: 0.13 GB, 29.59 MB/s
+Cumulative stall: 00:00:0.000 H:M:S, 0.0 percent
+Interval writes: 312K writes, 312K keys, 164K commit groups, 1.9 writes per commit group, ingest: 128.19 MB, 62.91 MB/s
+Interval WAL: 312K writes, 0 syncs, 312373.00 writes per sync, written: 0.13 MB, 62.91 MB/s
+Interval stall: 00:00:0.000 H:M:S, 0.0 percent
+
+
+** Compaction Stats [default] **
+Level    Files   Size     Score Read(GB)  Rn(GB) Rnp1(GB) Write(GB) Wnew(GB) Moved(GB) W-Amp Rd(MB/s) Wr(MB/s) Comp(sec) CompMergeCPU(sec) Comp(cnt) Avg(sec) KeyIn KeyDrop
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  L0      1/0   36.94 MB   0.2      0.0     0.0      0.0       0.1      0.1       0.0   1.0      0.0     53.7      2.03              0.65         3    0.677       0      0
+  L1      9/3   968.05 MB   1.1      0.5     0.4      0.1       0.1      0.0       0.0   0.3    135.2     30.8      3.88              4.49         1    3.882   2944K  2274K
+  L2     40/13   4.19 GB   0.7      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0      0.0      0.00              0.00         0    0.000       0      0
+  L3     62/0    6.75 GB   0.2      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0      0.0      0.00              0.00         0    0.000       0      0
+ Sum    112/16  11.92 GB   0.0      0.5     0.4      0.1       0.2      0.1       0.0   2.1     88.8     38.7      5.91              5.14         4    1.478   2944K  2274K
+ Int      0/0    0.00 KB   0.0      0.5     0.4      0.1       0.2      0.0       0.0   4.2    109.1     32.5      4.81              5.14         2    2.407   2944K  2274K
+
+** Compaction Stats [default] **
+Priority    Files   Size     Score Read(GB)  Rn(GB) Rnp1(GB) Write(GB) Wnew(GB) Moved(GB) W-Amp Rd(MB/s) Wr(MB/s) Comp(sec) CompMergeCPU(sec) Comp(cnt) Avg(sec) KeyIn KeyDrop
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Low      0/0    0.00 KB   0.0      0.5     0.4      0.1       0.1      0.0       0.0   0.0    135.2     30.8      3.88              4.49         1    3.882   2944K  2274K
+High      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0     39.7      0.93              0.65         1    0.931       0      0
+User      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.1      0.1       0.0   0.0      0.0     65.7      1.10              0.00         2    0.549       0      0
+Uptime(secs): 6.3 total, 2.0 interval
+Flush(GB): cumulative 0.107, interval 0.036
+AddFile(GB): cumulative 0.000, interval 0.000
+AddFile(Total Files): cumulative 0, interval 0
+AddFile(L0 Files): cumulative 0, interval 0
+AddFile(Keys): cumulative 0, interval 0
+Cumulative compaction: 0.22 GB write, 36.11 MB/s write, 0.51 GB read, 82.90 MB/s read, 5.9 seconds
+Interval compaction: 0.15 GB write, 78.27 MB/s write, 0.51 GB read, 262.45 MB/s read, 4.8 seconds
+Stalls(count): 0 level0_slowdown, 0 level0_slowdown_with_compaction, 0 level0_numfiles, 0 level0_numfiles_with_compaction, 0 stop for pending_compaction_bytes, 0 slowdown for pending_compaction_bytes, 0 memtable_compaction, 0 memtable_slowdown, interval 0 total count
+
+** File Read Latency Histogram By Level [default] **
+
+** DB Stats **
+Uptime(secs): 6.3 total, 2.0 interval
+Cumulative writes: 679K writes, 679K keys, 344K commit groups, 2.0 writes per commit group, ingest: 0.27 GB, 44.00 MB/s
+Cumulative WAL: 679K writes, 0 syncs, 679335.00 writes per sync, written: 0.27 GB, 44.00 MB/s
+Cumulative stall: 00:00:0.000 H:M:S, 0.0 percent
+Interval writes: 366K writes, 366K keys, 179K commit groups, 2.0 writes per commit group, ingest: 150.44 MB, 75.20 MB/s
+Interval WAL: 366K writes, 0 syncs, 366962.00 writes per sync, written: 0.15 MB, 75.20 MB/s
+Interval stall: 00:00:0.000 H:M:S, 0.0 percent
+
+
+** Compaction Stats [default] **
+Level    Files   Size     Score Read(GB)  Rn(GB) Rnp1(GB) Write(GB) Wnew(GB) Moved(GB) W-Amp Rd(MB/s) Wr(MB/s) Comp(sec) CompMergeCPU(sec) Comp(cnt) Avg(sec) KeyIn KeyDrop
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  L0      3/0   110.96 MB   0.8      0.0     0.0      0.0       0.2      0.2       0.0   1.0      0.0     46.4      3.95              2.06         5    0.790       0      0
+  L1      9/3   968.05 MB   1.1      0.5     0.4      0.1       0.1      0.0       0.0   0.3    135.2     30.8      3.88              4.49         1    3.882   2944K  2274K
+  L2     40/13   4.19 GB   0.7      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0      0.0      0.00              0.00         0    0.000       0      0
+  L3     62/0    6.75 GB   0.2      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0      0.0      0.00              0.00         0    0.000       0      0
+ Sum    114/16  11.99 GB   0.0      0.5     0.4      0.1       0.3      0.2       0.0   1.7     67.0     38.7      7.83              6.55         6    1.305   2944K  2274K
+ Int      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.1      0.1       0.0   1.0      0.0     38.6      1.92              1.42         2    0.959       0      0
+
+** Compaction Stats [default] **
+Priority    Files   Size     Score Read(GB)  Rn(GB) Rnp1(GB) Write(GB) Wnew(GB) Moved(GB) W-Amp Rd(MB/s) Wr(MB/s) Comp(sec) CompMergeCPU(sec) Comp(cnt) Avg(sec) KeyIn KeyDrop
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Low      0/0    0.00 KB   0.0      0.5     0.4      0.1       0.1      0.0       0.0   0.0    135.2     30.8      3.88              4.49         1    3.882   2944K  2274K
+High      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.1      0.1       0.0   0.0      0.0     38.9      2.85              2.06         3    0.950       0      0
+User      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.1      0.1       0.0   0.0      0.0     65.7      1.10              0.00         2    0.549       0      0
+Uptime(secs): 8.3 total, 2.0 interval
+Flush(GB): cumulative 0.179, interval 0.072
+AddFile(GB): cumulative 0.000, interval 0.000
+AddFile(Total Files): cumulative 0, interval 0
+AddFile(L0 Files): cumulative 0, interval 0
+AddFile(Keys): cumulative 0, interval 0
+Cumulative compaction: 0.30 GB write, 36.30 MB/s write, 0.51 GB read, 62.95 MB/s read, 7.8 seconds
+Interval compaction: 0.07 GB write, 36.87 MB/s write, 0.00 GB read, 0.00 MB/s read, 1.9 seconds
+Stalls(count): 0 level0_slowdown, 0 level0_slowdown_with_compaction, 0 level0_numfiles, 0 level0_numfiles_with_compaction, 0 stop for pending_compaction_bytes, 0 slowdown for pending_compaction_bytes, 0 memtable_compaction, 0 memtable_slowdown, interval 0 total count
+
+** File Read Latency Histogram By Level [default] **
+
+** DB Stats **
+Uptime(secs): 8.3 total, 2.0 interval
+Cumulative writes: 1102K writes, 1102K keys, 550K commit groups, 2.0 writes per commit group, ingest: 0.44 GB, 54.21 MB/s
+Cumulative WAL: 1102K writes, 0 syncs, 1102634.00 writes per sync, written: 0.44 GB, 54.21 MB/s
+Cumulative stall: 00:00:0.000 H:M:S, 0.0 percent
+Interval writes: 423K writes, 423K keys, 206K commit groups, 2.1 writes per commit group, ingest: 173.53 MB, 86.43 MB/s
+Interval WAL: 423K writes, 0 syncs, 423299.00 writes per sync, written: 0.17 MB, 86.43 MB/s
+Interval stall: 00:00:0.000 H:M:S, 0.0 percent
+
+
+** Compaction Stats [default] **
+Level    Files   Size     Score Read(GB)  Rn(GB) Rnp1(GB) Write(GB) Wnew(GB) Moved(GB) W-Amp Rd(MB/s) Wr(MB/s) Comp(sec) CompMergeCPU(sec) Comp(cnt) Avg(sec) KeyIn KeyDrop
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  L0      4/0   147.97 MB   1.0      0.0     0.0      0.0       0.2      0.2       0.0   1.0      0.0     46.0      4.78              2.69         6    0.797       0      0
+  L1      9/3   968.05 MB   1.1      0.5     0.4      0.1       0.1      0.0       0.0   0.3    135.2     30.8      3.88              4.49         1    3.882   2944K  2274K
+  L2     40/13   4.19 GB   0.7      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0      0.0      0.00              0.00         0    0.000       0      0
+  L3     62/0    6.75 GB   0.2      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0      0.0      0.00              0.00         0    0.000       0      0
+ Sum    115/16  12.03 GB   0.0      0.5     0.4      0.1       0.3      0.2       0.0   1.5     60.6     39.2      8.66              7.18         7    1.237   2944K  2274K
+ Int      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.0      0.0       0.0   1.0      0.0     44.5      0.83              0.63         1    0.832       0      0
+
+** Compaction Stats [default] **
+Priority    Files   Size     Score Read(GB)  Rn(GB) Rnp1(GB) Write(GB) Wnew(GB) Moved(GB) W-Amp Rd(MB/s) Wr(MB/s) Comp(sec) CompMergeCPU(sec) Comp(cnt) Avg(sec) KeyIn KeyDrop
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Low      0/0    0.00 KB   0.0      0.5     0.4      0.1       0.1      0.0       0.0   0.0    135.2     30.8      3.88              4.49         1    3.882   2944K  2274K
+High      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.1      0.1       0.0   0.0      0.0     40.2      3.68              2.69         4    0.920       0      0
+User      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.1      0.1       0.0   0.0      0.0     65.7      1.10              0.00         2    0.549       0      0
+Uptime(secs): 10.3 total, 2.0 interval
+Flush(GB): cumulative 0.215, interval 0.036
+AddFile(GB): cumulative 0.000, interval 0.000
+AddFile(Total Files): cumulative 0, interval 0
+AddFile(L0 Files): cumulative 0, interval 0
+AddFile(Keys): cumulative 0, interval 0
+Cumulative compaction: 0.33 GB write, 32.85 MB/s write, 0.51 GB read, 50.76 MB/s read, 8.7 seconds
+Interval compaction: 0.04 GB write, 18.48 MB/s write, 0.00 GB read, 0.00 MB/s read, 0.8 seconds
+Stalls(count): 0 level0_slowdown, 0 level0_slowdown_with_compaction, 0 level0_numfiles, 0 level0_numfiles_with_compaction, 0 stop for pending_compaction_bytes, 0 slowdown for pending_compaction_bytes, 0 memtable_compaction, 0 memtable_slowdown, interval 0 total count
+
+** File Read Latency Histogram By Level [default] **
+
+** DB Stats **
+Uptime(secs): 10.3 total, 2.0 interval
+Cumulative writes: 1562K writes, 1562K keys, 761K commit groups, 2.1 writes per commit group, ingest: 0.63 GB, 61.91 MB/s
+Cumulative WAL: 1562K writes, 0 syncs, 1562072.00 writes per sync, written: 0.63 GB, 61.91 MB/s
+Cumulative stall: 00:00:0.000 H:M:S, 0.0 percent
+Interval writes: 459K writes, 459K keys, 210K commit groups, 2.2 writes per commit group, ingest: 188.19 MB, 93.96 MB/s
+Interval WAL: 459K writes, 0 syncs, 459438.00 writes per sync, written: 0.18 MB, 93.96 MB/s
+Interval stall: 00:00:0.000 H:M:S, 0.0 percent
+
+
+** Compaction Stats [default] **
+Level    Files   Size     Score Read(GB)  Rn(GB) Rnp1(GB) Write(GB) Wnew(GB) Moved(GB) W-Amp Rd(MB/s) Wr(MB/s) Comp(sec) CompMergeCPU(sec) Comp(cnt) Avg(sec) KeyIn KeyDrop
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  L0      6/0   222.06 MB   1.5      0.0     0.0      0.0       0.3      0.3       0.0   1.0      0.0     46.4      6.34              4.03         8    0.793       0      0
+  L1      9/3   968.05 MB   1.1      0.5     0.4      0.1       0.1      0.0       0.0   0.3    135.2     30.8      3.88              4.49         1    3.882   2944K  2274K
+  L2     40/13   4.19 GB   0.7      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0      0.0      0.00              0.00         0    0.000       0      0
+  L3     62/0    6.75 GB   0.2      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0      0.0      0.00              0.00         0    0.000       0      0
+ Sum    117/16  12.10 GB   0.0      0.5     0.4      0.1       0.4      0.3       0.0   1.4     51.4     40.5     10.22              8.52         9    1.136   2944K  2274K
+ Int      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.1      0.1       0.0   1.0      0.0     47.5      1.56              1.34         2    0.780       0      0
+
+** Compaction Stats [default] **
+Priority    Files   Size     Score Read(GB)  Rn(GB) Rnp1(GB) Write(GB) Wnew(GB) Moved(GB) W-Amp Rd(MB/s) Wr(MB/s) Comp(sec) CompMergeCPU(sec) Comp(cnt) Avg(sec) KeyIn KeyDrop
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Low      0/0    0.00 KB   0.0      0.5     0.4      0.1       0.1      0.0       0.0   0.0    135.2     30.8      3.88              4.49         1    3.882   2944K  2274K
+High      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.2      0.2       0.0   0.0      0.0     42.4      5.24              4.03         6    0.874       0      0
+User      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.1      0.1       0.0   0.0      0.0     65.7      1.10              0.00         2    0.549       0      0
+Uptime(secs): 12.3 total, 2.0 interval
+Flush(GB): cumulative 0.287, interval 0.072
+AddFile(GB): cumulative 0.000, interval 0.000
+AddFile(Total Files): cumulative 0, interval 0
+AddFile(L0 Files): cumulative 0, interval 0
+AddFile(Keys): cumulative 0, interval 0
+Cumulative compaction: 0.40 GB write, 33.51 MB/s write, 0.51 GB read, 42.52 MB/s read, 10.2 seconds
+Interval compaction: 0.07 GB write, 36.97 MB/s write, 0.00 GB read, 0.00 MB/s read, 1.6 seconds
+Stalls(count): 0 level0_slowdown, 0 level0_slowdown_with_compaction, 0 level0_numfiles, 0 level0_numfiles_with_compaction, 0 stop for pending_compaction_bytes, 0 slowdown for pending_compaction_bytes, 0 memtable_compaction, 0 memtable_slowdown, interval 0 total count
+
+** File Read Latency Histogram By Level [default] **
+
+** DB Stats **
+Uptime(secs): 12.3 total, 2.0 interval
+Cumulative writes: 2014K writes, 2014K keys, 973K commit groups, 2.1 writes per commit group, ingest: 0.81 GB, 66.86 MB/s
+Cumulative WAL: 2014K writes, 0 syncs, 2014156.00 writes per sync, written: 0.81 GB, 66.86 MB/s
+Cumulative stall: 00:00:0.000 H:M:S, 0.0 percent
+Interval writes: 452K writes, 452K keys, 212K commit groups, 2.1 writes per commit group, ingest: 185.24 MB, 92.42 MB/s
+Interval WAL: 452K writes, 0 syncs, 452084.00 writes per sync, written: 0.18 MB, 92.42 MB/s
+Interval stall: 00:00:0.000 H:M:S, 0.0 percent
+
+
+** Compaction Stats [default] **
+Level    Files   Size     Score Read(GB)  Rn(GB) Rnp1(GB) Write(GB) Wnew(GB) Moved(GB) W-Amp Rd(MB/s) Wr(MB/s) Comp(sec) CompMergeCPU(sec) Comp(cnt) Avg(sec) KeyIn KeyDrop
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  L0      7/0   258.97 MB   1.8      0.0     0.0      0.0       0.3      0.3       0.0   1.0      0.0     46.8      7.08              4.66         9    0.787       0      0
+  L1      9/3   968.05 MB   1.1      0.5     0.4      0.1       0.1      0.0       0.0   0.3    135.2     30.8      3.88              4.49         1    3.882   2944K  2274K
+  L2     40/13   4.19 GB   0.7      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0      0.0      0.00              0.00         0    0.000       0      0
+  L3     62/0    6.75 GB   0.2      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0      0.0      0.00              0.00         0    0.000       0      0
+ Sum    118/16  12.13 GB   0.0      0.5     0.4      0.1       0.4      0.3       0.0   1.4     47.9     41.1     10.96              9.15        10    1.096   2944K  2274K
+ Int      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.0      0.0       0.0   1.0      0.0     50.0      0.74              0.64         1    0.739       0      0
+
+** Compaction Stats [default] **
+Priority    Files   Size     Score Read(GB)  Rn(GB) Rnp1(GB) Write(GB) Wnew(GB) Moved(GB) W-Amp Rd(MB/s) Wr(MB/s) Comp(sec) CompMergeCPU(sec) Comp(cnt) Avg(sec) KeyIn KeyDrop
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Low      0/0    0.00 KB   0.0      0.5     0.4      0.1       0.1      0.0       0.0   0.0    135.2     30.8      3.88              4.49         1    3.882   2944K  2274K
+High      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.3      0.3       0.0   0.0      0.0     43.3      5.98              4.66         7    0.854       0      0
+User      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.1      0.1       0.0   0.0      0.0     65.7      1.10              0.00         2    0.549       0      0
+Uptime(secs): 14.4 total, 2.0 interval
+Flush(GB): cumulative 0.323, interval 0.036
+AddFile(GB): cumulative 0.000, interval 0.000
+AddFile(Total Files): cumulative 0, interval 0
+AddFile(L0 Files): cumulative 0, interval 0
+AddFile(Keys): cumulative 0, interval 0
+Cumulative compaction: 0.44 GB write, 31.36 MB/s write, 0.51 GB read, 36.53 MB/s read, 11.0 seconds
+Interval compaction: 0.04 GB write, 18.23 MB/s write, 0.00 GB read, 0.00 MB/s read, 0.7 seconds
+Stalls(count): 0 level0_slowdown, 0 level0_slowdown_with_compaction, 0 level0_numfiles, 0 level0_numfiles_with_compaction, 0 stop for pending_compaction_bytes, 0 slowdown for pending_compaction_bytes, 0 memtable_compaction, 0 memtable_slowdown, interval 0 total count
+
+** File Read Latency Histogram By Level [default] **
+
+** DB Stats **
+Uptime(secs): 14.4 total, 2.0 interval
+Cumulative writes: 2449K writes, 2449K keys, 1179K commit groups, 2.1 writes per commit group, ingest: 0.98 GB, 69.86 MB/s
+Cumulative WAL: 2449K writes, 0 syncs, 2449580.00 writes per sync, written: 0.98 GB, 69.86 MB/s
+Cumulative stall: 00:00:0.000 H:M:S, 0.0 percent
+Interval writes: 435K writes, 435K keys, 205K commit groups, 2.1 writes per commit group, ingest: 178.42 MB, 88.10 MB/s
+Interval WAL: 435K writes, 0 syncs, 435424.00 writes per sync, written: 0.17 MB, 88.10 MB/s
+Interval stall: 00:00:0.000 H:M:S, 0.0 percent
+
+
+** Compaction Stats [default] **
+Level    Files   Size     Score Read(GB)  Rn(GB) Rnp1(GB) Write(GB) Wnew(GB) Moved(GB) W-Amp Rd(MB/s) Wr(MB/s) Comp(sec) CompMergeCPU(sec) Comp(cnt) Avg(sec) KeyIn KeyDrop
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  L0      8/8   296.01 MB   0.0      0.0     0.0      0.0       0.4      0.4       0.0   1.0      0.0     46.1      7.99              5.30        10    0.799       0      0
+  L1      9/5   968.05 MB   0.9      0.5     0.4      0.1       0.1      0.0       0.0   0.3    135.2     30.8      3.88              4.49         1    3.882   2944K  2274K
+  L2     40/13   4.19 GB   0.7      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0      0.0      0.00              0.00         0    0.000       0      0
+  L3     62/0    6.75 GB   0.2      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0      0.0      0.00              0.00         0    0.000       0      0
+ Sum    119/26  12.17 GB   0.0      0.5     0.4      0.1       0.5      0.4       0.0   1.3     44.2     41.1     11.87              9.79        11    1.079   2944K  2274K
+ Int      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.0      0.0       0.0   1.0      0.0     40.7      0.91              0.64         1    0.911       0      0
+
+** Compaction Stats [default] **
+Priority    Files   Size     Score Read(GB)  Rn(GB) Rnp1(GB) Write(GB) Wnew(GB) Moved(GB) W-Amp Rd(MB/s) Wr(MB/s) Comp(sec) CompMergeCPU(sec) Comp(cnt) Avg(sec) KeyIn KeyDrop
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Low      0/0    0.00 KB   0.0      0.5     0.4      0.1       0.1      0.0       0.0   0.0    135.2     30.8      3.88              4.49         1    3.882   2944K  2274K
+High      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.3      0.3       0.0   0.0      0.0     43.0      6.89              5.30         8    0.861       0      0
+User      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.1      0.1       0.0   0.0      0.0     65.7      1.10              0.00         2    0.549       0      0
+Uptime(secs): 16.4 total, 2.0 interval
+Flush(GB): cumulative 0.360, interval 0.036
+AddFile(GB): cumulative 0.000, interval 0.000
+AddFile(Total Files): cumulative 0, interval 0
+AddFile(L0 Files): cumulative 0, interval 0
+AddFile(Keys): cumulative 0, interval 0
+Cumulative compaction: 0.48 GB write, 29.78 MB/s write, 0.51 GB read, 32.05 MB/s read, 11.9 seconds
+Interval compaction: 0.04 GB write, 18.46 MB/s write, 0.00 GB read, 0.00 MB/s read, 0.9 seconds
+Stalls(count): 0 level0_slowdown, 0 level0_slowdown_with_compaction, 0 level0_numfiles, 0 level0_numfiles_with_compaction, 0 stop for pending_compaction_bytes, 0 slowdown for pending_compaction_bytes, 0 memtable_compaction, 0 memtable_slowdown, interval 0 total count
+
+** File Read Latency Histogram By Level [default] **
+
+** DB Stats **
+Uptime(secs): 16.4 total, 2.0 interval
+Cumulative writes: 2814K writes, 2814K keys, 1351K commit groups, 2.1 writes per commit group, ingest: 1.13 GB, 70.44 MB/s
+Cumulative WAL: 2814K writes, 0 syncs, 2814806.00 writes per sync, written: 1.13 GB, 70.44 MB/s
+Cumulative stall: 00:00:0.000 H:M:S, 0.0 percent
+Interval writes: 365K writes, 365K keys, 171K commit groups, 2.1 writes per commit group, ingest: 149.64 MB, 74.59 MB/s
+Interval WAL: 365K writes, 0 syncs, 365226.00 writes per sync, written: 0.15 MB, 74.59 MB/s
+Interval stall: 00:00:0.000 H:M:S, 0.0 percent
+
+Initializing RocksDB Options from the specified file
+Initializing RocksDB Options from command-line flags
+Keys:       20 bytes each
+Values:     400 bytes each (200 bytes after compression)
+Entries:    400000
+Prefix:    0 bytes
+Keys per prefix:    0
+RawSize:    160.2 MB (estimated)
+FileSize:   83.9 MB (estimated)
+Write rate: 0 bytes/second
+Read rate: 0 ops/second
+Compression: ZSTD
+Compression sampling rate: 0
+Memtablerep: skip_list
+Perf Level: 1
+WARNING: Assertions are enabled; benchmarks unnecessarily slow
+------------------------------------------------
+DB path: [../data/01_19/new/16_52_t1]
+updaterandom :      38.682 micros/op 206137 ops/sec;  165.1 MB/s ( updates:400000 found:400000)
+Microseconds per update:
+Count: 3200000 Average: 38.6863  StdDev: 290.19
+Min: 4  Median: 23.7227  Max: 35233
+Percentiles: P50: 23.72 P75: 32.26 P99: 143.92 P99.9: 1494.54 P99.99: 15775.46
+------------------------------------------------------
+(       3,       4 ]        1   0.000%   0.000% 
+(       4,       6 ]      742   0.023%   0.023% 
+(       6,      10 ]    15350   0.480%   0.503% 
+(      10,      15 ]   250082   7.815%   8.318% ##
+(      15,      22 ]  1172320  36.635%  44.953% #######
+(      22,      34 ]  1125016  35.157%  80.110% #######
+(      34,      51 ]   253354   7.917%  88.027% ##
+(      51,      76 ]   219978   6.874%  94.901% #
+(      76,     110 ]   108933   3.404%  98.305% #
+(     110,     170 ]    39309   1.228%  99.534% 
+(     170,     250 ]     7392   0.231%  99.765% 
+(     250,     380 ]     2024   0.063%  99.828% 
+(     380,     580 ]     1057   0.033%  99.861% 
+(     580,     870 ]      560   0.018%  99.879% 
+(     870,    1300 ]      587   0.018%  99.897% 
+(    1300,    1900 ]      293   0.009%  99.906% 
+(    1900,    2900 ]      444   0.014%  99.920% 
+(    2900,    4400 ]      589   0.018%  99.938% 
+(    4400,    6600 ]      385   0.012%  99.951% 
+(    6600,    9900 ]      508   0.016%  99.966% 
+(    9900,   14000 ]      671   0.021%  99.987% 
+(   14000,   22000 ]      383   0.012%  99.999% 
+(   22000,   33000 ]       21   0.001% 100.000% 
+(   33000,   50000 ]        1   0.000% 100.000% 
+
+RocksDB:    version 6.4
+Date:       Tue Jan 19 21:17:53 2021
+CPU:        12 * Intel(R) Core(TM) i7-8700 CPU @ 3.20GHz
+CPUCache:   12288 KB
+
+** Compaction Stats [default] **
+Level    Files   Size     Score Read(GB)  Rn(GB) Rnp1(GB) Write(GB) Wnew(GB) Moved(GB) W-Amp Rd(MB/s) Wr(MB/s) Comp(sec) CompMergeCPU(sec) Comp(cnt) Avg(sec) KeyIn KeyDrop
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  L0      4/0   146.52 MB   1.0      0.0     0.0      0.0       0.1      0.1       0.0   1.0      0.0     55.5      1.30              0.66         2    0.652       0      0
+  L1      8/1   839.66 MB   1.5      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0      0.0      0.00              0.00         0    0.000       0      0
+  L2     41/1    4.26 GB   1.0      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0      0.0      0.00              0.00         0    0.000       0      0
+  L3     62/0    6.75 GB   0.2      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0      0.0      0.00              0.00         0    0.000       0      0
+ Sum    115/2   11.97 GB   0.0      0.0     0.0      0.0       0.1      0.1       0.0   1.0      0.0     55.5      1.30              0.66         2    0.652       0      0
+ Int      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.0      0.0       0.0   1.0      0.0     49.1      0.75              0.66         1    0.753       0      0
+
+** Compaction Stats [default] **
+Priority    Files   Size     Score Read(GB)  Rn(GB) Rnp1(GB) Write(GB) Wnew(GB) Moved(GB) W-Amp Rd(MB/s) Wr(MB/s) Comp(sec) CompMergeCPU(sec) Comp(cnt) Avg(sec) KeyIn KeyDrop
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+High      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0     49.1      0.75              0.66         1    0.753       0      0
+User      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0     64.3      0.55              0.00         1    0.552       0      0
+Uptime(secs): 3.2 total, 2.0 interval
+Flush(GB): cumulative 0.071, interval 0.036
+AddFile(GB): cumulative 0.000, interval 0.000
+AddFile(Total Files): cumulative 0, interval 0
+AddFile(L0 Files): cumulative 0, interval 0
+AddFile(Keys): cumulative 0, interval 0
+Cumulative compaction: 0.07 GB write, 22.53 MB/s write, 0.00 GB read, 0.00 MB/s read, 1.3 seconds
+Interval compaction: 0.04 GB write, 18.18 MB/s write, 0.00 GB read, 0.00 MB/s read, 0.8 seconds
+Stalls(count): 0 level0_slowdown, 0 level0_slowdown_with_compaction, 0 level0_numfiles, 0 level0_numfiles_with_compaction, 0 stop for pending_compaction_bytes, 0 slowdown for pending_compaction_bytes, 0 memtable_compaction, 0 memtable_slowdown, interval 0 total count
+
+** File Read Latency Histogram By Level [default] **
+
+** DB Stats **
+Uptime(secs): 3.2 total, 2.0 interval
+Cumulative writes: 691K writes, 691K keys, 318K commit groups, 2.2 writes per commit group, ingest: 0.28 GB, 88.05 MB/s
+Cumulative WAL: 691K writes, 0 syncs, 691342.00 writes per sync, written: 0.28 GB, 88.05 MB/s
+Cumulative stall: 00:00:0.000 H:M:S, 0.0 percent
+Interval writes: 691K writes, 691K keys, 318K commit groups, 2.2 writes per commit group, ingest: 283.19 MB, 139.26 MB/s
+Interval WAL: 691K writes, 0 syncs, 691342.00 writes per sync, written: 0.28 MB, 139.26 MB/s
+Interval stall: 00:00:0.000 H:M:S, 0.0 percent
+
+
+** Compaction Stats [default] **
+Level    Files   Size     Score Read(GB)  Rn(GB) Rnp1(GB) Write(GB) Wnew(GB) Moved(GB) W-Amp Rd(MB/s) Wr(MB/s) Comp(sec) CompMergeCPU(sec) Comp(cnt) Avg(sec) KeyIn KeyDrop
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  L0      6/0   220.70 MB   1.5      0.0     0.0      0.0       0.1      0.1       0.0   1.0      0.0     51.0      2.87              2.01         4    0.719       0      0
+  L1      7/1   768.30 MB   1.2      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0      0.0      0.00              0.00         0    0.000       0      0
+  L2     41/4    4.26 GB   1.0      0.2     0.1      0.1       0.1      0.0       0.0   1.8     61.8     39.7      3.22              2.96         1    3.223   1116K   399K
+  L3     62/0    6.75 GB   0.2      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0      0.0      0.00              0.00         0    0.000       0      0
+ Sum    116/5   11.97 GB   0.0      0.2     0.1      0.1       0.3      0.1       0.0   1.9     32.7     45.1      6.10              4.98         5    1.220   1116K   399K
+ Int      0/0    0.00 KB   0.0      0.2     0.1      0.1       0.2      0.1       0.0   2.7     41.5     42.2      4.79              4.31         3    1.598   1116K   399K
+
+** Compaction Stats [default] **
+Priority    Files   Size     Score Read(GB)  Rn(GB) Rnp1(GB) Write(GB) Wnew(GB) Moved(GB) W-Amp Rd(MB/s) Wr(MB/s) Comp(sec) CompMergeCPU(sec) Comp(cnt) Avg(sec) KeyIn KeyDrop
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Low      0/0    0.00 KB   0.0      0.2     0.1      0.1       0.1      0.0       0.0   0.0     61.8     39.7      3.22              2.96         1    3.223   1116K   399K
+High      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.1      0.1       0.0   0.0      0.0     47.8      2.32              2.01         3    0.774       0      0
+User      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0     64.3      0.55              0.00         1    0.552       0      0
+Uptime(secs): 5.2 total, 2.0 interval
+Flush(GB): cumulative 0.143, interval 0.072
+AddFile(GB): cumulative 0.000, interval 0.000
+AddFile(Total Files): cumulative 0, interval 0
+AddFile(L0 Files): cumulative 0, interval 0
+AddFile(Keys): cumulative 0, interval 0
+Cumulative compaction: 0.27 GB write, 52.60 MB/s write, 0.19 GB read, 38.14 MB/s read, 6.1 seconds
+Interval compaction: 0.20 GB write, 100.81 MB/s write, 0.19 GB read, 99.26 MB/s read, 4.8 seconds
+Stalls(count): 0 level0_slowdown, 0 level0_slowdown_with_compaction, 0 level0_numfiles, 0 level0_numfiles_with_compaction, 0 stop for pending_compaction_bytes, 0 slowdown for pending_compaction_bytes, 0 memtable_compaction, 0 memtable_slowdown, interval 0 total count
+
+** File Read Latency Histogram By Level [default] **
+
+** DB Stats **
+Uptime(secs): 5.2 total, 2.0 interval
+Cumulative writes: 1389K writes, 1389K keys, 629K commit groups, 2.2 writes per commit group, ingest: 0.56 GB, 108.93 MB/s
+Cumulative WAL: 1389K writes, 0 syncs, 1389154.00 writes per sync, written: 0.56 GB, 108.93 MB/s
+Cumulative stall: 00:00:0.000 H:M:S, 0.0 percent
+Interval writes: 697K writes, 697K keys, 311K commit groups, 2.2 writes per commit group, ingest: 285.73 MB, 142.39 MB/s
+Interval WAL: 697K writes, 0 syncs, 697812.00 writes per sync, written: 0.28 MB, 142.39 MB/s
+Interval stall: 00:00:0.000 H:M:S, 0.0 percent
+
+
+** Compaction Stats [default] **
+Level    Files   Size     Score Read(GB)  Rn(GB) Rnp1(GB) Write(GB) Wnew(GB) Moved(GB) W-Amp Rd(MB/s) Wr(MB/s) Comp(sec) CompMergeCPU(sec) Comp(cnt) Avg(sec) KeyIn KeyDrop
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  L0      9/8   331.85 MB   0.2      0.0     0.0      0.0       0.3      0.3       0.0   1.0      0.0     47.9      5.38              4.02         7    0.769       0      0
+  L1      7/3   768.30 MB   0.9      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0      0.0      0.00              0.00         0    0.000       0      0
+  L2     41/9    4.26 GB   0.8      0.2     0.1      0.1       0.1      0.0       0.0   1.8     61.8     39.7      3.22              2.96         1    3.223   1116K   399K
+  L3     62/0    6.75 GB   0.2      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0      0.0      0.00              0.00         0    0.000       0      0
+ Sum    119/20  12.08 GB   0.0      0.2     0.1      0.1       0.4      0.3       0.0   1.5     23.1     44.8      8.60              6.99         8    1.076   1116K   399K
+ Int      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.1      0.1       0.0   1.0      0.0     44.3      2.51              2.01         3    0.836       0      0
+
+** Compaction Stats [default] **
+Priority    Files   Size     Score Read(GB)  Rn(GB) Rnp1(GB) Write(GB) Wnew(GB) Moved(GB) W-Amp Rd(MB/s) Wr(MB/s) Comp(sec) CompMergeCPU(sec) Comp(cnt) Avg(sec) KeyIn KeyDrop
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Low      0/0    0.00 KB   0.0      0.2     0.1      0.1       0.1      0.0       0.0   0.0     61.8     39.7      3.22              2.96         1    3.223   1116K   399K
+High      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.2      0.2       0.0   0.0      0.0     46.0      4.83              4.02         6    0.805       0      0
+User      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0     64.3      0.55              0.00         1    0.552       0      0
+Uptime(secs): 7.3 total, 2.0 interval
+Flush(GB): cumulative 0.252, interval 0.109
+AddFile(GB): cumulative 0.000, interval 0.000
+AddFile(Total Files): cumulative 0, interval 0
+AddFile(L0 Files): cumulative 0, interval 0
+AddFile(Keys): cumulative 0, interval 0
+Cumulative compaction: 0.38 GB write, 53.11 MB/s write, 0.19 GB read, 27.41 MB/s read, 8.6 seconds
+Interval compaction: 0.11 GB write, 54.41 MB/s write, 0.00 GB read, 0.00 MB/s read, 2.5 seconds
+Stalls(count): 0 level0_slowdown, 0 level0_slowdown_with_compaction, 0 level0_numfiles, 0 level0_numfiles_with_compaction, 0 stop for pending_compaction_bytes, 0 slowdown for pending_compaction_bytes, 0 memtable_compaction, 0 memtable_slowdown, interval 0 total count
+
+** File Read Latency Histogram By Level [default] **
+
+** DB Stats **
+Uptime(secs): 7.3 total, 2.0 interval
+Cumulative writes: 1862K writes, 1862K keys, 852K commit groups, 2.2 writes per commit group, ingest: 0.74 GB, 104.99 MB/s
+Cumulative WAL: 1862K writes, 0 syncs, 1862479.00 writes per sync, written: 0.74 GB, 104.99 MB/s
+Cumulative stall: 00:00:0.000 H:M:S, 0.0 percent
+Interval writes: 473K writes, 473K keys, 222K commit groups, 2.1 writes per commit group, ingest: 193.94 MB, 94.94 MB/s
+Interval WAL: 473K writes, 0 syncs, 473325.00 writes per sync, written: 0.19 MB, 94.94 MB/s
+Interval stall: 00:00:0.000 H:M:S, 0.0 percent
+
+
+** Compaction Stats [default] **
+Level    Files   Size     Score Read(GB)  Rn(GB) Rnp1(GB) Write(GB) Wnew(GB) Moved(GB) W-Amp Rd(MB/s) Wr(MB/s) Comp(sec) CompMergeCPU(sec) Comp(cnt) Avg(sec) KeyIn KeyDrop
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  L0      2/0   74.03 MB   0.5      0.0     0.0      0.0       0.3      0.3       0.0   1.0      0.0     46.2      6.39              4.72         8    0.798       0      0
+  L1      8/2   839.46 MB   1.1      0.3     0.3      0.0       0.1      0.1       0.0   0.4    140.6     49.0      2.44              3.06         1    2.439   1923K  1254K
+  L2     41/9    4.26 GB   0.8      0.2     0.1      0.1       0.1      0.0       0.0   1.8     61.8     39.7      3.22              2.96         1    3.223   1116K   399K
+  L3     62/0    6.75 GB   0.2      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0      0.0      0.00              0.00         0    0.000       0      0
+ Sum    113/11  11.90 GB   0.0      0.5     0.4      0.2       0.5      0.4       0.0   1.8     45.0     45.0     12.05             10.75        10    1.205   3039K  1654K
+ Int      0/0    0.00 KB   0.0      0.3     0.3      0.0       0.2      0.1       0.0   4.2     99.6     45.4      3.44              3.76         2    1.722   1923K  1254K
+
+** Compaction Stats [default] **
+Priority    Files   Size     Score Read(GB)  Rn(GB) Rnp1(GB) Write(GB) Wnew(GB) Moved(GB) W-Amp Rd(MB/s) Wr(MB/s) Comp(sec) CompMergeCPU(sec) Comp(cnt) Avg(sec) KeyIn KeyDrop
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Low      0/0    0.00 KB   0.0      0.5     0.4      0.2       0.2      0.1       0.0   0.0     95.8     43.7      5.66              6.03         2    2.831   3039K  1654K
+High      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.3      0.3       0.0   0.0      0.0     44.4      5.83              4.72         7    0.833       0      0
+User      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0     64.3      0.55              0.00         1    0.552       0      0
+Uptime(secs): 9.3 total, 2.0 interval
+Flush(GB): cumulative 0.288, interval 0.036
+AddFile(GB): cumulative 0.000, interval 0.000
+AddFile(Total Files): cumulative 0, interval 0
+AddFile(L0 Files): cumulative 0, interval 0
+AddFile(Keys): cumulative 0, interval 0
+Cumulative compaction: 0.53 GB write, 58.49 MB/s write, 0.53 GB read, 58.49 MB/s read, 12.0 seconds
+Interval compaction: 0.15 GB write, 77.97 MB/s write, 0.34 GB read, 171.02 MB/s read, 3.4 seconds
+Stalls(count): 0 level0_slowdown, 0 level0_slowdown_with_compaction, 0 level0_numfiles, 0 level0_numfiles_with_compaction, 0 stop for pending_compaction_bytes, 0 slowdown for pending_compaction_bytes, 0 memtable_compaction, 0 memtable_slowdown, interval 0 total count
+
+** File Read Latency Histogram By Level [default] **
+
+** DB Stats **
+Uptime(secs): 9.3 total, 2.0 interval
+Cumulative writes: 2430K writes, 2430K keys, 1110K commit groups, 2.2 writes per commit group, ingest: 0.97 GB, 107.38 MB/s
+Cumulative WAL: 2430K writes, 0 syncs, 2430841.00 writes per sync, written: 0.97 GB, 107.38 MB/s
+Cumulative stall: 00:00:0.000 H:M:S, 0.0 percent
+Interval writes: 568K writes, 568K keys, 258K commit groups, 2.2 writes per commit group, ingest: 232.78 MB, 116.03 MB/s
+Interval WAL: 568K writes, 0 syncs, 568362.00 writes per sync, written: 0.23 MB, 116.03 MB/s
+Interval stall: 00:00:0.000 H:M:S, 0.0 percent
+
+
+** Compaction Stats [default] **
+Level    Files   Size     Score Read(GB)  Rn(GB) Rnp1(GB) Write(GB) Wnew(GB) Moved(GB) W-Amp Rd(MB/s) Wr(MB/s) Comp(sec) CompMergeCPU(sec) Comp(cnt) Avg(sec) KeyIn KeyDrop
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  L0      4/0   147.99 MB   1.0      0.0     0.0      0.0       0.4      0.4       0.0   1.0      0.0     46.0      8.01              6.08        10    0.801       0      0
+  L1      8/2   839.46 MB   1.1      0.3     0.3      0.0       0.1      0.1       0.0   0.4    140.6     49.0      2.44              3.06         1    2.439   1923K  1254K
+  L2     41/9    4.26 GB   0.8      0.2     0.1      0.1       0.1      0.0       0.0   1.8     61.8     39.7      3.22              2.96         1    3.223   1116K   399K
+  L3     62/0    6.75 GB   0.2      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0      0.0      0.00              0.00         0    0.000       0      0
+ Sum    115/11  11.97 GB   0.0      0.5     0.4      0.2       0.6      0.4       0.0   1.7     39.6     45.1     13.68             12.11        12    1.140   3039K  1654K
+ Int      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.1      0.1       0.0   1.0      0.0     45.4      1.63              1.36         2    0.814       0      0
+
+** Compaction Stats [default] **
+Priority    Files   Size     Score Read(GB)  Rn(GB) Rnp1(GB) Write(GB) Wnew(GB) Moved(GB) W-Amp Rd(MB/s) Wr(MB/s) Comp(sec) CompMergeCPU(sec) Comp(cnt) Avg(sec) KeyIn KeyDrop
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Low      0/0    0.00 KB   0.0      0.5     0.4      0.2       0.2      0.1       0.0   0.0     95.8     43.7      5.66              6.03         2    2.831   3039K  1654K
+High      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.3      0.3       0.0   0.0      0.0     44.7      7.46              6.08         9    0.829       0      0
+User      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0     64.3      0.55              0.00         1    0.552       0      0
+Uptime(secs): 11.3 total, 2.0 interval
+Flush(GB): cumulative 0.360, interval 0.072
+AddFile(GB): cumulative 0.000, interval 0.000
+AddFile(Total Files): cumulative 0, interval 0
+AddFile(L0 Files): cumulative 0, interval 0
+AddFile(Keys): cumulative 0, interval 0
+Cumulative compaction: 0.60 GB write, 54.65 MB/s write, 0.53 GB read, 48.09 MB/s read, 13.7 seconds
+Interval compaction: 0.07 GB write, 36.90 MB/s write, 0.00 GB read, 0.00 MB/s read, 1.6 seconds
+Stalls(count): 0 level0_slowdown, 0 level0_slowdown_with_compaction, 0 level0_numfiles, 0 level0_numfiles_with_compaction, 0 stop for pending_compaction_bytes, 0 slowdown for pending_compaction_bytes, 0 memtable_compaction, 0 memtable_slowdown, interval 0 total count
+
+** File Read Latency Histogram By Level [default] **
+
+** DB Stats **
+Uptime(secs): 11.3 total, 2.0 interval
+Cumulative writes: 3075K writes, 3075K keys, 1399K commit groups, 2.2 writes per commit group, ingest: 1.23 GB, 111.70 MB/s
+Cumulative WAL: 3075K writes, 0 syncs, 3075304.00 writes per sync, written: 1.23 GB, 111.70 MB/s
+Cumulative stall: 00:00:0.000 H:M:S, 0.0 percent
+Interval writes: 644K writes, 644K keys, 288K commit groups, 2.2 writes per commit group, ingest: 263.89 MB, 131.64 MB/s
+Interval WAL: 644K writes, 0 syncs, 644463.00 writes per sync, written: 0.26 MB, 131.64 MB/s
+Interval stall: 00:00:0.000 H:M:S, 0.0 percent
+
+Initializing RocksDB Options from the specified file
+Initializing RocksDB Options from command-line flags
+Keys:       20 bytes each
+Values:     400 bytes each (200 bytes after compression)
+Entries:    400000
+Prefix:    0 bytes
+Keys per prefix:    0
+RawSize:    160.2 MB (estimated)
+FileSize:   83.9 MB (estimated)
+Write rate: 0 bytes/second
+Read rate: 0 ops/second
+Compression: ZSTD
+Compression sampling rate: 0
+Memtablerep: skip_list
+Perf Level: 1
+WARNING: Assertions are enabled; benchmarks unnecessarily slow
+------------------------------------------------
+DB path: [../data/01_19/new/16_52_t1]
+updaterandom :      26.126 micros/op 302874 ops/sec;  242.6 MB/s ( updates:400000 found:400000)
+Microseconds per update:
+Count: 3200000 Average: 26.1266  StdDev: 156.36
+Min: 5  Median: 21.2064  Max: 45927
+Percentiles: P50: 21.21 P75: 28.56 P99: 79.23 P99.9: 208.95 P99.99: 5966.67
+------------------------------------------------------
+(       4,       6 ]      860   0.027%   0.027% 
+(       6,      10 ]    26762   0.836%   0.863% 
+(      10,      15 ]   316238   9.882%  10.746% ##
+(      15,      22 ]  1416770  44.274%  55.020% #########
+(      22,      34 ]  1169260  36.539%  91.559% #######
+(      34,      51 ]   177145   5.536%  97.095% #
+(      51,      76 ]    58821   1.838%  98.933% 
+(      76,     110 ]    22581   0.706%  99.639% 
+(     110,     170 ]     7602   0.238%  99.876% 
+(     170,     250 ]     1563   0.049%  99.925% 
+(     250,     380 ]      811   0.025%  99.950% 
+(     380,     580 ]      383   0.012%  99.962% 
+(     580,     870 ]      142   0.004%  99.967% 
+(     870,    1300 ]      222   0.007%  99.974% 
+(    1300,    1900 ]      109   0.003%  99.977% 
+(    1900,    2900 ]      120   0.004%  99.981% 
+(    2900,    4400 ]      197   0.006%  99.987% 
+(    4400,    6600 ]      132   0.004%  99.991% 
+(    6600,    9900 ]       87   0.003%  99.994% 
+(    9900,   14000 ]      107   0.003%  99.997% 
+(   14000,   22000 ]       75   0.002% 100.000% 
+(   33000,   50000 ]       13   0.000% 100.000% 
+

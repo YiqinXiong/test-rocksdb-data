@@ -187,7 +187,7 @@ function run_change() {
        --use_existing_db=1 \
        --sync=$syncval \
        $params_w \
-       --threads=$num_threads \
+       --threads=8 \
        --merge_operator=\"put\" \
        --seed=$(date +%s) \
        2>&1 | grep -v \"... thread\" | tee -a $output_dir/${out_name}"
