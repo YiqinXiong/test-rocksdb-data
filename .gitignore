@@ -4,4 +4,4 @@ data/
 # logs
 
 #db_bench
-db_bench/db_bench
+db_bench/db_bench*

@@ -2,8 +2,8 @@
 # Copyright (c) Facebook, Inc. and its affiliates. All Rights Reserved.
 # REQUIRE: db_bench binary exists in the current directory
 
-if [ $# -ne 3 ]; then
-    echo -n "./benchmark.sh [bulkload/fillseq/updaterandom] [new/old] [num_threads]"
+if [ $# -ne 6 ]; then
+    echo -n "./benchmark.sh [bulkload/fillseq/updaterandom] [new/old] [num_threads] [db_dir] [output_dir] [auto-tuned?]"
     exit 0
 fi
 
@@ -13,7 +13,9 @@ M=$((1024 * K))
 G=$((1024 * M))
 W=10000
 
-db_dir=../data/$(date +%m_%d)/$2/$(date +%H_%M)_t$3
+db_bench_path=./db_bench_$2
+
+db_dir=$4
 if [ ! -d "$db_dir" ]; then
     mkdir -p "$db_dir"
 fi
@@ -22,7 +24,7 @@ echo db_dir="$db_dir"
 
 wal_dir=$db_dir
 
-output_dir=../logs/$(date +%m_%d)/$2/$(date +%H_%M)_t$3
+output_dir=$5
 if [ ! -d "$output_dir" ]; then
     mkdir -p "$output_dir"
 fi
@@ -50,7 +52,6 @@ const_params="\
   --db=$db_dir \
   --wal_dir=$wal_dir \
   \
-  --num=$num_keys \
   --num_levels=6 \
   --key_size=$key_size \
   --value_size=$value_size \
@@ -77,10 +78,10 @@ const_params="\
   \
   --open_files=-1 \
   \
-  --max_background_jobs=8 \
-  --subcompactions=3 \
+  --max_background_jobs=16 \
+  --subcompactions=5 \
   --rate_limiter_bytes_per_sec=$((400 * M)) \
-  --rate_limiter_auto_tuned=1 \
+  --rate_limiter_auto_tuned=$6 \
   --max_compaction_bytes=$((10 * G))"
 
 l0_config="--level0_file_num_compaction_trigger=4 \
@@ -125,10 +126,11 @@ function run_bulkload() {
     # This runs with a vector memtable and the WAL disabled to load faster. It is still crash safe and the
     # client can discover where to restart a load after a crash. I think this is a good way to load.
     echo "Bulk loading $num_keys random keys"
-    cmd="./db_bench --benchmarks=fillrandom \
+    cmd="$db_bench_path --benchmarks=fillrandom \
        --use_existing_db=0 \
        --disable_auto_compactions=1 \
        --sync=0 \
+       --num=$num_keys \
        $params_bulkload \
        --threads=1 \
        --memtablerep=vector \
@@ -139,10 +141,11 @@ function run_bulkload() {
     eval "$cmd"
 
     echo "Compacting..."
-    cmd="./db_bench --benchmarks=compact \
+    cmd="$db_bench_path --benchmarks=compact \
        --use_existing_db=1 \
        --disable_auto_compactions=1 \
        --sync=0 \
+       --num=$num_keys \
        $params_w \
        --threads=10 \
        2>&1 | tee -a $output_dir/benchmark_bulkload_compact.log"
@@ -166,13 +169,14 @@ function run_fillseq() {
     fi
 
     echo "Loading $num_keys keys sequentially"
-    cmd="./db_bench --benchmarks=fillseq \
+    cmd="$db_bench_path --benchmarks=fillseq \
        --use_existing_db=0 \
+       --sync=$syncval \
+       --num=$num_keys \
        $params_w \
        --min_level_to_compress=0 \
        --threads=$num_threads \
        --disable_wal=$1 \
-       --seed=$(date +%s) \
        2>&1 | grep -v \"... thread\" | tee -a $log_file_name"
     echo "$cmd" | tee "$log_file_name"
     eval "$cmd" >/dev/null 2>&1
@@ -180,17 +184,18 @@ function run_fillseq() {
 }
 
 function run_change() {
+    num_keys=$((num_keys/4))
     operation=$1
     echo "Do $num_keys random $operation"
     out_name="benchmark_${operation}.t${num_threads}.s${syncval}.log"
-    cmd="./db_bench --benchmarks=$operation \
+    cmd="$db_bench_path --benchmarks=$operation \
        --use_existing_db=1 \
        --sync=$syncval \
+       --num=$num_keys \
        $params_w \
-       --threads=8 \
-       --merge_operator=\"put\" \
-       --seed=$(date +%s) \
+       --threads=$num_threads \
        2>&1 | grep -v \"... thread\" | tee -a $output_dir/${out_name}"
+    num_keys=$((num_keys*4))
     echo "$cmd" | tee "$output_dir/${out_name}"
     eval "$cmd" >/dev/null 2>&1
 }

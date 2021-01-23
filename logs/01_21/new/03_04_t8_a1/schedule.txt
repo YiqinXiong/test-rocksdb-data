@@ -1,0 +1,4 @@
+Start fillseq_disable_wal at 2021年 01月 21日 星期四 03:04:02 CST by using 8 threads
+Complete fillseq_disable_wal in 482 seconds
+Start updaterandom at 2021年 01月 21日 星期四 03:12:04 CST by using 8 threads
+Complete updaterandom in 6800 seconds
