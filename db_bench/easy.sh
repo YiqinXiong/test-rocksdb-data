@@ -1,9 +1,9 @@
-#!/usr/bin/env bash
+#! /bin/zsh
 # Copyright (c) Facebook, Inc. and its affiliates. All Rights Reserved.
 # REQUIRE: db_bench binary exists in the current directory
 
 if [ $# -ne 6 ]; then
-    echo -n "./benchmark.sh [bulkload/fillseq/updaterandom] [new/old] [num_threads] [db_dir] [output_dir] [auto-tuned?]"
+    echo -n "./easy.sh [bulkload/fillseq/updaterandom] [new/old] [num_threads] [db_dir] [output_dir] [auto-tuned?]"
     exit 0
 fi
 

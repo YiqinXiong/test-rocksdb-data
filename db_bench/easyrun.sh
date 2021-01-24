@@ -1,4 +1,4 @@
-#! /bin/bash
+#! /bin/zsh
 echo ***将对应版本db_bench复制到该目录进行测试***
 # 参数1：选择新旧版本
 if [ $# -ne 3 ]; then
