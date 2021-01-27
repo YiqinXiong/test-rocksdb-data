@@ -1,5 +1,5 @@
-#! /bin/zsh
-echo ***将对应版本db_bench复制到该目录进行测试***
+#! /bin/bash
+echo "***将对应版本db_bench复制到该目录进行测试***"
 # 参数1：选择新旧版本
 if [ $# -ne 3 ]; then
     echo "./easyrun.sh [fillseq_enable_wal,fillseq_disable_wal,bulkload,updaterandom] [new/old] [auto-tuned?]"

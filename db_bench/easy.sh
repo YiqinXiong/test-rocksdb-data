@@ -1,4 +1,4 @@
-#! /bin/zsh
+#!/usr/bin/env bash
 # Copyright (c) Facebook, Inc. and its affiliates. All Rights Reserved.
 # REQUIRE: db_bench binary exists in the current directory
 
@@ -61,7 +61,7 @@ const_params="\
   --compression_max_dict_bytes=0 \
   --compression_ratio=0.5 \
   --compression_type=zstd \
-  --level_compaction_dynamic_level_bytes=0 \
+  --level_compaction_dynamic_level_bytes=1 \
   --bytes_per_sync=8388608 \
   --cache_index_and_filter_blocks=0 \
   --pin_l0_filter_and_index_blocks_in_cache=1 \

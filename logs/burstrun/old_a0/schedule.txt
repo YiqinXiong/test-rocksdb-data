@@ -1,0 +1,16 @@
+Begin burst updaterandom #1 at 120 s
+End burst updaterandom #1 at 120 s
+Complete burst updaterandom #1 in 0 seconds
+Begin burst updaterandom #2 at 240 s
+End burst updaterandom #2 at 240 s
+Complete burst updaterandom #2 in 0 seconds
+Begin burst updaterandom #3 at 360 s
+End burst updaterandom #3 at 360 s
+Complete burst updaterandom #3 in 0 seconds
+Begin burst updaterandom #4 at 480 s
+End burst updaterandom #4 at 480 s
+Complete burst updaterandom #4 in 0 seconds
+Begin burst updaterandom #5 at 600 s
+End burst updaterandom #5 at 600 s
+Complete burst updaterandom #5 in 0 seconds
+Complete fillseq in 935 seconds
