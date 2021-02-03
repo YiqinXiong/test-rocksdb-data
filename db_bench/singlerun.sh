@@ -14,10 +14,12 @@ W=10000
 
 cache_size=$((4 * G))
 
-num_keys=$((8000 * W))
+num_keys=$((80000 * W))
 key_size=20
 value_size=100000
 block_size=$((8 * K))
+rate_limiter_mega_bytes_per_sec=100
+rate_limiter_refill_period_ms=10
 
 db_bench_dir=../../rocksdb-
 db_bench_path=./db_bench_
@@ -44,6 +46,9 @@ fi
 db_dir="$db_dir_base"_a"$auto_tuned"
 if [ ! -d "$db_dir" ]; then
     mkdir -p "$db_dir"
+else
+    echo "***删除之前的测试仓库 $db_dir ***"
+    rm -rf "$db_dir"
 fi
 
 output_dir="$output_dir_base"_a"$auto_tuned"
@@ -51,8 +56,8 @@ if [ ! -d "$output_dir" ]; then
     mkdir -p "$output_dir"
 fi
 
-log_file_name=$output_dir/benchmark_fillseq.wal_enabled.v${value_size}.log
-schedule="$output_dir/schedule.txt"
+log_file_name="$output_dir/fillrandom_$(date +%m%d-%H%M)_r${rate_limiter_mega_bytes_per_sec}_p${rate_limiter_refill_period_ms}.log"
+schedule="$output_dir/schedule_$(date +%m%d-%H%M)_r${rate_limiter_mega_bytes_per_sec}_p${rate_limiter_refill_period_ms}.txt"
 
 function now() {
     date +"%s"
@@ -84,7 +89,8 @@ cmd="\
     \
     --max_background_jobs=16 \
     --subcompactions=5 \
-    --rate_limiter_bytes_per_sec=$((400 * M)) \
+    --rate_limiter_bytes_per_sec=$((rate_limiter_mega_bytes_per_sec * M)) \
+    --rate_limiter_refill_period_us=$((rate_limiter_refill_period_ms * 1000)) \
     --rate_limiter_auto_tuned=$auto_tuned \
     --max_compaction_bytes=$((10 * G)) \
     \
@@ -92,7 +98,7 @@ cmd="\
     \
     --max_write_buffer_number=4 \
     \
-    --duration=350 \
+    --duration=3600 \
     \
     --sine_write_rate=1 \
     --sine_a=75000000 \
