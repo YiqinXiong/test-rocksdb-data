@@ -56,7 +56,7 @@ class Statistics:
         path = os.path.join(os.getcwd(), log)
         with open(path, 'r') as f:
             matches = regex.findall(f.read())
-        matches = [ float(x) for x in matches ]
+        matches = [float(x) for x in matches]
         return matches
 
     def get_steps(self, regex, log):
@@ -112,12 +112,49 @@ if __name__ == '__main__':
     print(ss.keys())
 
     for test in tests:
-        # fig, ax = plt.subplots()#创建一个figure 
+        # fig, ax = plt.subplots()#创建一个figure
+        plt.figure(figsize=(14.4, 4.8))
         plt.title(test)
         for t in ss.keys():
             plt.plot(ss[t].steps, ss[t].matchs[test], label=t)
-        plt.legend()
+        plt.legend()    # 添加图例
         plt.xlabel('time(s)')
-        plt.ylabel('rate(MB/s)')
+        if test in tests[:2]:
+            plt.ylabel('stall time percentage(%)')
+        else:
+            plt.ylabel('rate(MB/s)')
+        plt.axis([0, 3600, 0, 1000])
+        plt.axis('tight')
         plt.grid(True)
-        plt.show()
+        pic_path = './picture/'
+        if not os.path.exists(pic_path):
+            os.makedirs(pic_path)
+        plt.savefig(pic_path+test+'.png')
+        plt.close()
+
+    for t in ss.keys():
+        # 设置plt
+        fig, ax1 = plt.subplots(figsize=(14.4, 4.8))
+        # 共享x轴，生成次坐标轴并上下翻转
+        ax2 = ax1.twinx()
+        ax2.invert_yaxis()
+        ax_dic = {'interval_writes': ax1, 'interval_compaction': ax2}
+        color_dic = {'interval_writes': 'r', 'interval_compaction': 'b'}
+        # 画图
+        for test in tests[2:][::2]:
+            ax_dic[test].plot(ss[t].steps, ss[t].matchs[test],
+                              color_dic[test], label=test)
+        # 设置ax
+        ax1.set_ylabel('interval_writes rate(MB/s)')
+        ax2.set_ylabel('interval_compaction rate(MB/s)')
+        ax1.set_xlabel('time(s)')
+        # plt.legend(loc=0)    # 添加图例
+        fig.legend(loc=1)
+        ax1.set_title(t)
+        plt.axis('tight')
+        plt.grid(True)
+        pic_path = './picture/'
+        if not os.path.exists(pic_path):
+            os.makedirs(pic_path)
+        plt.savefig(pic_path+t+'_interval.png')
+        plt.close()
