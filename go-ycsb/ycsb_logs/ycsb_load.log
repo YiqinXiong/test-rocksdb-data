@@ -1,0 +1,43 @@
+***************** properties *****************
+"dotransactions"="false"
+"rocksdb.block_size_deviation"="10"
+"rocksdb.level0_stop_writes_trigger"="36"
+"rocksdb.max_bytes_for_level_base"="536870912"
+"rocksdb.block_restart_interval"="16"
+"maxscanlength"="10"
+"rocksdb.memtable_huge_page_size"="0"
+"rocksdb.no_block_cache"="false"
+"rocksdb.max_total_wal_size"="0"
+"rocksdb.max_bytes_for_level_multiplier"="10"
+"rocksdb.whole_key_filtering"="true"
+"rocksdb.block_size"="4096"
+"fieldlength"="100"
+"rocksdb.level0_file_num_compaction_trigger"="4"
+"rocksdb.max_background_flushes"="2"
+"rocksdb.use_direct_reads"="false"
+"rocksdb.dir"="../data"
+"recordcount"="3000000"
+"fieldcount"="10"
+"rocksdb.write_buffer_size"="134217728"
+"dropdata"="true"
+"rocksdb.pin_l0_filter_and_index_blocks_in_cache"="false"
+"workload"="core"
+"threadcount"="4"
+"rocksdb.cache_index_and_filter_blocks"="false"
+"rocksdb.level0_slowdown_writes_trigger"="20"
+"operationcount"="10000000"
+"rocksdb.use_fsync"="false"
+**********************************************
+INSERT - Takes(s): 10.0, Count: 764997, OPS: 76656.3, Avg(us): 29, Min(us): 4, Max(us): 149104, 99th(us): 1000, 99.9th(us): 2000, 99.99th(us): 4000;
+ IntervalTakes(s): 10.0, IntervalCount: 764997, IntervalOPS: 76656.3, IntervalAvg(us): 29, IntervalMin(us): 4, IntervalMax(us): 149104, Interval99th(us): 1000, Interval99.9th(us): 2000, Interval99.99th(us): 4000
+INSERT - Takes(s): 20.0, Count: 1351090, OPS: 67621.3, Avg(us): 36, Min(us): 4, Max(us): 905176, 99th(us): 1000, 99.9th(us): 2000, 99.99th(us): 4000;
+ IntervalTakes(s): 10.0, IntervalCount: 586090, IntervalOPS: 58605.1, IntervalAvg(us): 45, IntervalMin(us): 4, IntervalMax(us): 905176, Interval99th(us): 1000, Interval99.9th(us): 1000, Interval99.99th(us): 4000
+INSERT - Takes(s): 30.0, Count: 1958093, OPS: 65312.3, Avg(us): 39, Min(us): 4, Max(us): 905176, 99th(us): 1000, 99.9th(us): 1000, 99.99th(us): 4000;
+ IntervalTakes(s): 10.0, IntervalCount: 606999, IntervalOPS: 60698.5, IntervalAvg(us): 44, IntervalMin(us): 4, IntervalMax(us): 810490, Interval99th(us): 1000, Interval99.9th(us): 1000, Interval99.99th(us): 3000
+INSERT - Takes(s): 40.0, Count: 2583159, OPS: 64498.9, Avg(us): 39, Min(us): 4, Max(us): 1079774, 99th(us): 1000, 99.9th(us): 2000, 99.99th(us): 4000;
+ IntervalTakes(s): 10.1, IntervalCount: 625047, IntervalOPS: 62075.2, IntervalAvg(us): 41, IntervalMin(us): 4, IntervalMax(us): 1079774, Interval99th(us): 1000, Interval99.9th(us): 2000, Interval99.99th(us): 6000
+INSERT - Takes(s): 50.0, Count: 2867976, OPS: 57382.4, Avg(us): 47, Min(us): 4, Max(us): 1079774, 99th(us): 1000, 99.9th(us): 2000, 99.99th(us): 5000;
+ IntervalTakes(s): 9.9, IntervalCount: 284817, IntervalOPS: 28681.5, IntervalAvg(us): 118, IntervalMin(us): 4, IntervalMax(us): 914685, Interval99th(us): 2000, Interval99.9th(us): 3000, Interval99.99th(us): 6000
+Run finished, takes 54.156677444s
+INSERT - Takes(s): 54.1, Count: 2999999, OPS: 55416.2, Avg(us): 49, Min(us): 4, Max(us): 1079774, 99th(us): 1000, 99.9th(us): 2000, 99.99th(us): 5000;
+ IntervalTakes(s): 4.2, IntervalCount: 132017, IntervalOPS: 31767.2, IntervalAvg(us): 101, IntervalMin(us): 4, IntervalMax(us): 236051, Interval99th(us): 2000, Interval99.9th(us): 3000, Interval99.99th(us): 6000

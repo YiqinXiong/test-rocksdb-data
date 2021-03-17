@@ -4,13 +4,13 @@ TYPE=$1
 
 # Directory to save data
 DATA=../data
-CMD=go-ycsb
+CMD=../../go-ycsb/bin/go-ycsb
 # Direcotry to save logs
-LOG=./logs
+LOG=./ycsb_logs
 
-RECORDCOUNT=100000000
-OPERATIONCOUNT=100000000
-THREADCOUNT=16
+RECORDCOUNT=3000000
+OPERATIONCOUNT=10000000
+THREADCOUNT=4
 FIELDCOUNT=10
 FIELDLENGTH=100
 MAXSCANLENGTH=10
@@ -41,11 +41,11 @@ fi
 echo ${TYPE} ${WORKLOADS} ${PROPS}
 
 if [ ${TYPE} == 'load' ]; then 
-    $CMD load rocksdb ${WORKLOADS} -p workload=core ${PROPS} | tee ${LOG}/rocksdb_load.log
+    $CMD load rocksdb ${WORKLOADS} -p workload=core ${PROPS} | tee ${LOG}/ycsb_load.log
 elif [ ${TYPE} == 'run' ]; then
     for workload in a b c d e f 
     do 
-        $CMD run rocksdb -P ./workloads/workload${workload} ${WORKLOADS} ${PROPS} | tee ${LOG}/rocksdb_workload${workload}.log
+        $CMD run rocksdb -P ./workloads/workload${workload} ${WORKLOADS} ${PROPS} | tee ${LOG}/ycsb_workload${workload}.log
     done
 else
     echo "invalid type ${TYPE}"

@@ -1,0 +1,63 @@
+***************** properties *****************
+"rocksdb.max_background_flushes"="2"
+"rocksdb.block_restart_interval"="16"
+"rocksdb.level0_stop_writes_trigger"="36"
+"rocksdb.pin_l0_filter_and_index_blocks_in_cache"="false"
+"rocksdb.whole_key_filtering"="true"
+"rocksdb.level0_file_num_compaction_trigger"="4"
+"threadcount"="4"
+"rocksdb.memtable_huge_page_size"="0"
+"operationcount"="10000000"
+"rocksdb.block_size_deviation"="10"
+"rocksdb.allow_concurrent_memtable_writes"="true"
+"rocksdb.max_bytes_for_level_base"="268435456"
+"rocksdb.max_bytes_for_level_multiplier"="10"
+"fieldlength"="100"
+"rocksdb.use_direct_reads"="false"
+"rocksdb.block_size"="4096"
+"rocksdb.num_levels"="7"
+"workload"="core"
+"updateproportion"="0"
+"fieldcount"="10"
+"recordcount"="3000000"
+"maxscanlength"="10"
+"rocksdb.no_block_cache"="false"
+"rocksdb.use_fsync"="false"
+"requestdistribution"="latest"
+"readallfields"="true"
+"rocksdb.max_total_wal_size"="0"
+"rocksdb.arena_block_size"="0"
+"dotransactions"="true"
+"rocksdb.level0_slowdown_writes_trigger"="20"
+"rocksdb.cache_index_and_filter_blocks"="false"
+"readproportion"="0.95"
+"rocksdb.write_buffer_size"="134217728"
+"rocksdb.hard_pending_compaction_bytes_limit"="274877906944"
+"rocksdb.db_write_buffer_size"="0"
+"rocksdb.dir"="../data"
+"scanproportion"="0"
+"rocksdb.allow_mmap_reads"="false "
+"insertproportion"="0.05"
+"rocksdb.allow_mmap_writes"="false"
+**********************************************
+INSERT - Takes(s): 10.0, Count: 110336, OPS: 11033.0, Avg(us): 23, Min(us): 5, Max(us): 10956, 99th(us): 1000, 99.9th(us): 2000, 99.99th(us): 3000
+READ   - Takes(s): 10.0, Count: 2090694, OPS: 209040.3, Avg(us): 12, Min(us): 2, Max(us): 14807, 99th(us): 1000, 99.9th(us): 1000, 99.99th(us): 3000
+INSERT - Takes(s): 20.0, Count: 225609, OPS: 11280.0, Avg(us): 23, Min(us): 5, Max(us): 10956, 99th(us): 1000, 99.9th(us): 2000, 99.99th(us): 3000
+READ   - Takes(s): 20.0, Count: 4273936, OPS: 213679.4, Avg(us): 12, Min(us): 2, Max(us): 120482, 99th(us): 1000, 99.9th(us): 1000, 99.99th(us): 2000
+INSERT - Takes(s): 30.0, Count: 344173, OPS: 11472.4, Avg(us): 22, Min(us): 5, Max(us): 10956, 99th(us): 1000, 99.9th(us): 1000, 99.99th(us): 3000
+READ   - Takes(s): 30.0, Count: 6524574, OPS: 217479.0, Avg(us): 12, Min(us): 2, Max(us): 120482, 99th(us): 1000, 99.9th(us): 1000, 99.99th(us): 2000
+INSERT - Takes(s): 40.0, Count: 432998, OPS: 10824.8, Avg(us): 24, Min(us): 5, Max(us): 108546, 99th(us): 1000, 99.9th(us): 2000, 99.99th(us): 3000
+READ   - Takes(s): 40.0, Count: 8210691, OPS: 205260.9, Avg(us): 13, Min(us): 2, Max(us): 389238, 99th(us): 1000, 99.9th(us): 1000, 99.99th(us): 3000
+INSERT - Takes(s): 50.0, Count: 438926, OPS: 8778.4, Avg(us): 24, Min(us): 5, Max(us): 108546, 99th(us): 1000, 99.9th(us): 2000, 99.99th(us): 3000
+READ   - Takes(s): 50.0, Count: 8325414, OPS: 166503.3, Avg(us): 17, Min(us): 2, Max(us): 645915, 99th(us): 1000, 99.9th(us): 1000, 99.99th(us): 3000
+INSERT - Takes(s): 60.0, Count: 447993, OPS: 7466.5, Avg(us): 24, Min(us): 5, Max(us): 108546, 99th(us): 1000, 99.9th(us): 2000, 99.99th(us): 3000
+READ   - Takes(s): 60.0, Count: 8496586, OPS: 141606.4, Avg(us): 22, Min(us): 2, Max(us): 645915, 99th(us): 1000, 99.9th(us): 1000, 99.99th(us): 19000
+INSERT - Takes(s): 70.0, Count: 460973, OPS: 6585.2, Avg(us): 24, Min(us): 5, Max(us): 108546, 99th(us): 1000, 99.9th(us): 1000, 99.99th(us): 3000
+READ   - Takes(s): 70.0, Count: 8742796, OPS: 124893.4, Avg(us): 25, Min(us): 2, Max(us): 645915, 99th(us): 1000, 99.9th(us): 1000, 99.99th(us): 33000
+INSERT - Takes(s): 80.0, Count: 476893, OPS: 5961.1, Avg(us): 24, Min(us): 5, Max(us): 108546, 99th(us): 1000, 99.9th(us): 1000, 99.99th(us): 3000
+READ   - Takes(s): 80.0, Count: 9043712, OPS: 113043.3, Avg(us): 29, Min(us): 2, Max(us): 645915, 99th(us): 1000, 99.9th(us): 1000, 99.99th(us): 42000
+INSERT - Takes(s): 90.0, Count: 494562, OPS: 5495.1, Avg(us): 23, Min(us): 5, Max(us): 108546, 99th(us): 1000, 99.9th(us): 1000, 99.99th(us): 3000
+READ   - Takes(s): 90.0, Count: 9382446, OPS: 104247.7, Avg(us): 32, Min(us): 2, Max(us): 645915, 99th(us): 1000, 99.9th(us): 1000, 99.99th(us): 46000
+Run finished, takes 1m33.51539081s
+INSERT - Takes(s): 93.5, Count: 500639, OPS: 5352.3, Avg(us): 23, Min(us): 5, Max(us): 108546, 99th(us): 1000, 99.9th(us): 1000, 99.99th(us): 3000
+READ   - Takes(s): 93.5, Count: 9499361, OPS: 101556.9, Avg(us): 33, Min(us): 2, Max(us): 645915, 99th(us): 1000, 99.9th(us): 1000, 99.99th(us): 47000

@@ -1,21 +1,14 @@
-rocksdb.allow_concurrent_memtable_writes = true
-rocksdb.allow_mmap_reads = false 
-rocksdb.allow_mmap_writes = false
-rocksdb.arena_block_size = 0
-rocksdb.db_write_buffer_size = 0
-rocksdb.hard_pending_compaction_bytes_limit = 274877906944
 rocksdb.level0_file_num_compaction_trigger = 4
 rocksdb.level0_slowdown_writes_trigger = 20
 rocksdb.level0_stop_writes_trigger = 36
-rocksdb.max_background_flushes = 1
-rocksdb.max_bytes_for_level_base = 268435456
+rocksdb.max_background_flushes = 2
+rocksdb.max_bytes_for_level_base = 536870912
 rocksdb.max_bytes_for_level_multiplier = 10
 rocksdb.max_total_wal_size = 0
 rocksdb.memtable_huge_page_size = 0
-rocksdb.num_levels = 7
 rocksdb.use_direct_reads = false
 rocksdb.use_fsync = false
-rocksdb.write_buffer_size = 67108864
+rocksdb.write_buffer_size = 134217728
 	
 # TableOptions/BlockBasedTable
 rocksdb.block_size = 4096
